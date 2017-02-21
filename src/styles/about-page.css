@@ -1,0 +1,19 @@
+/* Variables */
+$charcoal: #364958;
+$blue: #5FB3DD;
+$dark-blue: #427E9C;
+$light-blue: #8CCAE8;
+
+/* Styles */
+body {
+  font: 14px 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  line-height: 1.4em;
+  min-width: 230px;
+  max-width: 550px;
+  margin: 0 auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  font-weight: 300;
+  background: $blue;
+}
