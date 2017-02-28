@@ -15,7 +15,9 @@ body {
 	-moz-font-smoothing: antialiased;
 	font-smoothing: antialiased;
 	font-weight: 300;
-	background: $blue;
+	background-image: url('../../images/background.jpg');
+	background-repeat: no-repeat;
+	background-size: 100%;
 }
 
 .parent {
@@ -63,24 +65,22 @@ body {
 
 .login {
 	width: 30%;
-	height: 20em;
+	height: 10em;
 	color: white;
 	text-align: center;
-	background-color: $dark-blue;
 	position: absolute;
-	right: 3em;
-	top: 3em;
+	left: 35em;
+	top: 20em;
+
+	h3{
+		color: #CFD8DC;
+	}
 }
 
-.getstarted {
-	width: 30%;
-	height: 28em;
+.main_text {
 	color: white;
-	text-align: center;
-	background-color: $dark-blue;
 	position: absolute;
-	right: 3em;
-	top: 25em;
+	left: 1em;
 }
 
 .nav {

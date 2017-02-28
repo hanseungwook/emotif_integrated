@@ -8,7 +8,7 @@ import FlatButton from 'material-ui/FlatButton';
 import TextField from 'material-ui/TextField';
 import {Tabs, Tab} from 'material-ui/Tabs';
 
-import {fullWhite, lightBlue500, cyan200} from 'material-ui/styles/colors';
+import {fullWhite, blueGrey700} from 'material-ui/styles/colors';
 import ActionGetApp from 'material-ui/svg-icons/action/get-app';
 import ActionImportantDevices from 'material-ui/svg-icons/action/important-devices';
 import ActionAccountBox from 'material-ui/svg-icons/action/account-box';
@@ -44,56 +44,25 @@ export default class LoginPage extends Component {
 		return (
 			<MuiThemeProvider muiTheme={muiTheme}>	
 			<div className='parent'>
-				<img src={require('../../images/logo.png')}/>
 				<div className='nav'>
-					<FlatButton hoverColor={lightBlue500} label='Who are we?' onClick={() => console.log('we are')}/>
-					<FlatButton hoverColor={lightBlue500} label='Our Data' onClick={() => console.log('allo')}/>	
-					<FlatButton hoverColor={lightBlue500} label='Learn More' onClick={() => console.log('noone')}/>
-					<FlatButton hoverColor={lightBlue500} label='Contact Us' onClick={() => console.log('noone')}/>
+					<FlatButton hoverColor={blueGrey700} label='Philosophy' onClick={() => console.log('we are')}/>
+					<FlatButton hoverColor={blueGrey700} label='Designers' onClick={() => console.log('allo')}/>	
+					<FlatButton hoverColor={blueGrey700} label='Methods' onClick={() => console.log('noone')}/>
+					<FlatButton hoverColor={blueGrey700} label='Contact Us' onClick={() => console.log('noone')}/>
+				</div>
+				<div className='main_text'>
+					<h1>Fitted, Expressive</h1>
+					<h1>Clothing</h1>
+					<h1>From Designers</h1>
+					<h1>To You</h1>
 				</div>
 				<div style={styles.main}>
 					<div className='login'>
-						<h3>Login</h3>
-						<TextField type='text' ref='email' hintText='Email' color={fullWhite}/>
-						<br/><br/>
-						<TextField type='password' ref='password' hintText='Password'/>
-						<br/><br/>
-						<RaisedButton style={styles.but} backgroundColor={lightBlue500} label='Login' onClick={() => this.handleClick()}/>
+						<TextField type='text' ref='email' hintText='Email' color={fullWhite} hintStyle={{color:'white'}}/>
+						<RaisedButton style={styles.but} backgroundColor={blueGrey700} label='Submit' onClick={() => this.handleClick()}/>
 						{errorMessage &&
 							<p>{errorMessage}</p>
 						}
-					</div>
-					<div className='getstarted'>
-						<Tabs inkBarStyle={styles.ink}>
-						<Tab style={styles.tab} label='Step One' >
-							<div className='tab'>
-								<p> To get started with Auxcare : </p>
-								
-								<p> <CommunicationLiveHelp style={styles.icon}/> Learn about our platform.</p>
-								<p> 
-								<ActionAccountBox/>
-								<NavigationArrowForward/>
-								<CommunicationEmail/>
-								<br/>
-								Sign Up and we'll email you!
-								</p>
-							</div>
-						</Tab>
-						<Tab style={styles.tab} label='Step Two' >
-							<div className='tab'>
-								<p> <ActionGetApp style={styles.icon}/> Ask your patients to download our smartphone app. </p>
-								<p> <ActionAssessment style={styles.icon}/> They will take weekly medically accurate tests. </p>
-							</div>
-						</Tab>
-						<Tab style={styles.tab} label='Step Three'>
-							<div className='tab'>
-								<p> <ActionImportantDevices style={styles.icon}/> Get the results right here on this website! </p>
-								<p> <ActionAssignment style={styles.icon}/> Check on their symptom progression and tailor your treatment! </p>
-							</div>
-						</Tab>
-						</Tabs>
-						<br/>
-						<RaisedButton style={styles.but} backgroundColor={lightBlue500} label='Get Started!' onClick={() => this.handleClick()}/>
 					</div>
 				</div>
 			</div>
@@ -105,7 +74,7 @@ export default class LoginPage extends Component {
 
 const styles = {
 	tab: {
-		backgroundColor: lightBlue500,
+		backgroundColor: blueGrey700,
 		height: 50,
 	},
 	icon: {
@@ -113,9 +82,6 @@ const styles = {
 		marginLeft: 190,
 		lineHeight: 1,
 	},	
-	ink: {
-		backgroundColor: cyan200,
-	},
 	but: {
 		position: 'absolute',
 		right: 100,

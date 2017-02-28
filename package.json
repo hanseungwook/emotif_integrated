@@ -1,7 +1,7 @@
 {
-  "name": "react-hack",
-  "version": "1.0.0",
-  "description": "Boilerplate for React apps",
+  "name": "Emotif",
+  "version": "0.0.1",
+  "description": "Fashion Startup",
   "engines": {
     "npm": ">=3"
   },
@@ -90,14 +90,14 @@
     "webpack-md5-hash": "0.0.5"
   },
   "keywords": [
-    "React",
-    "Boilerplate",
-    "Redux",
-    "API",
-    "Hackathon"
+    "Fashion",
+    "Emotif",
+    "Body",
+    "Shape",
+    "Crowdfunding"
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/mgavaudan/react-hack"
+    "url": "https://github.com/mgavaudan/emotif"
   }
 }
