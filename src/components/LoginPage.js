@@ -6,17 +6,8 @@ import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import RaisedButton from 'material-ui/RaisedButton';
 import FlatButton from 'material-ui/FlatButton';
 import TextField from 'material-ui/TextField';
-import {Tabs, Tab} from 'material-ui/Tabs';
 
 import {fullWhite, blueGrey700} from 'material-ui/styles/colors';
-import ActionGetApp from 'material-ui/svg-icons/action/get-app';
-import ActionImportantDevices from 'material-ui/svg-icons/action/important-devices';
-import ActionAccountBox from 'material-ui/svg-icons/action/account-box';
-import ActionAssessment from 'material-ui/svg-icons/action/assessment';
-import ActionAssignment from 'material-ui/svg-icons/action/assignment';
-import CommunicationLiveHelp from 'material-ui/svg-icons/communication/live-help';
-import CommunicationEmail from 'material-ui/svg-icons/communication/email';
-import NavigationArrowForward from 'material-ui/svg-icons/navigation/arrow-forward';
 
 
 import '../styles/styles.scss';
