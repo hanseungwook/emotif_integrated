@@ -1,7 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { loginUser, logoutUser } from './loginActions';
+import { loginUser, logoutUser, joinWaitlist } from './loginActions';
 import LoginPage from '../../components/LoginPage';
 import DashboardContainer from '../dashboard/DashboardContainer';
 
@@ -9,7 +9,7 @@ import DashboardContainer from '../dashboard/DashboardContainer';
 export class LoginContainer extends Component {
 
 	render(){
-		const { isAuthenticated, errorMessage, onLogoutClick, onLoginClick } = this.props;
+		const { isAuthenticated, errorMessage, onLogoutClick, onLoginClick, onWaitlistClick } = this.props;
 
 		if ( isAuthenticated ){
 			return (
@@ -18,7 +18,9 @@ export class LoginContainer extends Component {
 		}
 		else {
 			return (
-				<LoginPage errorMessage={errorMessage} onLoginClick={onLoginClick}/>
+				<LoginPage errorMessage={errorMessage} 
+							onLoginClick={onLoginClick} 
+							onWaitlistClick={onWaitlistClick}/>
 			);
 		}
 	}
@@ -27,6 +29,7 @@ export class LoginContainer extends Component {
 
 LoginContainer.propTypes = {
   isAuthenticated: PropTypes.bool.isRequired,
+  onWaitlistClick: PropTypes.func.isRequired,
   onLoginClick: PropTypes.func.isRequired,
   onLogoutClick: PropTypes.func.isRequired,
   errorMessage: PropTypes.string
@@ -43,6 +46,7 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
 	return{
+		onWaitlistClick: bindActionCreators(joinWaitlist, dispatch),
 		onLoginClick: bindActionCreators(loginUser, dispatch),
 		onLogoutClick: bindActionCreators(logoutUser, dispatch),
 		dispatch

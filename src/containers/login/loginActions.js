@@ -8,6 +8,66 @@ export const LOGOUT_REQUEST = 'LOGOUT_REQUEST';
 export const LOGOUT_SUCCESS = 'LOGOUT_SUCCESS';
 export const LOGOUT_FAILURE = 'LOGOUT_FAILURE';
 
+export const WAITLIST_REQUEST = 'WAITLIST_REQUEST';
+export const WAITLIST_SUCCESS = 'WAITLIST_SUCCESS';
+export const WAITLIST_FAILURE = 'WAITLIST_FAILURE';
+
+
+//*****************************  WAITLIST  *******************************//
+
+function requestWaitlist(creds) {
+	return {
+		type: WAITLIST_REQUEST,
+		isFetching: true,
+		creds
+	};
+}
+
+function receiveWaitlist() {
+	return {
+		type: WAITLIST_SUCCESS,
+		isFetching: false
+	};
+}
+
+function waitlistError(message) {
+	return {
+		type: WAITLIST_FAILURE,
+		isFetching: false,
+		message
+	};
+}
+
+export function joinWaitlist(creds) {
+
+	console.log("joining waitlist");
+
+	let config = {
+		method: 'POST',
+		headers: { 'Content-Type' : 'application/x-www-form-urlencoded' },
+		body: `email=${creds.email}`
+	};
+
+	return dispatch => {
+
+		dispatch(requestWaitlist(creds));
+
+		return fetch('52.44.28.140/api/waitlistSignup', config)
+		.then(response =>
+			response.json().then(user => ({ user, response }))
+		).then(({ user, response }) =>  {
+			// ERROR
+			if (!response.ok) {
+				dispatch(waitlistError(user.message));
+				return Promise.reject(user);
+			// SUCCESS
+			} else {
+				dispatch(receiveWaitlist(user));
+			}
+		}).catch(err => console.log("Error: ", err));
+	};
+}
+
 
 //*****************************  LOGIN  *******************************//
 
