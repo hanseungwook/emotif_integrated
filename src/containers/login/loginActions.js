@@ -52,7 +52,7 @@ export function joinWaitlist(creds) {
 
 		dispatch(requestWaitlist(creds));
 
-		return fetch('52.44.28.140/api/waitlistSignup', config)
+		return fetch('http://ec2-34-197-16-2.compute-1.amazonaws.com/api/waitlistSignup', config)
 		.then(response =>
 			response.json().then(user => ({ user, response }))
 		).then(({ user, response }) =>  {
