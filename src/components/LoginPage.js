@@ -38,7 +38,7 @@ export default class LoginPage extends Component {
 
 		const { errorMessage } = this.props;
 
-		var successMessage = "";
+		let successMessage = "";
 
 		return (
 			<MuiThemeProvider muiTheme={muiTheme}>	
