@@ -1,12 +1,12 @@
-import { LOGIN_REQUEST, LOGIN_SUCCESS,
-		LOGIN_FAILURE, LOGOUT_SUCCESS,
+import { LOGIN_REQUEST, LOGIN_SUCCESS, LOGIN_FAILURE,
+		LOGOUT_SUCCESS,
 		WAITLIST_SUCCESS, WAITLIST_FAILURE } from './loginActions';
 
 const login = ( state = { isFetching: false, isAuthenticated: localStorage.getItem('id_token') ? true : false }, action) => {
 	switch (action.type) {
 	case WAITLIST_FAILURE:
 		return Object.assign({}, state, {
-			isFetching: true,
+			isFetching: false,
 			isAuthenticated: false,
 			errorMessage: action.message
 		});

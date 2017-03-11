@@ -8,32 +8,21 @@ export const LOGOUT_REQUEST = 'LOGOUT_REQUEST';
 export const LOGOUT_SUCCESS = 'LOGOUT_SUCCESS';
 export const LOGOUT_FAILURE = 'LOGOUT_FAILURE';
 
-export const WAITLIST_REQUEST = 'WAITLIST_REQUEST';
 export const WAITLIST_SUCCESS = 'WAITLIST_SUCCESS';
 export const WAITLIST_FAILURE = 'WAITLIST_FAILURE';
 
 
 //*****************************  WAITLIST  *******************************//
 
-function requestWaitlist(creds) {
+function waitlistSuccess() {
 	return {
-		type: WAITLIST_REQUEST,
-		isFetching: true,
-		creds
-	};
-}
-
-function receiveWaitlist() {
-	return {
-		type: WAITLIST_SUCCESS,
-		isFetching: false
+		type: WAITLIST_SUCCESS
 	};
 }
 
 function waitlistError(message) {
 	return {
 		type: WAITLIST_FAILURE,
-		isFetching: false,
 		message
 	};
 }
@@ -50,19 +39,20 @@ export function joinWaitlist(creds) {
 
 	return dispatch => {
 
-		dispatch(requestWaitlist(creds));
-
 		return fetch('http://ec2-34-197-16-2.compute-1.amazonaws.com/api/waitlistSignup', config)
+		// return fetch('http://localhost:3004/waitlist', config)
 		.then(response =>
 			response.json().then(user => ({ user, response }))
 		).then(({ user, response }) =>  {
 			// ERROR
 			if (!response.ok) {
+				console.log("waitlist error");
 				dispatch(waitlistError(user.message));
 				return Promise.reject(user);
 			// SUCCESS
 			} else {
-				dispatch(receiveWaitlist(user));
+				console.log("confirmed waitlist");
+				dispatch(waitlistSuccess());
 			}
 		}).catch(err => console.log("Error: ", err));
 	};

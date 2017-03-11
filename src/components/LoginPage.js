@@ -60,6 +60,7 @@ export default class LoginPage extends Component {
 						{successMessage &&
 							<p>{successMessage}</p>
 						}
+						<h2> Join WaitList </h2>
 						<TextField type='text' ref='email' hintText='Email' 
 									underlineStyle={{borderColor: grey900}} 
 									hintStyle={{color:'black'}} underlineFocusStyle={{borderColor: blueGrey700}} 

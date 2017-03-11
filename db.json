@@ -1,153 +1,360 @@
 {
-	"doctors" : {
-		"doctor1@gmail.com": {
-			"name": "Luke Sky",
-			"phone": "917-759-9873",
-			"password": "test",
-			"patients": [
-				{
-					"id": 1,
-					"info" : {
-						"patientName": "Yoda Yodo",
-						"treatmentCode": 12
-					}
-				},
-				{
-					"id": 2,
-					"info" : {
-						"patientName" : "Yoda Yodi",
-						"treatmentCode": 34
-					}
-				},
-				{
-					"id": 3,
-					"info" : {
-						"patientName" : "Yoda Yodu",
-						"treatmentCode": 23
-					}
-
-				}
-			]
-		},
-		"doctor2@gmail.com": {
-			"name": "Luke Sky",
-			"phone": "917-759-9873",
-			"password": "test",
-			"patients": [
-				{
-					"id": 1,
-					"info" : {
-						"patientName": "Yoda Yodo",
-						"treatmentCode": 12
-					}
-				},
-				{
-					"id": 2,
-					"info" : {
-						"patientName" : "Yoda Yodi",
-						"treatmentCode": 34
-					}
-				},
-				{
-					"id": 3,
-					"info" : {
-						"patientName" : "Yoda Yodu",
-						"treatmentCode": 23
-					}
-
-				}
-			]
-		},
-		"doctor3@gmail.com": {
-			"name": "Luke Sky",
-			"phone": "917-759-9873",
-			"password": "test",
-			"patients": [
-				{
-					"id": 1,
-					"info" : {
-						"patientName": "Yoda Yodo",
-						"treatmentCode": 12
-					}
-				},
-				{
-					"id": 2,
-					"info" : {
-						"patientName" : "Yoda Yodi",
-						"treatmentCode": 34
-					}
-				},
-				{
-					"id": 3,
-					"info" : {
-						"patientName" : "Yoda Yodu",
-						"treatmentCode": 23
-					}
-
-				}
-			]
-		},
-		"doctor4@gmail.com": {
-			"name": "Luke Sky",
-			"phone": "917-759-9873",
-			"password": "test",
-			"patients": [
-				{
-					"id": 1,
-					"info" : {
-						"patientName": "Yoda Yodo",
-						"treatmentCode": 12
-					}
-				},
-				{
-					"id": 2,
-					"info" : {
-						"patientName" : "Yoda Yodi",
-						"treatmentCode": 34
-					}
-				},
-				{
-					"id": 3,
-					"info" : {
-						"patientName" : "Yoda Yodu",
-						"treatmentCode": 23
-					}
-
-				}
-			]
-		}
-	},
-
-	"patients": [
-		{
-			"id": 1,
-			"name": "Yoda Yodo",
-			"tap_data": [5, 45, 23, 23, 43, 5, 45, 23, 23, 43],
-			"tap_times": [97216, 98216, 99216, 91216, 911216, 913216, 916216, 917216, 92216, 921216],
-			"gait_data": [5, 45, 23, 23, 43, 5, 45, 23, 23, 43],
-			"gait_times": [97216, 98216, 99216, 91216, 911216, 913216, 916216, 917216, 92216, 921216],
-			"voice_data": [5, 45, 23, 23, 43, 5, 45, 23, 23, 43],
-			"voice_times": [97216, 98216, 99216, 91216, 911216, 913216, 916216, 917216, 92216, 921216]
-		},
-		{
-			"id": 2,
-			"name": "Yoda Yodi",
-			"tap_data": [5, 45, 23, 23, 43, 5, 45, 23, 23, 43],
-			"tap_times": [97216, 98216, 99216, 91216, 911216, 913216, 916216, 917216, 92216, 921216],
-			"gait_data": [5, 45, 23, 23, 43, 5, 45, 23, 23, 43],
-			"gait_times": [97216, 98216, 99216, 91216, 911216, 913216, 916216, 917216, 92216, 921216],
-			"voice_data": [5, 45, 23, 23, 43, 5, 45, 23, 23, 43],
-			"voice_times": [97216, 98216, 99216, 91216, 911216, 913216, 916216, 917216, 92216, 921216]
-		},
-		{
-			"id": 3,
-			"name": "Yoda Yodu",
-			"tap_data": [5, 45, 23, 23, 43, 5, 45, 23, 23, 43],
-			"tap_times": [97216, 98216, 99216, 91216, 911216, 913216, 916216, 917216, 92216, 921216],
-			"gait_data": [5, 45, 23, 23, 43, 5, 45, 23, 23, 43],
-			"gait_times": [97216, 98216, 99216, 91216, 911216, 913216, 916216, 917216, 92216, 921216],
-			"voice_data": [5, 45, 23, 23, 43, 5, 45, 23, 23, 43],
-			"voice_times": [97216, 98216, 99216, 91216, 911216, 913216, 916216, 917216, 92216, 921216]
-		}
-	]
+  "doctors": {
+    "doctor1@gmail.com": {
+      "name": "Luke Sky",
+      "phone": "917-759-9873",
+      "password": "test",
+      "patients": [
+        {
+          "id": 1,
+          "info": {
+            "patientName": "Yoda Yodo",
+            "treatmentCode": 12
+          }
+        },
+        {
+          "id": 2,
+          "info": {
+            "patientName": "Yoda Yodi",
+            "treatmentCode": 34
+          }
+        },
+        {
+          "id": 3,
+          "info": {
+            "patientName": "Yoda Yodu",
+            "treatmentCode": 23
+          }
+        }
+      ]
+    },
+    "doctor2@gmail.com": {
+      "name": "Luke Sky",
+      "phone": "917-759-9873",
+      "password": "test",
+      "patients": [
+        {
+          "id": 1,
+          "info": {
+            "patientName": "Yoda Yodo",
+            "treatmentCode": 12
+          }
+        },
+        {
+          "id": 2,
+          "info": {
+            "patientName": "Yoda Yodi",
+            "treatmentCode": 34
+          }
+        },
+        {
+          "id": 3,
+          "info": {
+            "patientName": "Yoda Yodu",
+            "treatmentCode": 23
+          }
+        }
+      ]
+    },
+    "doctor3@gmail.com": {
+      "name": "Luke Sky",
+      "phone": "917-759-9873",
+      "password": "test",
+      "patients": [
+        {
+          "id": 1,
+          "info": {
+            "patientName": "Yoda Yodo",
+            "treatmentCode": 12
+          }
+        },
+        {
+          "id": 2,
+          "info": {
+            "patientName": "Yoda Yodi",
+            "treatmentCode": 34
+          }
+        },
+        {
+          "id": 3,
+          "info": {
+            "patientName": "Yoda Yodu",
+            "treatmentCode": 23
+          }
+        }
+      ]
+    },
+    "doctor4@gmail.com": {
+      "name": "Luke Sky",
+      "phone": "917-759-9873",
+      "password": "test",
+      "patients": [
+        {
+          "id": 1,
+          "info": {
+            "patientName": "Yoda Yodo",
+            "treatmentCode": 12
+          }
+        },
+        {
+          "id": 2,
+          "info": {
+            "patientName": "Yoda Yodi",
+            "treatmentCode": 34
+          }
+        },
+        {
+          "id": 3,
+          "info": {
+            "patientName": "Yoda Yodu",
+            "treatmentCode": 23
+          }
+        }
+      ]
+    }
+  },
+  "patients": [
+    {
+      "id": 1,
+      "name": "Yoda Yodo",
+      "tap_data": [
+        5,
+        45,
+        23,
+        23,
+        43,
+        5,
+        45,
+        23,
+        23,
+        43
+      ],
+      "tap_times": [
+        97216,
+        98216,
+        99216,
+        91216,
+        911216,
+        913216,
+        916216,
+        917216,
+        92216,
+        921216
+      ],
+      "gait_data": [
+        5,
+        45,
+        23,
+        23,
+        43,
+        5,
+        45,
+        23,
+        23,
+        43
+      ],
+      "gait_times": [
+        97216,
+        98216,
+        99216,
+        91216,
+        911216,
+        913216,
+        916216,
+        917216,
+        92216,
+        921216
+      ],
+      "voice_data": [
+        5,
+        45,
+        23,
+        23,
+        43,
+        5,
+        45,
+        23,
+        23,
+        43
+      ],
+      "voice_times": [
+        97216,
+        98216,
+        99216,
+        91216,
+        911216,
+        913216,
+        916216,
+        917216,
+        92216,
+        921216
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Yoda Yodi",
+      "tap_data": [
+        5,
+        45,
+        23,
+        23,
+        43,
+        5,
+        45,
+        23,
+        23,
+        43
+      ],
+      "tap_times": [
+        97216,
+        98216,
+        99216,
+        91216,
+        911216,
+        913216,
+        916216,
+        917216,
+        92216,
+        921216
+      ],
+      "gait_data": [
+        5,
+        45,
+        23,
+        23,
+        43,
+        5,
+        45,
+        23,
+        23,
+        43
+      ],
+      "gait_times": [
+        97216,
+        98216,
+        99216,
+        91216,
+        911216,
+        913216,
+        916216,
+        917216,
+        92216,
+        921216
+      ],
+      "voice_data": [
+        5,
+        45,
+        23,
+        23,
+        43,
+        5,
+        45,
+        23,
+        23,
+        43
+      ],
+      "voice_times": [
+        97216,
+        98216,
+        99216,
+        91216,
+        911216,
+        913216,
+        916216,
+        917216,
+        92216,
+        921216
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Yoda Yodu",
+      "tap_data": [
+        5,
+        45,
+        23,
+        23,
+        43,
+        5,
+        45,
+        23,
+        23,
+        43
+      ],
+      "tap_times": [
+        97216,
+        98216,
+        99216,
+        91216,
+        911216,
+        913216,
+        916216,
+        917216,
+        92216,
+        921216
+      ],
+      "gait_data": [
+        5,
+        45,
+        23,
+        23,
+        43,
+        5,
+        45,
+        23,
+        23,
+        43
+      ],
+      "gait_times": [
+        97216,
+        98216,
+        99216,
+        91216,
+        911216,
+        913216,
+        916216,
+        917216,
+        92216,
+        921216
+      ],
+      "voice_data": [
+        5,
+        45,
+        23,
+        23,
+        43,
+        5,
+        45,
+        23,
+        23,
+        43
+      ],
+      "voice_times": [
+        97216,
+        98216,
+        99216,
+        91216,
+        911216,
+        913216,
+        916216,
+        917216,
+        92216,
+        921216
+      ]
+    }
+  ],
+  "waitlist": [
+    {
+      "id": 1,
+      "email": "josh@gmail.com"
+    },
+    {
+      "email": "han@gmail.com",
+      "id": 2
+    },
+    {
+      "email": "hello@gmail.com",
+      "id": 3
+    }
+  ]
 }
