@@ -39,7 +39,7 @@ export function joinWaitlist(creds) {
 
 	return dispatch => {
 
-		return fetch('http://ec2-34-197-16-2.compute-1.amazonaws.com/api/waitlistSignup', config)
+		return fetch('http://34.197.16.2:8080/api/waitlistSignup', config)
 		// return fetch('http://localhost:3004/waitlist', config)
 		.then(response =>
 			response.json().then(user => ({ user, response }))
