@@ -34,7 +34,6 @@ export function joinWaitlist(creds) {
 	let config = {
 		method: 'POST',
 		headers: {
-			'Access-Control-Allow-Origin':'*',
 			'Content-Type' : 'application/x-www-form-urlencoded' 
 			},
 		body: `email=${creds.email}`
