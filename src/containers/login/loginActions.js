@@ -33,7 +33,10 @@ export function joinWaitlist(creds) {
 
 	let config = {
 		method: 'POST',
-		headers: { 'Content-Type' : 'application/x-www-form-urlencoded' },
+		headers: {
+			'Access-Control-Allow-Origin':'*',
+			'Content-Type' : 'application/x-www-form-urlencoded' 
+			},
 		body: `email=${creds.email}`
 	};
 
