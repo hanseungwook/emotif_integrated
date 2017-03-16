@@ -6,3 +6,7 @@ node_modules
 
 # Logs
 *.log
+logs
+
+# Parse Dashboard Configuration
+parse-dashboard-config.json

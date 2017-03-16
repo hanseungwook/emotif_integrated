@@ -7,12 +7,13 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
   },
-  "repository": "www.github.com/mgavaudan/emotif_backend",
+  "repository": "www.github.com/hanseungwook/emotif_parse",
   "author": "Seungwook Han",
   "license": "MIT",
   "dependencies": {
     "dotenv": "^4.0.0",
     "express": "^4.15.2",
-    "parse-server": "^2.3.6"
+    "parse-server": "^2.3.6",
+    "stripe": "^4.15.1"
   }
 }
