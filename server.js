@@ -1,8 +1,8 @@
 //==================Server Setup==================//
 //================================================//
 
-var express = require('express'),
-var parseServer = require('parse-server').ParseServer;
+var express = require('express');
+var ParseServer = require('parse-server').ParseServer;
 var app = express();
 var port = process.env.PORT || 1337;
 
