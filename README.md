@@ -1,6 +1,6 @@
 README for émotif backend using parse server
 
-Setup:
+Setup: \n
 **Command: npm start**
 
 Dependencies | Feature

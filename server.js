@@ -19,8 +19,9 @@ var api = new ParseServer({
   databaseURI: databaseUri,
   cloud: process.env.CLOUD_CODE_MAIN || __dirname + '/cloud/main.js',
   appId: process.env.APP_ID,
+  restAPIKey: process.env.REST_API_KEY,
   masterKey: process.env.MASTER_KEY,
-  serverURL: process.env.SERVER_URL  // Don't forget to change to https if needed
+  serverURL: process.env.SERVER_URL
 });
 
 app.use('/parse', api);
