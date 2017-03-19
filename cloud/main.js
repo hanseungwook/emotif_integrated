@@ -7,6 +7,7 @@ var mongoose = require('mongoose');
 mongoose.connect(process.env.MONGODB_URI);
 
 // Setting ACL setings for UserProfile class before saving
+
 Parse.Cloud.beforeSave("UserProfile", function(req, res) {
     var acl = new Parse.ACL();
     acl.setReadAccess(req.user, true);
@@ -65,10 +66,9 @@ Parse.Cloud.define("createStripeCustomer", function(req, res) {
     var custEmail = req.body.email;
     var token = req.body.stripeToken;
 
- //   var User = Parse.Object.extend('_User');
     var query = new Parse.Query(Parse.User);
     query.equalTo("email", custEmail);
-    query.first({
+    query.first({ useMasterKey: true }, {
         success: function(user) {
             alert("Successfully retrieved " + user.email);
             if (!user.get("stripeId")) {
@@ -80,7 +80,7 @@ Parse.Cloud.define("createStripeCustomer", function(req, res) {
                         res.error("Could not create stripe customer account");
                     }
                     user.set("stripeId", stripeCustomer.id);
-                    res.success();
+                    res.success(JSON.parse('{ "stripeCustomerId": stripeCustomer.id}'));
                 });
 
             }
@@ -92,7 +92,7 @@ Parse.Cloud.define("createStripeCustomer", function(req, res) {
         error: function(err) {
             res.error("Error " + err.code + " " + err.message);
         }
-    }, { useMasterKey: true }
+    }
     );
 });
 
@@ -100,34 +100,45 @@ Parse.Cloud.define("createTransaction", function(req, res) {
     var custEmail = req.body.email;
     var query = new Parse.Query(Parse.User);
     query.equalTo("email", custEmail);
-    query.first({
+    query.first({ useMasterKey: true }, {
         success: function(user) {
-            stripe.customers.retrieve({
-                user.get("stripeId"),
-                function(err, stripeCustomer) {
-                    if (err) {
-                        res.error("Error retrieving stripe customer");
+            var custStripeId = user.get("stripeId");
+            if (!custStripeId) {
+                Parse.Cloud.run("createStripeCustomer", {email: req.body.email, token: req.body.stripeToken}, {
+                    success: function(result) {
+                        stripe.charges.create({
+                            amount: req.body.amount,
+                            currency: "usd",
+                            customer: result.stripeCustomerId
+                        }, function(err, charge) {
+                            if (err) {
+                                res.error(err);
+                            }
+                            res.success(JSON.stringify(charge));
+                        });
+                    },
+                    error: function(err) {
+                        res.error("Error in creating stripe account");
                     }
-                    stripe.charges.create({
-                        amount: req.body.amount,
-                        currency: "usd",
-                        source: stripeCustomer.default_source
-                        description: "Test charge for " + custEmail
+                });
+            }
+            else {
+                stripe.charges.create({
+                    amount: req.body.amount,
+                    currency: "usd",
+                    customer: result.stripeCustomerId
                     }, function(err, charge) {
-                        if(err) {
+                        if (err) {
                             res.error(err);
                         }
                         res.success(JSON.stringify(charge));
-                    });
-                }
-            });
-        }
-    }, {
+                });
+            }
+        },
         error: function(err) {
             res.error("Error" + err.code + " " + err.message);
         }
-    }, { useMasterKey: true }
-    );
+    });
 });
 
 
