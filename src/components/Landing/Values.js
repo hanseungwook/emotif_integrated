@@ -1,19 +1,33 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
 
-export default
+export default class Values extends Component {
+  constructor(props){
+		super(props);
+	}
 
-class Values extends Component {
   render(){
+    let value_props = [
+      'Clothes should complement the shape of your body',
+      'Clothes should express your Identity',
+      'Clothes should be made ethically',
+      'Quality solely should determine price',
+      'Designers should have complete creative freedom',
+      'Customers should decide what clothes are produced',
+    ];
+
     return (
       <div className='values'>
-        <div className='values'>
-          {this.props.values.map((value) => (<h3>value</h3>))}
-        </div>
+          <h3 className='value'> {value_props[0]} </h3>
+          <h3 className='value'> {value_props[1]} </h3>
+          <h3 className='value'> {value_props[2]} </h3>
+          <h3 className='value'> {value_props[3]} </h3>
+          <h3 className='value'> {value_props[4]} </h3>
+          <h3 className='value'> {value_props[5]} </h3>
       </div>
-    )
+    );
   }
 }
 
 Values.propTypes = {
-  values : React.PropTypes.array
+  // value_props : PropTypes.array
 }

@@ -1,21 +1,18 @@
 import React, { Component, PropTypes } from 'react';
 
-export default
-class ImageBox extends Component {
+export default class ImageBox extends Component {
 
   render(){
-      <div className="img_box">
-        <img src=
-          {src: this.props.src
-           alt: this.props.alt}
-        >
+    return(
+      <div className='img-box'>
+          <img className='img-hero' src={this.props.img.src}
+             alt={this.props.img.alt} />
       </div>
+    );
   }
 }
 
 
-
 ImageBox.propTypes = {
-  src: React.PropTypes.string
-  alt: React.PropTypes.string
-}
+  img: PropTypes.object
+};

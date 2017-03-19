@@ -1,13 +1,22 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
 
-export default
-class DynamicText extends Component {
+export default class DynamicText extends Component {
+
+
   render(){
+    let dynamic_text = {
+      base: 'Clothes should be ',
+      endings: [
+        'powerful',
+        'emotional',
+        'emotif'
+      ]
+    };
     return (
         <h2 className='dynamic-text'>
-          {this.base}
+          {dynamic_text.base}
           <b>
-          {this.ending}
+          {dynamic_text.endings[0]}
           </b>
         </h2>
     );
@@ -15,8 +24,4 @@ class DynamicText extends Component {
 }
 
 DynamicText.propTypes = {
-  base   : React.PropTypes.string.isRequired,
-  endings: React.PropTypes.obj.isRequired,
-  ending : React.PropTypes.string.isRequired,
-
 };

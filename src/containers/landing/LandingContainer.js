@@ -1,31 +1,27 @@
 import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { loginUser, logoutUser, joinWaitlist } from './loginActions';
-import LoginPage from '../../components/LoginPage';
-import DashboardContainer from '../dashboard/DashboardContainer';
-
+import { joinWaitlist } from './landingActions';
+import LandingPage from '../../components/landing/LandingPage';
 
 export class LandingContainer extends Component {
 
 	render()
 	{
-		if (isAuthenticated) {
+		if (this.props.isAuthenticated) {
 			return (
-				<BrowseContainer/>
+				// <BrowseContainer/>
+				<LandingPage onWaitlistClick = {this.props.onWaitlistClick} />
 			);
 		} else {
 			return (
-				<Landing
-					{ errorMessage    = this.errorMessage
-						onWaitlistClick = this.onWaitlistClick }
-				/>
+				<LandingPage onWaitlistClick = {this.props.onWaitlistClick} />
 			);
 		}
 	}
 }
 
-LoginContainer.propTypes = {
+LandingContainer.propTypes = {
 	onWaitlistClick: PropTypes.func.isRequired,
   isAuthenticated: PropTypes.bool.isRequired,
   errorMessage   : PropTypes.string
@@ -46,4 +42,4 @@ const mapDispatchToProps = (dispatch) => {
 	};
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(LoginContainer);
+export default connect(mapStateToProps, mapDispatchToProps)(LandingContainer);

@@ -1,20 +1,21 @@
-import React, { Component, PropTypes } from 'react';
-import ImageBox from './ImageBox';
+import React, { Component } from 'react';
 
-export default
-class Header extends Component {
+export default class Header extends Component {
   render(){
-    <div className="Header">
-      <div id="center"> emotif</div>
-      <div id="left">   manifesto</div>
-      <div id="right">  designers</div>
-    </div>
+    return(
+      <div className='header'>
+        <div id='left'>   manifesto</div>
+        <div id='center'> émotif</div>
+        <div id='right'>  designers</div>
+      </div>
+    );
   }
 }
 
 
-Header.propTypes = {
-  onWaitlistClick: PropTypes.func.isRequired,
-  onWaitlistClick: PropTypes.func.isRequired,
 
-}
+//
+// Header.propTypes =
+// {
+//
+// }

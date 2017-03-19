@@ -1,43 +1,27 @@
 import React, { Component, PropTypes } from 'react';
 //SUBCOMPONENTS
-import WaitListBox from './WaitListBox';
+import WaitlistBox from './WaitlistBox';
 
 
-export default
-class WaitList extends Component {
+export default class Waitlist extends Component {
+
   constructor(props){
-		super(props);
-    this.handleChange = this.handleChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
-	}
-
-  handleChange(event) {
-    this.setState({value: event.target.value});
-  }
-
-  handleSubmit(event) {
-    console.log('name and email: ' + this.state.value);
-    event.preventDefault();
+    super(props);
   }
 
   render(){
-    let definition: 'é·mo·tif /emɔtif/: (adj) evoking intense feeling and emotion.';
+    let definition = 'é·mo·tif /emɔtif/: (adj) evoking intense feeling and emotion.';
     return (
       <div className='pane'>
-
         <h2 className='definition'>
           {definition}
         </h2>
-
-        <WaitListBox/>
+        <WaitlistBox onWaitlistClick={this.props.onWaitlistClick}/>
       </div>
-      </form>
-
-    )
+    );
   }
 }
 
-WaitList.propTypes = {
-  handleChange: PropTypes.func.isRequired,
-  handleSubmit: PropTypes.func.isRequired
+Waitlist.propTypes = {
+  onWaitlistClick: PropTypes.func.isRequired,
 }
