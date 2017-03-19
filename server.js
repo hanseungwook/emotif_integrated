@@ -1,22 +1,18 @@
 //==================Server Setup==================//
 //================================================//
 
-var express = require('express');
-var ParseServer = require('parse-server').ParseServer;
-var app = express();
-var port = process.env.PORT || 1337;
+var express = require('express'),
+    app = express(),
+    ParseServer = require('parse-server').ParseServer,
+    port = process.env.PORT || 1337,
+    bodyParser = require('body-parser'),
+    dotenv = require('dotenv').config();
 
-// Setting environment variables for development purposes
-var dotenv = require('dotenv').config();
-
-var databaseUri = process.env.DATABASE_URI || process.env.MONGODB_URI;
-
-if (!databaseUri) {
-  console.log('DATABASE_URI not specified, falling back to localhost.');
-}
+app.use(bodyParser.urlencoded({ extended: true}));
+app.use(bodyParser.json());
 
 var api = new ParseServer({
-  databaseURI: databaseUri,
+  databaseURI: process.env.MONGODB_URI,
   cloud: process.env.CLOUD_CODE_MAIN || __dirname + '/cloud/main.js',
   appId: process.env.APP_ID,
   masterKey: process.env.MASTER_KEY,

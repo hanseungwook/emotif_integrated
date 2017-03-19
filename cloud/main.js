@@ -6,8 +6,12 @@ var mongoose = require('mongoose');
 
 mongoose.connect(process.env.MONGODB_URI);
 
-// Setting ACL setings for UserProfile class before saving
+// Test hello function
+Parse.Cloud.define("hello", function(req, res) {
+    res.success('hi');
+})
 
+// Setting ACL setings for UserProfile class before saving
 Parse.Cloud.beforeSave("UserProfile", function(req, res) {
     var acl = new Parse.ACL();
     acl.setReadAccess(req.user, true);
@@ -19,13 +23,15 @@ Parse.Cloud.beforeSave("UserProfile", function(req, res) {
 // Signup
 Parse.Cloud.define("signUp", function(req, res) {
     var user = new Parse.User();
-    user.set("email", req.body.email);
-    user.set("password", req.body.password);
-    user.set("username", req.body.email);
+    user.set('email', req.params.email);
+    user.set('password', req.params.password);
+    user.set('username', req.params.email);
+    user.set('userType', req.params.userType);
+    user.set('stripeId', req.params.stripeId);
 
-    user.signUp(null, {
+    user.signUp(null, { useMasterKey: true,
         success: function(user) {
-            Parse.Cloud.run("logIn", {username: req.body.email, password: req.body.password}, {
+            /* Parse.Cloud.run("logIn", {username: req.body.email, password: req.body.password}, {
                 success: function(result) {
                     console.log("Logged in after signing up");
                 },
@@ -33,11 +39,15 @@ Parse.Cloud.define("signUp", function(req, res) {
                     console.log(err);
                 }
             });
+            */
+           res.success("Sign up worked!");
         },
         error: function(err) {
-            alert("Error: " + err.code + err.message);
+            res.error("Error: " + err.code + err.message);
         }
     });
+
+
 });
 
 // Login
