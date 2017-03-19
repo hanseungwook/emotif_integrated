@@ -41,11 +41,11 @@ export default class LoginPage extends Component {
 		let successMessage = "";
 
 		return (
-			<MuiThemeProvider muiTheme={muiTheme}>	
+			<MuiThemeProvider muiTheme={muiTheme}>
 			<div className='parent'>
 				<div className='nav'>
 					<FlatButton hoverColor={blueGrey700} label='Philosophy' onClick={() => console.log('we are')}/>
-					<FlatButton hoverColor={blueGrey700} label='Designers' onClick={() => console.log('allo')}/>	
+					<FlatButton hoverColor={blueGrey700} label='Designers' onClick={() => console.log('allo')}/>
 					<FlatButton hoverColor={blueGrey700} label='Sign In' onClick={() => console.log('noone')}/>
 					<FlatButton hoverColor={blueGrey700} label='Contact Us' onClick={() => console.log('noone')}/>
 				</div>
@@ -61,11 +61,11 @@ export default class LoginPage extends Component {
 							<p>{successMessage}</p>
 						}
 						<h2> Join WaitList </h2>
-						<TextField type='text' ref='email' hintText='Email' 
-									underlineStyle={{borderColor: grey900}} 
-									hintStyle={{color:'black'}} underlineFocusStyle={{borderColor: blueGrey700}} 
+						<TextField type='text' ref='email' hintText='Email'
+									underlineStyle={{borderColor: grey900}}
+									hintStyle={{color:'black'}} underlineFocusStyle={{borderColor: blueGrey700}}
 									inputStyle={{color: grey900}}/>
-						<RaisedButton style={styles.but} backgroundColor={blueGrey700} 
+						<RaisedButton style={styles.but} backgroundColor={blueGrey700}
 										label='Submit' onClick={() => {this.handleClickWaitlist(); successMessage="hey";}}/>
 						{errorMessage &&
 							<p>{errorMessage}</p>
@@ -76,7 +76,7 @@ export default class LoginPage extends Component {
 			</MuiThemeProvider>
 		);
 	}
-	
+
 }
 
 const styles = {
@@ -85,7 +85,7 @@ const styles = {
 		marginRight: 190,
 		marginLeft: 190,
 		lineHeight: 1,
-	},	
+	},
 	but: {
 		position: 'absolute',
 		right: 100,

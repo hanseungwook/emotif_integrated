@@ -40,7 +40,7 @@ export default class Dashboard extends Component {
 			<div>
 				<div className='topmenu'>
 					<Paper style={styles.paper} zDepth={2}>
-					<AutoComplete 
+					<AutoComplete
 						hintText='Search Patients'
 						fullWidth={true}
 						style={styles.search}
@@ -110,3 +110,4 @@ Dashboard.propTypes = {
 	onLogoutClick: PropTypes.func.isRequired,
 	data: PropTypes.object
 };
+Contact GitHub API Training Shop Blog About
