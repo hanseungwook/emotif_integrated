@@ -2,7 +2,7 @@ import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { loginUser, logoutUser, joinWaitlist } from './loginActions';
-import LandingPage from '../../components/LoginForm';
+import LoginPage from '../../components/LoginPage';
 import DashboardContainer from '../dashboard/DashboardContainer';
 
 
@@ -18,7 +18,7 @@ export class LoginContainer extends Component {
 		}
 		else {
 			return (
-				<LandingPage errorMessage={errorMessage} 
+				<LoginPage errorMessage={errorMessage} 
 							onLoginClick={onLoginClick} 
 							onWaitlistClick={onWaitlistClick}/>
 			);
