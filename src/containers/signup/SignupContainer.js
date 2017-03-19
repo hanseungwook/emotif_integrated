@@ -1,12 +1,12 @@
 import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { loginUser, logoutUser, joinWaitlist } from './loginActions';
-import LandingPage from '../../components/LoginForm';
+import { loginUser, logoutUser, joinWaitlist } from './signupActions';
+import SignupPage from '../../components/SignupPage';
 import DashboardContainer from '../dashboard/DashboardContainer';
 
 
-export class LoginContainer extends Component {
+export class SignupContainer extends Component {
 
 	render(){
 		const { isAuthenticated, errorMessage, onLogoutClick, onLoginClick, onWaitlistClick } = this.props;
@@ -18,7 +18,7 @@ export class LoginContainer extends Component {
 		}
 		else {
 			return (
-				<LandingPage errorMessage={errorMessage} 
+				<SignupPage errorMessage={errorMessage} 
 							onLoginClick={onLoginClick} 
 							onWaitlistClick={onWaitlistClick}/>
 			);
@@ -27,7 +27,7 @@ export class LoginContainer extends Component {
 
 }
 
-LoginContainer.propTypes = {
+SignupContainer.propTypes = {
   isAuthenticated: PropTypes.bool.isRequired,
   onWaitlistClick: PropTypes.func.isRequired,
   onLoginClick: PropTypes.func.isRequired,
@@ -54,5 +54,5 @@ const mapDispatchToProps = (dispatch) => {
 };
 
 
-export default connect(mapStateToProps, mapDispatchToProps)(LoginContainer);
+export default connect(mapStateToProps, mapDispatchToProps)(SignupContainer);
 

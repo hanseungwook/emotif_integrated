@@ -81,11 +81,6 @@ export default class LoginPage extends Component {
 
 const styles = {
 
-	icon: {
-		marginRight: 190,
-		marginLeft: 190,
-		lineHeight: 1,
-	},	
 	but: {
 		position: 'absolute',
 		right: 100,
