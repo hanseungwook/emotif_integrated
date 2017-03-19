@@ -13,7 +13,7 @@ import {fullWhite, grey900, blueGrey700} from 'material-ui/styles/colors';
 import '../styles/styles.scss';
 
 
-export default class LoginPage extends Component {
+export default class LandingPage extends Component {
 
 
 	constructor(props){
@@ -25,13 +25,6 @@ export default class LoginPage extends Component {
 		const user = this.refs.email.getValue().trim();
 		const creds = { email: user};
 		this.props.onWaitlistClick(creds);
-	}
-
-	handleClickLogin () {
-		const user = this.refs.email.getValue().trim();
-		const pass = this.refs.password.getValue().trim();
-		const creds = { email: user, password: pass };
-		this.props.onLoginClick(creds);
 	}
 
 	render() {
@@ -46,7 +39,7 @@ export default class LoginPage extends Component {
 				<div className='nav'>
 					<FlatButton hoverColor={blueGrey700} label='Philosophy' onClick={() => console.log('we are')}/>
 					<FlatButton hoverColor={blueGrey700} label='Designers' onClick={() => console.log('allo')}/>	
-					<FlatButton hoverColor={blueGrey700} label='Sign In' onClick={() => console.log('noone')}/>
+					<FlatButton hoverColor={blueGrey700} label='Login' href='login'/>
 					<FlatButton hoverColor={blueGrey700} label='Contact Us' onClick={() => console.log('noone')}/>
 				</div>
 				<div className='main_text'>
@@ -104,8 +97,7 @@ const muiTheme = getMuiTheme({
 	},
 });
 
-LoginPage.propTypes = {
-	onLoginClick: PropTypes.func.isRequired,
+LandingPage.propTypes = {
 	onWaitlistClick: PropTypes.func.isRequired,
 	errorMessage: PropTypes.string
 };

@@ -10,28 +10,21 @@ import TextField from 'material-ui/TextField';
 import {fullWhite, grey900, blueGrey700} from 'material-ui/styles/colors';
 
 
-import '../styles/styles.scss';
+import '../styles/signup.scss';
 
 
-export default class Signup extends Component {
+export default class SignupPage extends Component {
 
 
 	constructor(props){
 		super(props);
-		this.handleClickWaitlist = this.handleClickWaitlist.bind(this);
 	}
 
-	handleClickWaitlist () {
-		const user = this.refs.email.getValue().trim();
-		const creds = { email: user};
-		this.props.onWaitlistClick(creds);
-	}
-
-	handleClickLogin () {
+	handleClickSignup () {
 		const user = this.refs.email.getValue().trim();
 		const pass = this.refs.password.getValue().trim();
 		const creds = { email: user, password: pass };
-		this.props.onLoginClick(creds);
+		this.props.onSignupClick(creds);
 	}
 
 	render() {
@@ -44,29 +37,27 @@ export default class Signup extends Component {
 			<MuiThemeProvider muiTheme={muiTheme}>	
 			<div className='parent'>
 				<div className='nav'>
+					<FlatButton hoverColor={blueGrey700} label='Login' href='login'/>
 					<FlatButton hoverColor={blueGrey700} label='Philosophy' onClick={() => console.log('we are')}/>
 					<FlatButton hoverColor={blueGrey700} label='Designers' onClick={() => console.log('allo')}/>	
-					<FlatButton hoverColor={blueGrey700} label='Sign In' onClick={() => console.log('noone')}/>
 					<FlatButton hoverColor={blueGrey700} label='Contact Us' onClick={() => console.log('noone')}/>
-				</div>
-				<div className='main_text'>
-					<h1>Fitted, Expressive</h1>
-					<h1>Clothing</h1>
-					<h1>From Designers</h1>
-					<h1>To You</h1>
 				</div>
 				<div style={styles.main}>
 					<div className='login'>
 						{successMessage &&
 							<p>{successMessage}</p>
 						}
-						<h2> Join WaitList </h2>
+						<h2> Signup </h2>
 						<TextField type='text' ref='email' hintText='Email' 
 									underlineStyle={{borderColor: grey900}} 
 									hintStyle={{color:'black'}} underlineFocusStyle={{borderColor: blueGrey700}} 
 									inputStyle={{color: grey900}}/>
+						<TextField type='text' ref='password' hintText='Password' 
+									underlineStyle={{borderColor: grey900}} 
+									hintStyle={{color:'black'}} underlineFocusStyle={{borderColor: blueGrey700}} 
+									inputStyle={{color: grey900}}/>
 						<RaisedButton style={styles.but} backgroundColor={blueGrey700} 
-										label='Submit' onClick={() => {this.handleClickWaitlist(); successMessage="hey";}}/>
+										label='Submit' onClick={() => {this.handleClickSignup(); successMessage="hey";}}/>
 						{errorMessage &&
 							<p>{errorMessage}</p>
 						}
@@ -104,8 +95,7 @@ const muiTheme = getMuiTheme({
 	},
 });
 
-Signup.propTypes = {
-	onLoginClick: PropTypes.func.isRequired,
-	onWaitlistClick: PropTypes.func.isRequired,
+SignupPage.propTypes = {
+	onSignupClick: PropTypes.func.isRequired,
 	errorMessage: PropTypes.string
 };
