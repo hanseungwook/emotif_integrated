@@ -43,7 +43,7 @@ export default class SignupPage extends Component {
 					<FlatButton hoverColor={blueGrey700} label='Contact Us' onClick={() => console.log('noone')}/>
 				</div>
 				<div style={styles.main}>
-					<div className='login'>
+					<div className='signup'>
 						{successMessage &&
 							<p>{successMessage}</p>
 						}

@@ -4,7 +4,8 @@ export const SIGNUP_REQUEST = 'SIGNUP_REQUEST';
 export const SIGNUP_SUCCESS = 'SIGNUP_SUCCESS';
 export const SIGNUP_FAILURE = 'SIGNUP_FAILURE';
 
-//*****************************  LOGIN  *******************************//
+
+//*****************************  SIGNUP  *******************************//
 
 function requestSignup(creds) {
 	return {
@@ -61,3 +62,8 @@ export function signupUser(creds) {
 		}).catch(err => console.log("Error: ", err));
 	};
 }
+
+
+
+
+

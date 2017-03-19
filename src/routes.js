@@ -14,7 +14,7 @@ export default (
     <IndexRoute component={LandingContainer}/>
     <Route path='login' component={LoginContainer}/>
     <Route path='signup' component={SignupContainer}/>
-    <Route path='welcome' component={DashboardContainer}/>
+    <Route path='dashboard' component={DashboardContainer}/>
     <Route path='*' component={NotFoundPage}/>
   </Route>
 );

@@ -1,19 +1,27 @@
 import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { callApi } from './dashboardActions';
+import { callApi, logoutUser } from './dashboardActions';
 import Dashboard from '../../components/Dashboard';
+import LandingContainer from '../landing/LandingContainer';
 
 class DashboardContainer extends Component {
 
-	componentWillMount(){
-		const { dispatch } = this.props;
-		dispatch(callApi('protected/doctor/doctor1@gmail.com', true));
-	}
-
-
 	render(){
-		return <Dashboard {...this.props}/>;
+		const { data, onSecretQuoteClick, onLogoutClick } = this.props;
+
+		if ( isAuthenticated ){
+			return (
+				<Dashboard data={data}
+							onSecretQuoteClick={onSecretQuoteClick}
+							onLogoutClick={onLogoutClick}/>
+			);
+		}
+		else {
+			return (
+				<LandingContainer/>
+			);
+		}
 	}
 }
 
@@ -34,6 +42,7 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
 	return{
 		onSecretQuoteClick: bindActionCreators(callApi, dispatch),
+		onLogoutClick: bindActionCreators(logoutUser, dispatch),
 		dispatch
 	};
 };

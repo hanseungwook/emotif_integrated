@@ -49,7 +49,7 @@ export default class LandingPage extends Component {
 					<h1>To You</h1>
 				</div>
 				<div style={styles.main}>
-					<div className='login'>
+					<div className='landing'>
 						{successMessage &&
 							<p>{successMessage}</p>
 						}

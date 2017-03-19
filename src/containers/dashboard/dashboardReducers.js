@@ -1,5 +1,6 @@
 import {
-	QUOTE_REQUEST, QUOTE_SUCCESS, QUOTE_FAILURE
+	QUOTE_REQUEST, QUOTE_SUCCESS, QUOTE_FAILURE,
+	LOGOUT_SUCCESS, LOGOUT_FAILURE
 } from './dashboardActions';
 
 const data = (state = { isFetching: false, quotes: '', authenticated: false }, action) => {
@@ -17,6 +18,16 @@ const data = (state = { isFetching: false, quotes: '', authenticated: false }, a
 	case QUOTE_FAILURE:
 		return Object.assign({}, state, {
 			isFetching: false
+		});
+	case LOGOUT_SUCCESS:
+		return Object.assign({}, state, {
+			isFetching: false,
+			authenticated: false
+		});
+	case LOGOUT_FAILURE:
+		return Object.assign({}, state, {
+			isFetching: false,
+			authenticated: action.authenticated || false
 		});
 	default:
 		return state;

@@ -4,6 +4,10 @@ export const QUOTE_REQUEST = 'QUOTE_REQUEST';
 export const QUOTE_SUCCESS = 'QUOTE_SUCCESS';
 export const QUOTE_FAILURE = 'QUOTE_FAILURE';
 
+export const LOGOUT_REQUEST = 'LOGOUT_REQUEST';
+export const LOGOUT_SUCCESS = 'LOGOUT_SUCCESS';
+export const LOGOUT_FAILURE = 'LOGOUT_FAILURE';
+
 function requestQuote() {
 	return {
 		type: QUOTE_REQUEST
@@ -24,9 +28,6 @@ function quoteError(error) {
 		error
 	};
 }
-
-
-
 
 export function callApi(endpoint, authenticated) {
 
@@ -62,4 +63,32 @@ export function callApi(endpoint, authenticated) {
 	};
 }
 
+//***************************  LOGOUT  *******************************//
+
+
+
+function requestLogout() {
+  return {
+    type: LOGOUT_REQUEST,
+    isFetching: true,
+    isAuthenticated: true
+  };
+}
+
+function receiveLogout() {
+  return {
+    type: LOGOUT_SUCCESS,
+    isFetching: false,
+    isAuthenticated: false
+  };
+}
+
+// Logs the user out
+export function logoutUser() {
+  return dispatch => {
+    dispatch(requestLogout());
+    localStorage.removeItem('id_token');
+    dispatch(receiveLogout());
+  };
+}
 
