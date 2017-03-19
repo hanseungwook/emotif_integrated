@@ -8,7 +8,7 @@ import LandingContainer from '../landing/LandingContainer';
 class DashboardContainer extends Component {
 
 	render(){
-		const { data, onSecretQuoteClick, onLogoutClick } = this.props;
+		const { data, onSecretQuoteClick, onLogoutClick, isAuthenticated } = this.props;
 
 		if ( isAuthenticated ){
 			return (
@@ -28,14 +28,16 @@ class DashboardContainer extends Component {
 DashboardContainer.propTypes = {
 	data: PropTypes.object.isRequired,
 	onSecretQuoteClick: PropTypes.func.isRequired,
+	isAuthenticated: PropTypes.bool.isRequired,
 	dispatch: PropTypes.func.isRequired,
 	onLogoutClick: PropTypes.func.isRequired
 };
 
 const mapStateToProps = (state) => {
-	const { data }  = state;
+	const { data, isAuthenticated }  = state.data;
 	return{
-		data
+		data,
+		isAuthenticated
 	};
 };
 
