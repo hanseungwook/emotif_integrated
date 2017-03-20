@@ -38,15 +38,25 @@ export function signupUser(creds) {
 
 	let config = {
 		method: 'POST',
-		headers: { 'Content-Type' : 'application/x-www-form-urlencoded' },
-		body: `email=${creds.email}&password=${creds.password}`
+		headers: {
+			'X-Parse-Application-Id': 'emotifAppId',
+			'X-Parse-REST-API-Key': 'emotifMasterKey',
+		'Content-Type': 'application/x-www-form-urlencoded'
+		},
+		body: JSON.stringify({
+			email: `${creds.email}`,
+			password: `${creds.password}`,
+			username: `${creds.email}`,
+			userType: 'value',
+			stripeId: 'value'
+		})
 	};
 
 	return dispatch => {
 
 		dispatch(requestSignup(creds));
 
-		return fetch('http://localhost:6001/sessions/create', config)
+		return fetch('http://emotif-parse-dev.us-east-1.elasticbeanstalk.com/parse/classes/_User', config)
 		.then(response =>
 			response.json().then(user => ({ user, response }))
 		).then(({ user, response }) =>  {
@@ -62,7 +72,6 @@ export function signupUser(creds) {
 		}).catch(err => console.log("Error: ", err));
 	};
 }
-
 
 
 

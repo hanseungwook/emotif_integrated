@@ -57,7 +57,7 @@ export default class SignupPage extends Component {
 									hintStyle={{color:'black'}} underlineFocusStyle={{borderColor: blueGrey700}} 
 									inputStyle={{color: grey900}}/>
 						<RaisedButton style={styles.but} backgroundColor={blueGrey700} 
-										label='Submit' onClick={() => {this.handleClickSignup(); successMessage="hey";}}/>
+										label='Next' onClick={() => {this.handleClickSignup(); successMessage="hey";}}/>
 						{errorMessage &&
 							<p>{errorMessage}</p>
 						}
