@@ -8,19 +8,25 @@ var express = require('express'),
     bodyParser = require('body-parser'),
     dotenv = require('dotenv').config();
 
-app.use(bodyParser.urlencoded({ extended: true}));
-app.use(bodyParser.json());
-
 var api = new ParseServer({
   databaseURI: process.env.MONGODB_URI,
   cloud: process.env.CLOUD_CODE_MAIN || __dirname + '/cloud/main.js',
   appId: process.env.APP_ID,
+  restApiKey: process.env.REST_API_KEY,
   masterKey: process.env.MASTER_KEY,
   serverURL: process.env.SERVER_URL
 });
 
+app.use(bodyParser.urlencoded({ extended: true}));
+app.use(bodyParser.json());
 app.use('/parse', api);
+
+app.get('/', function(req, res) {
+  res.status(200).send('Routing working');
+});
 
 app.listen(port, function() {
     console.log('Emotif backend with parse running on ' + port + '.');
 });
+
+

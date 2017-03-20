@@ -1,10 +1,10 @@
 //=================Cloud Functions=================//
 //=================================================//
 // Test stripe key for dev, change stripe key for live
-var stripe = require('stripe')(process.env.STRIPEAPIKEY);
-var mongoose = require('mongoose');
+var stripe = require('stripe')(process.env.STRIPEAPIKEY),
+    mongoose = require('mongoose');
 
-mongoose.connect(process.env.MONGODB_URI);
+// mongoose.connect(process.env.MONGODB_URI);
 
 // Test hello function
 Parse.Cloud.define("hello", function(req, res) {
@@ -18,57 +18,6 @@ Parse.Cloud.beforeSave("UserProfile", function(req, res) {
     acl.setWriteAccess(req.user, true);
     req.object.setACL(acl);
     res.success();
-});
-
-// Signup
-Parse.Cloud.define("signUp", function(req, res) {
-    var user = new Parse.User();
-    user.set('email', req.params.email);
-    user.set('password', req.params.password);
-    user.set('username', req.params.email);
-    user.set('userType', req.params.userType);
-    user.set('stripeId', req.params.stripeId);
-
-    user.signUp(null, { useMasterKey: true,
-        success: function(user) {
-            /* Parse.Cloud.run("logIn", {username: req.body.email, password: req.body.password}, {
-                success: function(result) {
-                    console.log("Logged in after signing up");
-                },
-                error: function(err) {
-                    console.log(err);
-                }
-            });
-            */
-           res.success("Sign up worked!");
-        },
-        error: function(err) {
-            res.error("Error: " + err.code + err.message);
-        }
-    });
-
-
-});
-
-// Login
-Parse.Cloud.define("logIn", function(req, res) {
-    Parse.User.logIn(req.body.email, req.body.password, {
-        success: function(user) {
-            req.session.user = user;
-            req.session.token = user.getSessionToken();
-            res.redirect('/');
-        },
-        error: function(err) {
-            res.error("Error: " + err.code + err.message);
-        }
-
-    });
-
-});
-
-// Unclear if necessary
-Parse.Cloud.define("getUser", function(req, res) {
-
 });
 
 // Creating stripe customer account
