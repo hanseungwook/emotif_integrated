@@ -8,18 +8,26 @@ import '../../styles/landing.scss';
 
 export default class LandingPage extends Component
 {
+
+
 	render() {
 		// const { errorMessage } = this.props;
 		return (
       <div className='page'>
-        <Header/>
-        <Panes onWaitlistClick={this.props.onWaitlistClick}/>
+        <Header onSwitchPane={this.props.onSwitchPane}/>
+        <Panes onWaitlistClick={this.props.onWaitlistClick}
+               onSwitchPane={this.props.onSwitchPane}
+               paneId      ={this.props.paneId}
+        />
       </div>
 		);
 	}
 }
 
 LandingPage.propTypes = {
-	onWaitlistClick: PropTypes.func.isRequired,
-	errorMessage   : PropTypes.string
+	onWaitlistClick : PropTypes.func.isRequired,
+  onDesignersClick: PropTypes.func.isRequired,
+  onSwitchPane    : PropTypes.func.isRequired,
+  paneId          : PropTypes.number.isRequired,
+	errorMessage    : PropTypes.string
 }

@@ -1,21 +1,33 @@
-import React, { Component } from 'react';
+import React, { PropTypes, Component } from 'react';
 
 export default class Header extends Component {
+  constructor(props){
+		super(props);
+	}
+
+  onNavClick(id) {
+    console.log('onNavClick',id);
+
+    this.props.onSwitchPane(id);
+  }
+
+
   render(){
     return(
       <div className='header'>
-        <div id='left'>   manifesto</div>
-        <div id='center'> émotif</div>
-        <div id='right'>  designers</div>
+        <div className='header-inner-box'>
+          <div id='left'   className='header-link'
+              onClick={() => this.onNavClick(2)} >manifesto</div>
+          <div id='center'
+              onClick={() => this.onNavClick(1)} >émotif</div>
+          <div id='right'  className='header-link' >designers</div>
+        </div>
       </div>
     );
   }
 }
 
-
-
-//
-// Header.propTypes =
-// {
-//
-// }
+Header.propTypes =
+{
+  onSwitchPane: PropTypes.func.isRequired,
+}

@@ -4,7 +4,12 @@ import ImageBox from './ImageBox';
 export default class Hero extends Component {
   constructor(props){
     super(props);
+    this.handleButtonClick = this.handleButtonClick.bind(this);
+  }
 
+  handleButtonClick(){
+    console.log('onSwitchPane');
+    this.props.onSwitchPane(3);
   }
 
   render(){
@@ -17,29 +22,23 @@ export default class Hero extends Component {
     let images =
                   [ { src: src1,
                       alt: 'pants.png',
-                      // width: '170px',
-                      // height: '350px',
                     },
                     { src: src2,
                       alt: 'dress.png',
-                      // width: '240px',
-                      // height: '315px',
                     },
                     { src: src3,
                       alt: 'sweatshirt.png',
-                      // width: '294px',
-                      // height: '301px',
                     } ];
 
     return(
-      <div className='pane'>
+      <div className='pane hero-pane'>
         <div className='images'>
           <ImageBox img={images[0]} />
           <ImageBox img={images[1]} />
           <ImageBox img={images[2]} />
         </div>
         <h2 className='tagline'>    {tagline}</h2>
-        <button className='hero-button'><span>{button_text}</span></button>
+        <button className='hero-button' onClick={() => this.handleButtonClick()}><span>{button_text}</span></button>
       </div>
     );
   }
@@ -47,6 +46,5 @@ export default class Hero extends Component {
 
 Hero.propTypes =
 {
-  images      : PropTypes.array,
-  tagline     : PropTypes.string
+  onSwitchPane: PropTypes.func.isRequired,
 };

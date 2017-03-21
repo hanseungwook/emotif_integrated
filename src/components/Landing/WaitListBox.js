@@ -5,7 +5,6 @@ export default class WaitlistBox extends Component {
   constructor(props){
 		super(props);
     this.onWaitlistClick = this.handleSubmit.bind(this);
-    this.handleSubmit    = this.handleSubmit.bind(this);
 	}
 
   handleChange() {
@@ -24,11 +23,11 @@ export default class WaitlistBox extends Component {
   render(){
     let call_to_action = 'Join The Movement';
     return (
-        <div>
+        <div className='waitlist-box'>
             <DynamicText/>
-              <input className='waitlist-input' ref='name'  type='text'/>
-              <input className='waitlist-input' ref='email' type='text'/>
-              <div className="waitlist-button" onClick={this.handleSubmit()}>
+              <input className='waitlist-input' ref='email' type='text'
+              placeholder='email'/>
+              <div className='waitlist-button' onClick={this.handleSubmit()} >
               <span>{call_to_action}</span>
               </div>
         </div>

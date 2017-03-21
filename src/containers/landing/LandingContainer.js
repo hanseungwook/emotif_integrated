@@ -1,21 +1,26 @@
 import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { joinWaitlist } from './landingActions';
+import { joinWaitlist, switchPane } from './landingActions';
 import LandingPage from '../../components/landing/LandingPage';
 
 export class LandingContainer extends Component {
 
 	render()
 	{
-		if (this.props.isAuthenticated) {
+		if (this.props.isAuthenticated){
 			return (
-				// <BrowseContainer/>
-				<LandingPage onWaitlistClick = {this.props.onWaitlistClick} />
+				<LandingPage
+					onWaitlistClick = {this.props.onWaitlistClick}
+				/>
 			);
 		} else {
 			return (
-				<LandingPage onWaitlistClick = {this.props.onWaitlistClick} />
+				<LandingPage
+					onWaitlistClick = {this.props.onWaitlistClick}
+					onSwitchPane 		= {this.props.onSwitchPane}
+					paneId					= {this.props.paneId}
+				/>
 			);
 		}
 	}
@@ -23,22 +28,25 @@ export class LandingContainer extends Component {
 
 LandingContainer.propTypes = {
 	onWaitlistClick: PropTypes.func.isRequired,
+	onSwitchPane	 : PropTypes.func.isRequired,
   isAuthenticated: PropTypes.bool.isRequired,
+	paneId				 : PropTypes.number.isRequired,
   errorMessage   : PropTypes.string
 };
 
 const mapStateToProps = (state) => {
-	const  { isAuthenticated, errorMessage } = state.login;
+	const  { isAuthenticated, errorMessage, paneId } = state.landing;
 	return {
 		isAuthenticated,
-		errorMessage
+		errorMessage,
+		paneId
 	};
 };
 
 const mapDispatchToProps = (dispatch) => {
 	return{
-		onWaitlistClick: bindActionCreators(joinWaitlist, dispatch),
-		dispatch
+			onSwitchPane:    bindActionCreators(switchPane,dispatch),
+			onWaitlistClick: bindActionCreators(joinWaitlist, dispatch)
 	};
 };
 
