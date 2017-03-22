@@ -51,6 +51,7 @@ Parse.Cloud.define("createStripeCustomer", function(req, res) {
                 stripe.customers.create({
                     email: custEmail,
                     // source: token
+                    // Create a stripe token using cloud function with req parameters
                 }, function(err, stripeCustomer) {
                     if(err) {
                         res.error("Could not create stripe customer account");
@@ -75,43 +76,32 @@ Parse.Cloud.define("createStripeCustomer", function(req, res) {
 
 Parse.Cloud.define("createTransaction", function(req, res) {
     var custEmail = req.params.email;
-    res.success("working");
-    var query = new Parse.Query(Parse.User);
+    var User = Parse.Object.extend("_User");
+    var query = new Parse.Query(User);
     query.equalTo("email", custEmail);
-    query.first({ useMasterKey: true }, {
+    query.first({
         success: function(user) {
             var custStripeId = user.get("stripeId");
             if (!custStripeId) {
-                Parse.Cloud.run("createStripeCustomer", {email: req.body.email, token: req.body.stripeToken}, {
+                Parse.Cloud.run("createStripeCustomer", {email: req.body.email}, {
                     success: function(result) {
-                        stripe.charges.create({
-                            amount: req.body.amount,
-                            currency: "usd",
-                            customer: result.stripeCustomerId
-                        }, function(err, charge) {
-                            if (err) {
-                                res.error(err);
-                            }
-                            res.success(JSON.stringify(charge));
-                        });
+                        alert("Stripe Customer registration success!");
                     },
                     error: function(err) {
-                        res.error("Error in creating stripe account");
+                        res.error("Error in creating new stripe account");
                     }
                 });
             }
-            else {
-                stripe.charges.create({
-                    amount: req.body.amount,
-                    currency: "usd",
-                    customer: result.stripeCustomerId
-                    }, function(err, charge) {
-                        if (err) {
-                            res.error(err);
-                        }
-                        res.success(JSON.stringify(charge));
-                });
-            }
+            stripe.charges.create({
+                amount: req.params.amount,
+                currency: "usd",
+                customer: custStripeId
+                }, function(err, charge) {
+                    if (err) {
+                        res.error(err);
+                    }
+                    res.success(charge);
+            });
         },
         error: function(err) {
             res.error("Error" + err.code + " " + err.message);
