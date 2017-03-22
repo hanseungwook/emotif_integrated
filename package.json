@@ -16,6 +16,7 @@
     "express": "^4.15.2",
     "mongoose": "^4.9.0",
     "parse-server": "^2.3.7",
+    "request": "^2.81.0",
     "stripe": "^4.15.1"
   }
 }
