@@ -7,6 +7,7 @@ import LoginContainer from './containers/login/LoginContainer'; // eslint-disabl
 import SignupContainer from './containers/signup/SignupContainer'; // eslint-disable-line import/no-named-as-default
 import LandingContainer from './containers/landing/LandingContainer'; // eslint-disable-line import/no-named-as-default
 import DashboardContainer from './containers/dashboard/DashboardContainer'; // eslint-disable-line import/no-named-as-default
+import BrowseContainer from './containers/browse/BrowseContainer';
 
 export default (
   <Route path='/' component={App}>
@@ -14,6 +15,7 @@ export default (
     <Route path='login' component={LoginContainer}/>
     <Route path='signup' component={SignupContainer}/>
     <Route path='welcome' component={DashboardContainer}/>
+    <Route path='browse' component={BrowseContainer}/>
     <Route path='*' component={NotFoundPage}/>
   </Route>
 );
