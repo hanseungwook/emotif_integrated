@@ -1,0 +1,32 @@
+@import 'reset';
+@import 'fonts';
+@import 'mixins';
+@import 'variables';
+
+body {
+  width     : 100%;
+  max-width : 100%;
+  margin    : 0;
+}
+div{
+  width       : 100%;
+  text-align  : center;
+  background  : transparent;
+  margin      : 0 auto;
+  box-sizing  : border-box;
+}
+input{
+  box-sizing  : border-box;
+}
+p h1 h2 h3 h4 h5 h6 span{
+  text-align: center;
+}
+.page {
+  width         : 100%;
+  font-weight   : normal;
+  font-style    : normal;
+  font-stretch  : normal;
+  line-height   : normal;
+  letter-spacing: normal;
+  text-align    : center;
+}

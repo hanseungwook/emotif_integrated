@@ -1,0 +1,267 @@
+
+$ft_title_1440: 34px;
+$ft_title_1024: 28px;
+$ft_title_768 : 22px;
+$ft_title_320 : 22px;
+
+$ft_sub_1440: 24px;
+$ft_sub_1024: 20px;
+$ft_sub_768 : 18px;
+$ft_sub_320 : 16px;
+
+$ft_input_1440: 16px;
+$ft_input_1024: 16px;
+$ft_input_768 : 16px;
+$ft_input_320 : 16px;
+
+$input-320h           :20px;
+$input-768h           :30px;
+$input-1024h          :30px;
+$input-1440h          :30px;
+$input-320w           :200px;
+$input-768w           :200px;
+$input-1024w          :200px;
+$input-1440w          :200px;
+
+$title-font       : $Futura;
+$subtitle-font    : $Futura;
+$input-font       : $Lato;
+$input-label-font : $Lato;
+
+
+
+.page{
+  padding: 10%;
+  .section{
+    clear: both;
+
+    .title{
+      font-family: $title-font;
+      @include height(50px, 50px, 50px, 50px);
+      @include width(200px,200px,200px,200px);
+      @include font-size($ft_title_320, $ft_title_768,$ft_title_1024,$ft_title_1440);
+      display:table-cell;
+      text-align: left;
+      vertical-align:bottom;
+    }
+
+    .sub-section{
+      clear: both;
+
+      .subtitle{
+        font-family: $subtitle-font;
+        @include height(50px, 50px, 50px, 50px);
+        @include width(120px,120px,120px,120px);
+        @include font-size($ft_sub_320, $ft_sub_768,$ft_sub_1024,$ft_sub_1440);
+        display: block;
+        width: 100%;
+        cursor: pointer;
+        text-align: left;
+      }
+
+      .radio{
+        .radio-option{
+          display: inline-block;
+          float: left;
+          width       : 50px;
+          height      : 30px;
+          line-height : 30px;
+          border      : 1px solid $grey;
+        }
+      }
+
+      .checkbox{
+        .checkbox-option{
+          display     : inline-block;
+          float: left;
+          border      : 1px solid $grey;
+          width       : 50px;
+          line-height : 30px;
+          height      : 30px;
+        }
+      }
+
+      .selector{
+        width: 100%;
+
+      }
+
+    }
+
+
+  }
+}
+
+
+
+.sub-selected{
+  color: $blue;
+}
+.clear{
+  clear: both;
+}
+
+
+.input-label{
+  width: 100%;
+  clear: both;
+  @include margin-top( 20px, 20px, 20px, 20px);
+  @include margin-bottom( 20px, 20px, 20px, 20px);
+  font-family: $input-label-font;
+  text-align: left;
+}
+
+
+.pref-input{
+  font-family : $input-font;
+  display     : block;
+  text-align  : left;
+  padding-left: 10px;
+  font-weight : lighter;
+  background  : transparent;
+  color       : $grey;
+  border      : 1px solid $grey;
+  margin-right: 0;
+  @include margin-top(  20px,  20px,   20px,   20px);
+  @include font-size($ft_input_320, $ft_input_768,$ft_input_1024,$ft_input_1440);
+  @include height(      $input-320h,  $input-768h, $input-1024h, $input-1440h);
+  @include width(       $input-320w,  $input-768w, $input-1024w, $input-1440w);
+  span{ @include line-height( $input-320h,  $input-768h, $input-1024h, $input-1440h);}
+}
+
+
+
+.radio-selected{
+  background: $blue;
+}
+.checkbox{
+  display: block;
+  width: 100%;
+  .checkbox-option{
+    display     : inline-block;
+    float: left;
+    border      : 1px solid $grey;
+    width       : 50px;
+    line-height : 30px;
+    height      : 30px;
+  }
+}
+.checkbox-selected{
+  background: $blue;
+}
+
+.height-box, .weight-box{
+  input{
+    display: inline-block;
+    margin-right: 0;
+  }
+  .radio{
+    vertical-align: bottom;
+    display: inline-block;
+  }
+}
+.section{
+  clear: both;
+}
+.body-shape,.body-shape-specific, .body-shape-selected{
+  display: inline-block;
+  cursor: pointer;
+  margin: 0;
+  width       : 200px;
+  height      : 240px;
+  border      : 1px solid $grey;
+}
+
+.color-opt{
+  float       : left;
+  display     : inline-block;
+  width       : 80px;
+  height      : 80px;
+  border: none;
+}
+.aesthetics{
+  .checkbox{
+    float: left;
+    margin: 0 auto;
+    // @include background-gradient($peach, $mint, $earth);
+    // @include width(600px, 600px, 600px, 600px);
+    .checkbox-option{
+      width       : 120px;
+      height      : 40px;
+      line-height : 40px;
+      border      : 1px solid $grey;
+      border-width: 1px 1px 1px 1px;
+      background  : rgba(255,255,255,.9);
+      vertical-align: bottom;
+    }
+    .checkbox-selected{
+      background  : rgba(255,255,255,.2);
+    }
+  }
+}
+
+
+.skin-color-selected{
+  border      : 1px solid $grey;
+}
+.body-shape-selected{
+  border      : 2px solid $grey;
+}
+
+.form1 { @include radial-gradient($color1 );}
+.form2 { @include radial-gradient($color2 );}
+.form3 { @include radial-gradient($color3 );}
+.form4 { @include radial-gradient($color4 );}
+.form5 { @include radial-gradient($color5 );}
+.form6 { @include radial-gradient($color6 );}
+.form7 { @include radial-gradient($color7 );}
+.form8 { @include radial-gradient($color8 );}
+.form9 { @include radial-gradient($color9 );}
+.form10{ @include radial-gradient($color10);}
+.form11{ @include radial-gradient($color11);}
+.form12{ @include radial-gradient($color12);}
+
+.eye1 {@include radial-gradient($eye-color1);}
+.eye2 {@include radial-gradient($eye-color2);}
+.eye3 {@include radial-gradient($eye-color3);}
+.eye4 {@include radial-gradient($eye-color4);}
+.eye5 {@include radial-gradient($eye-color5);}
+.eye6 {@include radial-gradient($eye-color6);}
+.eye7 {@include radial-gradient($eye-color7);}
+
+.skin1 { @include radial-gradient($color1 );}
+.skin2 { @include radial-gradient($color2 );}
+.skin3 { @include radial-gradient($color3 );}
+.skin4 { @include radial-gradient($color4 );}
+.skin5 { @include radial-gradient($color5 );}
+.skin6 { @include radial-gradient($color6 );}
+.skin7 { @include radial-gradient($color7 );}
+.skin8 { @include radial-gradient($color8 );}
+.skin9 { @include radial-gradient($color9 );}
+.skin10{ @include radial-gradient($color10);}
+.skin11{ @include radial-gradient($color11);}
+.skin12{ @include radial-gradient($color12);}
+.skin13{ @include radial-gradient($color13);}
+.skin14{ @include radial-gradient($color14);}
+.skin15{ @include radial-gradient($color15);}
+.skin16{ @include radial-gradient($color16);}
+.skin17{ @include radial-gradient($color17);}
+.skin18{ @include radial-gradient($color18);}
+.skin19{ @include radial-gradient($color19);}
+.skin20{ @include radial-gradient($color20);}
+.skin21{ @include radial-gradient($color21);}
+.skin22{ @include radial-gradient($color22);}
+.skin23{ @include radial-gradient($color23);}
+.skin24{ @include radial-gradient($color24);}
+.skin25{ @include radial-gradient($color25);}
+.skin26{ @include radial-gradient($color26);}
+.skin27{ @include radial-gradient($color27);}
+.skin28{ @include radial-gradient($color28);}
+.skin29{ @include radial-gradient($color29);}
+.skin30{ @include radial-gradient($color30);}
+.skin31{ @include radial-gradient($color31);}
+.skin32{ @include radial-gradient($color32);}
+.skin33{ @include radial-gradient($color33);}
+.skin34{ @include radial-gradient($color34);}
+.skin35{ @include radial-gradient($color35);}
+.skin36{ @include radial-gradient($color36);}

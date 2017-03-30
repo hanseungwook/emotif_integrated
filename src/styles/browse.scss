@@ -1,0 +1,140 @@
+
+/* Variables */
+$ft_sz_logo_1440: 34px;
+$ft_sz_logo_1024: 28px;
+$ft_sz_logo_768 : 22px;
+$ft_sz_logo_320 : 22px;
+
+$ft_sz_main_1440: 26px;
+$ft_sz_main_1024: 22px;
+$ft_sz_main_768 : 20px;
+$ft_sz_main_320 : 18px;
+
+$ft_sz_sec_1440 : 24px;
+$ft_sz_sec_1024 : 20px;
+$ft_sz_sec_768  : 18px;
+$ft_sz_sec_320  : 16px;
+
+$black:          #000000;
+$light-grey:     #9B9B9B;
+$grey:           #4A4A4A;
+$dark-grey:      #979797;
+$peach:          #EFC4B2;
+$mint:           #C7EDDE;
+$earth:          #A7988B;
+$blue :          #5EAFDE;
+
+$SourceSansPro : 'Source Sans Pro', sans-serif;
+$Lato          : 'Lato'           , sans-serif;
+$Raleway       : 'Raleway'        , sans-serif;
+$Dosis         : 'Dosis'          , sans-serif;
+$Abel          : 'Abel'           , sans-serif;
+$Harmattan     : 'Harmattan'      , sans-serif;
+$Futura        : 'Futura'         , sans-serif;
+$Buffalo       : 'Buffalo'        , sans-serif;
+$Adam          : 'Adam'           , sans-serif;
+$HelveticaNeue : 'HelveticaNeue'  , sans-serif;
+$IndieFlower   : 'Indie Flower'   , cursive;
+$AmaticSC      : 'Amatic SC'      , cursive;
+$Pacifico      : 'Pacifico'       , cursive;
+$Yellowtail    : 'Yellowtail'     , cursive;
+
+$logo-font            : $Pacifico;
+$header-font          : $Futura;
+$tagline-font         : $Futura;
+$button-font          : $Futura;
+$quote-font           : $Futura;
+$quote-author-font    : $Futura;
+$value-prop-font      : $Futura;
+$value-prop-bold-font : $Futura;
+$definition-font      : $Futura;
+$waitlist-box-font    : $Futura;
+$input-font           : $Futura;
+
+
+/* Styles */
+
+.products{
+  background: white;
+  height: 100vh;
+  width: 100%;
+  overflow: scroll;
+}
+.product{
+  margin: 20%;
+  height: 60%;
+  width: 60%;
+  .product-innerbox{
+    width: 100%;
+    height: 100%;
+    .info{
+      height: 10%;
+      vertical-align: bottom;
+      width:100%;
+      .product-name{
+        color: $blue;
+      }
+      .designer{
+        color: $blue;
+      }
+    }
+  }
+}
+
+.product-view{
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  margin:0;
+  width: 100vw;
+  height: 100vh;
+  background: white;
+  overflow: scroll;
+  .product-innerbox{
+    margin: 20px 20%;
+    height: 100%;
+    width: 60%;
+    .info{
+      margin: 0 auto;
+      color: white;
+      text-align: center;
+      .product-name{
+        color: white;
+      }
+      .designer{
+        color: white;
+      }
+    }
+  }
+}
+
+.images {
+  margin: 0 auto;
+  @include width(      100%,  720px,  900px,  1200px);
+  @include height(     300px, 300px,  300px,  400px);
+  @include margin-top( 50px,  50px,   50px,   50px);
+  div.img-box{
+    display         : inline-block;
+    margin: 0;
+    vertical-align  : top;
+    width: auto;
+    &:nth-child(1){
+      float: left;
+      @media screen and (min-width: 0px)  { display: none;}
+      @media screen and (min-width: 768px){ display: inline-block;;}
+    }
+    &:nth-child(2){ margin: auto;}
+    &:nth-child(3){
+      float : right;
+      @media screen and (min-width: 0px){   display: none;}
+      @media screen and (min-width: 768px){ display: inline-block;}
+    }
+    img.img-hero{
+      display:block;
+      margin: 0;
+      @include width(      200px,  200px,  240px,  320px);
+      @include height(     250px,  250px,  300px,  400px);
+    }
+  }
+}

@@ -1,0 +1,254 @@
+
+/* Variables */
+$ft_sz_logo_1440: 34px;
+$ft_sz_logo_1024: 28px;
+$ft_sz_logo_768 : 22px;
+$ft_sz_logo_320 : 22px;
+
+$ft_sz_main_1440: 26px;
+$ft_sz_main_1024: 22px;
+$ft_sz_main_768 : 20px;
+$ft_sz_main_320 : 18px;
+
+$ft_sz_sec_1440 : 24px;
+$ft_sz_sec_1024 : 20px;
+$ft_sz_sec_768  : 18px;
+$ft_sz_sec_320  : 16px;
+
+$black:          #000000;
+$light-grey:     #9B9B9B;
+$grey:           #4A4A4A;
+$dark-grey:      #979797;
+$peach:          #EFC4B2;
+$mint:           #C7EDDE;
+$earth:          #A7988B;
+$blue :          #5EAFDE;
+
+$SourceSansPro : 'Source Sans Pro', sans-serif;
+$Lato          : 'Lato'           , sans-serif;
+$Raleway       : 'Raleway'        , sans-serif;
+$Dosis         : 'Dosis'          , sans-serif;
+$Abel          : 'Abel'           , sans-serif;
+$Harmattan     : 'Harmattan'      , sans-serif;
+$Futura        : 'Futura'         , sans-serif;
+$Buffalo       : 'Buffalo'        , sans-serif;
+$Adam          : 'Adam'           , sans-serif;
+$HelveticaNeue : 'HelveticaNeue'  , sans-serif;
+$IndieFlower   : 'Indie Flower'   , cursive;
+$AmaticSC      : 'Amatic SC'      , cursive;
+$Pacifico      : 'Pacifico'       , cursive;
+$Yellowtail    : 'Yellowtail'     , cursive;
+
+$logo-font            : $Pacifico;
+$header-font          : $Futura;
+$tagline-font         : $Futura;
+$button-font          : $Futura;
+$quote-font           : $Futura;
+$quote-author-font    : $Futura;
+$value-prop-font      : $Futura;
+$value-prop-bold-font : $Futura;
+$definition-font      : $Futura;
+$waitlist-box-font    : $Futura;
+$input-font           : $Futura;
+
+$but-320h           :40px;
+$but-768h           :50px;
+$but-1024h          :50px;
+$but-1440h          :60px;
+$but-320w           :240px;
+$but-768w           :300px;
+$but-1024w          :300px;
+$but-1440w          :400px;
+/* Header */
+
+.panes{
+    background: rgba(0,0,0,0);
+    height      : 100vh;
+  .pane {
+    background  : white;
+    height      : 100vh;
+    max-height  : 100vh;
+    max-width   : 100%;
+    @include width( 100%,  720px,  900px,  1200px);
+  }
+}
+
+.images {
+  margin: 0 auto;
+  @include width(      100%,  720px,  900px,  1200px);
+  @include height(     300px, 300px,  300px,  400px);
+  @include margin-top( 50px,  50px,   50px,   50px);
+  div.img-box{
+    display         : inline-block;
+    margin: 0;
+    vertical-align  : top;
+    width: auto;
+    &:nth-child(1){
+      float: left;
+      @media screen and (min-width: 0px)  { display: none;}
+      @media screen and (min-width: 768px){ display: inline-block;;}
+    }
+    &:nth-child(2){ margin: auto;}
+    &:nth-child(3){
+      float : right;
+      @media screen and (min-width: 0px){   display: none;}
+      @media screen and (min-width: 768px){ display: inline-block;}
+    }
+    img.img-hero{
+      display:block;
+      margin: 0;
+      @include width(      200px,  200px,  200px,  240px);
+      @include height(     250px,  250px,  250px,  300px);
+    }
+  }
+}
+
+
+.tagline {
+  font-family : $tagline-font;
+  font-weight : lighter;
+  color       : $grey;
+  display     : block;
+  width       : 100%;
+  @include font-size($ft_sz_main_320, $ft_sz_main_768,$ft_sz_main_1024,$ft_sz_main_1440);
+  @include margin-top( 20px,  20px,   20px,   20px);
+}
+.hero-button {
+  border        : 2px solid $grey;
+  span {
+    font-family: $button-font;
+    font-weight: lighter;
+    color      : $grey;
+  }
+  @include font-size($ft_sz_sec_320, $ft_sz_sec_768,$ft_sz_sec_1024,$ft_sz_sec_1440);
+  @include height(      $but-320h,  $but-768h, $but-1024h, $but-1440h);
+  @include line-height( $but-320h,  $but-768h, $but-1024h, $but-1440h);
+  @include width(       $but-320w,  $but-768w, $but-1024w, $but-1440w);
+  @include margin-top(  20px,  20px,   20px,   20px);
+}
+
+.quote-box{
+  .quote{
+    font-family : $quote-font;
+    color       : $light-grey;
+    margin-top  : 25vh;
+    text-align  : center;
+    @include font-size($ft_sz_main_320, $ft_sz_main_768,$ft_sz_main_1024,$ft_sz_main_1440);
+    span{
+      display: block;
+      margin: 0 auto;
+      height: 40px;
+    }
+  }
+  .author{
+    font-family : $quote-author-font;
+    color       : $grey;
+    display     : block;
+    @include font-size($ft_sz_sec_320, $ft_sz_sec_768,$ft_sz_sec_1024,$ft_sz_sec_1440);
+  }
+}
+.values{
+  text-align  : center;
+  .left-part{
+    text-align: right;
+    width: 40%;
+  }
+  .right-part{
+    padding-left: 10px;
+    text-align: left;
+    width: 60%;
+  }
+
+  .left-part, .right-part{
+    display: inline-block;
+    float: left;
+    .value{
+      font-family : $value-prop-font;
+      font-weight : lighter;
+      color       : $grey;
+      @include font-size($ft_sz_sec_320, $ft_sz_sec_768,$ft_sz_sec_1024,$ft_sz_sec_1440);
+      @include margin-top(  20px,  20px,   20px,   20px);
+      .highlight{
+        font-family: $value-prop-bold-font;
+        font-weight: lighter;
+        color: $blue;
+      }
+    }
+    .empty{
+      opacity: 0;
+    }
+  }
+}
+
+
+.waitlist-bkgd-filter{
+  position  : fixed;
+  top       : 0;
+  z-index   : -1;
+  height    : 100%;
+  width     : 100%;
+  @include vertical-gradient-reverse;
+  // &:after{ background: linear-gradient(transparent, white);}
+}
+.waitlist-bkgd{
+  position  : fixed;
+  top       : 0;
+  z-index   : -2;
+  height    : 100%;
+  width     : 100%;
+  @include blur(20px);
+  @include background-gradient($peach, $mint, $earth);
+}
+
+.definition{
+  font-family : $definition-font;
+  font-weight : lighter;
+  color       : $grey;
+  display     : block;
+  margin      : 0 auto;
+  width       : 100%;
+  @include margin-top(  25vh,  25vh,   25vh,   25vh);
+  @include font-size($ft_sz_sec_320, $ft_sz_sec_768,$ft_sz_sec_1024,$ft_sz_sec_1440);
+}
+.waitlist-box{
+  opacity   : 10%;
+  background: white;
+  @include border-gradient(3px, $peach, $mint, $earth);
+  @include font-size($ft_sz_sec_320, $ft_sz_sec_768,$ft_sz_sec_1024,$ft_sz_sec_1440);
+  @include height(      150px, 300px,  350px,  450px);
+  @include width(       300px, 600px,  750px,  900px);
+  @include margin-top(  20px,  20px,   20px,   20px);
+}
+.dynamic-text{
+  font-family   : $waitlist-box-font;
+  font-weight   : lighter;
+  color         : $peach;
+  width         : 100%;
+  margin-bottom : 0px;
+  @include height(      50px,  50px,   50px,   50px);
+  @include margin-top(  50px,  50px,   50px,   50px);
+  @include font-size($ft_sz_sec_320, $ft_sz_sec_768,$ft_sz_sec_1024,$ft_sz_sec_1440);
+}
+.waitlist-input{
+  font-family : $input-font;
+  text-align: center;
+  font-weight : lighter;
+  color       : $grey;
+  border      : 2px solid $dark-grey;
+  @include font-size($ft_sz_sec_320, $ft_sz_sec_768,$ft_sz_sec_1024,$ft_sz_sec_1440);
+  @include height(      $but-320h,  $but-768h, $but-1024h, $but-1440h);
+  @include width(       $but-320w,  $but-768w, $but-1024w, $but-1440w);
+  @include margin-top(  20px,  20px,   20px,   20px);
+  span{ @include line-height( $but-320h,  $but-768h, $but-1024h, $but-1440h);}
+}
+.waitlist-button{
+  font-family : $button-font;
+  font-weight : lighter;
+  color       : $grey;
+  border      : 2px solid $dark-grey;
+  @include font-size($ft_sz_sec_320, $ft_sz_sec_768,$ft_sz_sec_1024,$ft_sz_sec_1440);
+  @include height(      $but-320h,  $but-768h, $but-1024h, $but-1440h);
+  @include width(       $but-320w,  $but-768w, $but-1024w, $but-1440w);
+  @include margin-top(  20px,  20px,   20px,   20px);
+  span{ @include line-height( $but-320h,  $but-768h, $but-1024h, $but-1440h);}
+}
