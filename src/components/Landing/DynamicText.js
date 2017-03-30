@@ -14,7 +14,7 @@ export default class DynamicText extends Component {
     };
     return (
         <h2 className='dynamic-text'>
-          {dynamic_text.base}
+          Clothes should be 
           <b>
           {dynamic_text.endings[0]}
           </b>

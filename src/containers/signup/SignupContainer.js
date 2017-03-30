@@ -18,9 +18,9 @@ export class SignupContainer extends Component {
 		}
 		else {
 			return (
-				<SignupPage errorMessage={errorMessage} 
-							onLoginClick={onLoginClick} 
-							onWaitlistClick={onWaitlistClick}/>
+
+				<SignupPage errorMessage={errorMessage}
+							onSignupClick={onSignupClick}/>
 			);
 		}
 	}
@@ -55,4 +55,3 @@ const mapDispatchToProps = (dispatch) => {
 
 
 export default connect(mapStateToProps, mapDispatchToProps)(SignupContainer);
-
