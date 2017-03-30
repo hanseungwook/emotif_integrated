@@ -26,12 +26,12 @@ export default class LandingPage extends Component {
 
 		return (
 			<div>
-			<div className='title'> Émotif </div>
+			<Link to={'/'} className='title_ref'><div className='title'> Émotif </div></Link>
 			<div className='subtitle'> <b> Clothing made for your figure </b> </div>
 			<div className='content'>
 				<div className='slides'>
 					<Link to={'signup'}><div className='signup_but'> Sign Up </div></Link>
-					<Link to={'signup'}><div className='login_but'> Login </div></Link>
+					<Link to={'login'}><div className='login_but'> Login </div></Link>
 					<img src={require('../../images/fashion.jpg')}/>
 				</div>
 				<div className='nav'>

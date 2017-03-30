@@ -1,21 +1,41 @@
 /* Variables */
-$charcoal: #364958;
-$blue: #5FB3DD;
-$dark-blue: #427E9C;
-$light-blue: #8CCAE8;
+$neonblue: #67C8FF;
+$neonpink: #FF6EC7;
+$neongreen: #83F52C;
+$neonpurple: #c32aff;
+$neonred: #DD0048;
 
-.login {
-	width: 30%;
-	height: 17em;
-	color: white;
-	background-color: rgba(255, 255, 255, 0.7);
-	text-align: center;
-	position: absolute;
-	left: 35em;
-	top: 20em;
+.login_form {
+    margin:auto;
+    margin-top: 4%;
+    margin-right: 35%;
+    margin-left: 35%;
+    height: 30em;
+    position: relative;
+    border: 1px solid grey;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
 
-	h3{
-		color: #CFD8DC;
+    input {
+    	margin-top: 4em;
+    }
+
+	.next_but {
+		background-color: $neonred;
+		color: white;
+		position: absolute;
+		left: 33.3%;
+		top: 5em;
+		text-align: center;
+		font-family: artely;
+		font-size: 2.5em;
+		width: 33.3%;
+		height: 50px;
+		margin-top: 2em;
+		line-height: 1.3em;
+	}
+	.next_but:hover {
+		cursor: pointer;
 	}
 }
 
