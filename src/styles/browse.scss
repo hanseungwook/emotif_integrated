@@ -87,7 +87,7 @@ $header-font: $Zona;
 #content-container {
     overflow: hidden;
     width: 100%;
-    padding: 15px 10px 15px 10px;
+    padding: 25px 10px 15px 10px;
     background-image: url('../../images/browse/background1.png');
 }
 
@@ -153,6 +153,7 @@ $products-font: $Futura;
         .product-designer {
             float: left;
             font-size: 20px;
+            margin: 20px 0 0 30px;
         }
     }
 
