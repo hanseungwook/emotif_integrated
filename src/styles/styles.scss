@@ -59,12 +59,12 @@ html, body
 	}
 
 	.signup_but:hover{
-		background-color: $neonpink;
+		background-color: #88002B;
 		cursor: pointer;
 	}
 
 	.login_but {
-		background-color: $neonblue;
+		background-color: #69DF00;
 		color: white;
 		position: absolute;
 		right: 30%;
@@ -78,7 +78,7 @@ html, body
 	}
 
 	.login_but:hover{
-		background-color: $neonpurple;
+		background-color: #418900;
 		cursor: pointer;
 	}
 }
