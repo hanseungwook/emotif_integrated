@@ -40,8 +40,7 @@ export function signupUser(creds) {
 		method: 'POST',
 		headers: {
 			'X-Parse-Application-Id': 'emotifAppId',
-			'X-Parse-REST-API-Key': 'emotifMasterKey',
-		'Content-Type': 'application/x-www-form-urlencoded'
+			'Content-Type': 'application/x-www-form-urlencoded'
 		},
 		body: JSON.stringify({
 			email: `${creds.email}`,
@@ -51,6 +50,8 @@ export function signupUser(creds) {
 			stripeId: 'value'
 		})
 	};
+
+
 
 	return dispatch => {
 

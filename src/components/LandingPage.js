@@ -1,14 +1,5 @@
 import React, { Component, PropTypes } from 'react';
-// import { Link } from 'react-router';
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import getMuiTheme from 'material-ui/styles/getMuiTheme';
-
-import RaisedButton from 'material-ui/RaisedButton';
-import FlatButton from 'material-ui/FlatButton';
-import TextField from 'material-ui/TextField';
-
-import {fullWhite, grey900, blueGrey700} from 'material-ui/styles/colors';
-
+import { Link } from 'react-router';
 
 import '../styles/styles.scss';
 
@@ -31,71 +22,53 @@ export default class LandingPage extends Component {
 
 		const { errorMessage } = this.props;
 
-		let successMessage = "";
+		let successMessage = '';
 
 		return (
-			<MuiThemeProvider muiTheme={muiTheme}>	
-			<div className='parent'>
+			<div>
+			<div className='title'> Émotif </div>
+			<div className='subtitle'> <b> Clothing made for your figure </b> </div>
+			<div className='content'>
+				<div className='slides'>
+					<Link to={'signup'}><div className='signup_but'> Sign Up </div></Link>
+					<Link to={'signup'}><div className='login_but'> Login </div></Link>
+					<img src={require('../../images/fashion.jpg')}/>
+				</div>
 				<div className='nav'>
-					<FlatButton hoverColor={blueGrey700} label='Philosophy' onClick={() => console.log('we are')}/>
-					<FlatButton hoverColor={blueGrey700} label='Designers' onClick={() => console.log('allo')}/>	
-					<FlatButton hoverColor={blueGrey700} label='Login' href='login'/>
-					<FlatButton hoverColor={blueGrey700} label='Contact Us' onClick={() => console.log('noone')}/>
+					<a href='preferences.html'>Clothes</a>
+					<a href='preferences.html'>Designers</a> 
+					<a href='preferences.html'>Values</a>  
 				</div>
-				<div className='main_text'>
-					<h1>Fitted, Expressive</h1>
-					<h1>Clothing</h1>
-					<h1>From Designers</h1>
-					<h1>To You</h1>
+				<div className='waitlist'> 
+					<p> Join the Waitlist </p> 
+					{successMessage}
+					{errorMessage}
+					<form action='hello'>
+						<input type='text' placeholder='Email' name='fname'/><br/>
+					</form>
 				</div>
-				<div style={styles.main}>
-					<div className='landing'>
-						{successMessage &&
-							<p>{successMessage}</p>
-						}
-						<h2> Join WaitList </h2>
-						<TextField type='text' ref='email' hintText='Email' 
-									underlineStyle={{borderColor: grey900}} 
-									hintStyle={{color:'black'}} underlineFocusStyle={{borderColor: blueGrey700}} 
-									inputStyle={{color: grey900}}/>
-						<RaisedButton style={styles.but} backgroundColor={blueGrey700} 
-										label='Submit' onClick={() => {this.handleClickWaitlist(); successMessage="hey";}}/>
-						{errorMessage &&
-							<p>{errorMessage}</p>
-						}
-					</div>
+				<div className='info'> 
+					<img src={require('../../images/shape.jpg')}/>
+					<img src={require('../../images/designer.jpg')}/>
+					<img src={require('../../images/art.jpg')}/>
+						<p>Tailored to your <b>shape</b></p>
+						<p>Tailored to your <b>tastes</b></p>
+						<p>Tailored to your <b>values</b></p>
 				</div>
+
 			</div>
-			</MuiThemeProvider>
+			<div className='footer'>
+				<p>Contact Us</p>
+				<p>Press</p>
+				<p>Policies</p>
+				<p>Help</p>
+				<p>Manufacturing</p>
+			</div>
+			</div>
 		);
 	}
 	
 }
-
-const styles = {
-
-	but: {
-		position: 'absolute',
-		right: 100,
-		left:100,
-		bottom: 25,
-	},
-	main: {
-		paddingTop: 150,
-		paddingLeft: 195,
-		position: 'absolute',
-		top:50,
-		bottom:0,
-		right:0,
-		left:0,
-	},
-};
-
-const muiTheme = getMuiTheme({
-	palette: {
-		textColor: fullWhite,
-	},
-});
 
 LandingPage.propTypes = {
 	onWaitlistClick: PropTypes.func.isRequired,

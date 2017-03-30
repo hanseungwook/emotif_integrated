@@ -35,7 +35,7 @@ export default class SignupPage extends Component {
 
 		return (
 			<MuiThemeProvider muiTheme={muiTheme}>	
-			<div className='parent'>
+			<div className='parent1'>
 				<div className='nav'>
 					<FlatButton hoverColor={blueGrey700} label='Login' href='login'/>
 					<FlatButton hoverColor={blueGrey700} label='Philosophy' onClick={() => console.log('we are')}/>
