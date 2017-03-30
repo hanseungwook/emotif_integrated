@@ -1,11 +1,10 @@
 import React, { Component, PropTypes } from 'react';
 import { Link } from 'react-router';
 
-import '../styles/styles.scss';
+import '../styles/landing.scss';
 
 
 export default class LandingPage extends Component {
-
 
 	constructor(props){
 		super(props);
@@ -32,7 +31,7 @@ export default class LandingPage extends Component {
 				<div className='slides'>
 					<Link to={'signup'}><div className='signup_but'> Sign Up </div></Link>
 					<Link to={'login'}><div className='login_but'> Login </div></Link>
-					<img src={require('../../images/fashion.jpg')}/>
+					<img src={require('../../images/art2.jpg')}/>
 				</div>
 				<div className='nav'>
 					<a href='preferences.html'>Clothes</a>
@@ -67,7 +66,7 @@ export default class LandingPage extends Component {
 			</div>
 		);
 	}
-	
+
 }
 
 LandingPage.propTypes = {

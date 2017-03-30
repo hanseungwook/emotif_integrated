@@ -1,4 +1,5 @@
 import fetch from 'isomorphic-fetch';
+import URLSearchParams from 'url-search-params';
 
 export const SIGNUP_REQUEST = 'SIGNUP_REQUEST';
 export const SIGNUP_SUCCESS = 'SIGNUP_SUCCESS';
@@ -36,19 +37,20 @@ function signupError(message) {
 
 export function signupUser(creds) {
 
+    const searchParams = new URLSearchParams();
+    searchParams.set('email', creds.email);
+    searchParams.set('password', creds.password);
+    searchParams.set('username', creds.email);
+
+
 	let config = {
 		method: 'POST',
 		headers: {
 			'X-Parse-Application-Id': 'emotifAppId',
+			'X-Parse-REST-API-Key': 'emotifRestKey',
 			'Content-Type': 'application/x-www-form-urlencoded'
 		},
-		body: JSON.stringify({
-			email: `${creds.email}`,
-			password: `${creds.password}`,
-			username: `${creds.email}`,
-			userType: 'value',
-			stripeId: 'value'
-		})
+		body: searchParams
 	};
 
 
@@ -73,7 +75,3 @@ export function signupUser(creds) {
 		}).catch(err => console.log("Error: ", err));
 	};
 }
-
-
-
-

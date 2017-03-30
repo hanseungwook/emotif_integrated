@@ -1,8 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-
 import Badge from 'material-ui/Badge';
-import IconButton from 'material-ui/IconButton';
+// import IconButton from 'material-ui/IconButton';
 import Menu from 'material-ui/Menu';
 import MenuItem from 'material-ui/MenuItem';
 import Paper from 'material-ui/Paper';
@@ -40,7 +39,7 @@ export default class Dashboard extends Component {
 			<div>
 				<div className='topmenu'>
 					<Paper style={styles.paper} zDepth={2}>
-					<AutoComplete 
+					<AutoComplete
 						hintText='Search Patients'
 						fullWidth={true}
 						style={styles.search}
@@ -110,3 +109,5 @@ Dashboard.propTypes = {
 	onLogoutClick: PropTypes.func.isRequired,
 	data: PropTypes.object
 };
+
+// Contact GitHub API Training Shop Blog About

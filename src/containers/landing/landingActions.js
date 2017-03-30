@@ -2,7 +2,14 @@ import fetch from 'isomorphic-fetch';
 
 export const WAITLIST_SUCCESS = 'WAITLIST_SUCCESS';
 export const WAITLIST_FAILURE = 'WAITLIST_FAILURE';
+export const CHANGE_PANE	  = 'CHANGE_PANE';
 
+export function switchPane(id) {
+	return {
+		type: CHANGE_PANE,
+		id
+	};
+}
 
 //*****************************  WAITLIST  *******************************//
 
@@ -49,8 +56,3 @@ export function joinWaitlist(creds) {
 		}).catch(err => console.log("Error: ", err));
 	};
 }
-
-
-
-
-
