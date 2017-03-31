@@ -1,0 +1,61 @@
+/* Fonts */
+/* Font Sizes */
+/* Header */
+#header {
+  top: 0;
+  left: 0;
+  right: 0;
+  background: white;
+  width: 100%;
+  z-index: 500;
+  position: fixed;
+  font-family: "Futura", sans-serif; }
+  #header #navigation {
+    margin: auto;
+    padding: 30px 30px 30px 30px; }
+    #header #navigation #left {
+      float: left;
+      margin-left: 50px; }
+    #header #navigation #right {
+      float: right;
+      margin-right: 50px; }
+    #header #navigation .header-side {
+      font-size: 22px;
+      padding: 30px 30px 30px 30px; }
+    #header #navigation .header-logo {
+      font-size: 37px;
+      text-align: center; }
+
+/* Side Bar */
+#side-bar {
+  height: 50px;
+  margin: 200px 0 0 0;
+  text-align: left;
+  position: fixed; }
+  #side-bar #designer {
+    margin-top: 20px; }
+
+#product-view .box img {
+  width: 300px;
+  margin: 10px 10px 10px 10px; }
+
+#product-view .product-box {
+  margin: 0 0 0 0;
+  text-align: center;
+  width: 100%; }
+
+/* Positions */
+#center {
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  height: 100px;
+  position: absolute; }
+
+#left {
+  float: left; }
+
+#right {
+  float: right; }
+
+/*# sourceMappingURL=browse.css.map */

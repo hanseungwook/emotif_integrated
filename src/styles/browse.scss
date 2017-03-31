@@ -1,140 +1,152 @@
+/* HTML */
+@import url('https://fonts.googleapis.com/css?family=Futura');
 
-/* Variables */
-$ft_sz_logo_1440: 34px;
-$ft_sz_logo_1024: 28px;
-$ft_sz_logo_768 : 22px;
-$ft_sz_logo_320 : 22px;
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
 
-$ft_sz_main_1440: 26px;
-$ft_sz_main_1024: 22px;
-$ft_sz_main_768 : 20px;
-$ft_sz_main_320 : 18px;
+@mixin height($size1, $size2, $size3, $size4){
+  @media screen and (min-width: 0px   ) { height: $size1;}
+  @media screen and (min-width: 768px ) { height: $size2;}
+  @media screen and (min-width: 1024px) { height: $size3;}
+  @media screen and (min-width: 1440px) { height: $size4;}
+  }
+@mixin width($size1, $size2, $size3, $size4){
+  @media screen and (min-width: 0px   ) { width: $size1;}
+  @media screen and (min-width: 768px ) { width: $size2;}
+  @media screen and (min-width: 1024px) { width: $size3;}
+  @media screen and (min-width: 1440px) { width: $size4;}
+}
 
-$ft_sz_sec_1440 : 24px;
-$ft_sz_sec_1024 : 20px;
-$ft_sz_sec_768  : 18px;
-$ft_sz_sec_320  : 16px;
-
-$black:          #000000;
-$light-grey:     #9B9B9B;
-$grey:           #4A4A4A;
-$dark-grey:      #979797;
-$peach:          #EFC4B2;
-$mint:           #C7EDDE;
-$earth:          #A7988B;
-$blue :          #5EAFDE;
-
-$SourceSansPro : 'Source Sans Pro', sans-serif;
-$Lato          : 'Lato'           , sans-serif;
-$Raleway       : 'Raleway'        , sans-serif;
-$Dosis         : 'Dosis'          , sans-serif;
-$Abel          : 'Abel'           , sans-serif;
-$Harmattan     : 'Harmattan'      , sans-serif;
+/* Fonts */
+$Zona          : 'Zona Pro'       , sans-serif;
 $Futura        : 'Futura'         , sans-serif;
-$Buffalo       : 'Buffalo'        , sans-serif;
-$Adam          : 'Adam'           , sans-serif;
-$HelveticaNeue : 'HelveticaNeue'  , sans-serif;
-$IndieFlower   : 'Indie Flower'   , cursive;
-$AmaticSC      : 'Amatic SC'      , cursive;
-$Pacifico      : 'Pacifico'       , cursive;
-$Yellowtail    : 'Yellowtail'     , cursive;
+/* Colors */
+$seashell      : #FFF5EE;
+$redpink       : #FF6666;
+$mud           : #E0AC69;
+$foundation    : #EEC1AD;
+$darkpink      : #C98276;
 
-$logo-font            : $Pacifico;
-$header-font          : $Futura;
-$tagline-font         : $Futura;
-$button-font          : $Futura;
-$quote-font           : $Futura;
-$quote-author-font    : $Futura;
-$value-prop-font      : $Futura;
-$value-prop-bold-font : $Futura;
-$definition-font      : $Futura;
-$waitlist-box-font    : $Futura;
-$input-font           : $Futura;
+/* Header */
 
+$header-font: $Zona;
 
-/* Styles */
-
-.products{
-  background: white;
-  height: 100vh;
-  width: 100%;
-  overflow: scroll;
-}
-.product{
-  margin: 20%;
-  height: 60%;
-  width: 60%;
-  .product-innerbox{
+#navigation{
+    top: 0;
+    left: 0;
     width: 100%;
-    height: 100%;
-    .info{
-      height: 10%;
-      vertical-align: bottom;
-      width:100%;
-      .product-name{
-        color: $blue;
-      }
-      .designer{
-        color: $blue;
-      }
+    min-height: 80px;
+    padding: 25px 30px 0px 30px;
+    font-family: $header-font;
+    .header-side{
+        font-size: 22px;
+        padding: 40px 140px 40px 140px;
+        #left {
+            float: left;
+        }
+        #right {
+            float: right;
+        }
+        #center {
+            left: 50%;
+        }
     }
-  }
+    .header-logo {
+        font-size: 37px;
+        text-align: center;
+    }
 }
 
-.product-view{
-  position: fixed;
-  z-index: 1000;
-  top: 0;
-  left: 0;
-  margin:0;
-  width: 100vw;
-  height: 100vh;
-  background: white;
-  overflow: scroll;
-  .product-innerbox{
-    margin: 20px 20%;
-    height: 100%;
-    width: 60%;
-    .info{
-      margin: 0 auto;
-      color: white;
-      text-align: center;
-      .product-name{
-        color: white;
-      }
-      .designer{
-        color: white;
-      }
-    }
-  }
+.header-side:hover {
+    color: $redpink;
 }
 
-.images {
-  margin: 0 auto;
-  @include width(      100%,  720px,  900px,  1200px);
-  @include height(     300px, 300px,  300px,  400px);
-  @include margin-top( 50px,  50px,   50px,   50px);
-  div.img-box{
-    display         : inline-block;
-    margin: 0;
-    vertical-align  : top;
-    width: auto;
-    &:nth-child(1){
-      float: left;
-      @media screen and (min-width: 0px)  { display: none;}
-      @media screen and (min-width: 768px){ display: inline-block;;}
+/* Content Container */
+
+#content-container > div {
+    min-height: 450px;
+}
+
+#content-container {
+    overflow: hidden;
+    width: 100%;
+    padding: 25px 10px 15px 10px;
+    background-image: url('../../images/browse/background1.png');
+}
+
+/* Side Bar */
+
+$sidebar-font: $Futura;
+
+#side-bar {
+    float: left;
+    width: 150px;
+    margin: 50px 0 0 130px;
+    font-family: $sidebar-font;
+    // padding: 50px 0 0 140px;
+    #category-list {
+        margin: 0 0 175px 0;
+        text-align: left;
+        .product-category {
+            font-size: 17px;
+            padding: 2px 2px 2px 0;
+        }
     }
-    &:nth-child(2){ margin: auto;}
-    &:nth-child(3){
-      float : right;
-      @media screen and (min-width: 0px){   display: none;}
-      @media screen and (min-width: 768px){ display: inline-block;}
+    .product-category:hover {
+        color: $mud;
     }
-    img.img-hero{
-      display:block;
-      margin: 0;
-      @include width(      200px,  200px,  240px,  320px);
-      @include height(     250px,  250px,  300px,  400px);
+    #designer-list {
+        margin: 0 0 0 20px;
+        text-align: left;
+        .designer-name {
+            font-size: 15px;
+            padding: 1px 1px 1px 1px;
+        }
     }
-  }
+    .designer-name:hover {
+        color: $foundation;
+    }
+    #designer-text {
+        text-align: left;
+        font-size: 17px;
+        padding: 0px 0px 10px 0;
+        margin: 0;
+    }
+}
+
+/* Products */
+
+$products-font: $Futura;
+
+#product-page {
+    overflow: hidden;
+    float: right;
+    width: 70%;
+    font-family: $products-font;
+    .product {
+        overflow: hidden;
+        .product-img {
+            float: left;
+            width: 65%;
+        }
+        .product-title {
+            float: left;
+            font-size: 23px;
+        }
+        .product-designer {
+            float: left;
+            font-size: 20px;
+            margin: 20px 0 0 30px;
+        }
+    }
+
+}
+
+.product-img img {
+    @include width( 80px, 240px, 350px, 490px);
+    @include height( 110px, 340px, 490px, 690px);
+    margin-left: 70px;
 }

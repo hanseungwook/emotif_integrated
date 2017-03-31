@@ -53,12 +53,8 @@ export function signupUser(creds) {
 		body: searchParams
 	};
 
-
-
 	return dispatch => {
-
 		dispatch(requestSignup(creds));
-
 		return fetch('http://emotif-parse-dev.us-east-1.elasticbeanstalk.com/parse/classes/_User', config)
 		.then(response =>
 			response.json().then(user => ({ user, response }))

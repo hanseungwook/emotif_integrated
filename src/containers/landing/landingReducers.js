@@ -1,4 +1,4 @@
-import { WAITLIST_SUCCESS, WAITLIST_FAILURE, CHANGE_PANE } from './landingActions';
+import { WAITLIST_SUCCESS, WAITLIST_FAILURE } from './landingActions';
 
 const landingReducer = ( state = {isFetching: false,
 	isAuthenticated: localStorage.getItem('id_token') ? true : false }, action) =>
@@ -15,10 +15,6 @@ const landingReducer = ( state = {isFetching: false,
 				isFetching: false,
 				isAuthenticated: false,
 				errorMessage: ''
-			});
-		case CHANGE_PANE:
-			return Object.assign({}, state, {
-				paneId: action.id
 			});
 		default:
 			return state;
