@@ -7,7 +7,6 @@ import MenuItem from 'material-ui/MenuItem';
 import Paper from 'material-ui/Paper';
 import AutoComplete from 'material-ui/AutoComplete';
 
-import NotificationsIcon from 'material-ui/svg-icons/social/notifications';
 import ActionDashboard from 'material-ui/svg-icons/action/dashboard';
 import ActionHelp from 'material-ui/svg-icons/action/help';
 import ActionPermIdentity from 'material-ui/svg-icons/action/perm-identity';
@@ -18,15 +17,12 @@ import ActionHighlightOff from 'material-ui/svg-icons/action/highlight-off';
 
 import {lightBlue500} from 'material-ui/styles/colors';
 
-import '../styles/dashboard.scss';
-
 
 export default class Dashboard extends Component {
 
 	render() {
 		const { data, onLogoutClick } = this.props;
 		const lightGrey = '#A0ACBF';
-		const grey = '#9AA2AE';
 
 		const patients = [];
 		const dataObj = JSON.parse(data.quotes)[0];
@@ -47,9 +43,6 @@ export default class Dashboard extends Component {
 						dataSource={patients}
 					/>
 					<Badge style={styles.badge} badgeContent={10} secondary={true} badgeStyle={{top: 12, right: 12, backgroundColor: lightBlue500}}>
-						<IconButton tooltip='Notifications'>
-						<NotificationsIcon color={grey}/>
-						</IconButton>
 					</Badge>
 					</Paper>
 				</div>

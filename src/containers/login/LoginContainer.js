@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { loginUser } from './loginActions';
 import LoginPage from '../../components/LoginPage';
-import DashboardContainer from '../dashboard/DashboardContainer';
+import BrowseContainer from '../browse/BrowseContainer';
 
 
 export class LoginContainer extends Component {
@@ -13,7 +13,7 @@ export class LoginContainer extends Component {
 
 		if ( isAuthenticated ){
 			return (
-				<DashboardContainer/>
+				<BrowseContainer/>
 			);
 		}
 		else {
