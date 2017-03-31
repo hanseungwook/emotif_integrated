@@ -1,9 +1,9 @@
 // import {} from './preferencesActions';
 
 const initialState = {
-  atSection         : 0,
-  atQuestion        : 0,
-  formValues        : [],
+  // atSection         : 0,
+  // atQuestion        : 0,
+  // formValues        : [],
   isAuthenticated   : true,
 };
 
@@ -16,4 +16,5 @@ const preferencesReducer = (state = initialState, action) => {
       return state;
   }
 };
+
 export default preferencesReducer;

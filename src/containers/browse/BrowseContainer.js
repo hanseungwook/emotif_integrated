@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 // import { connect }                     from 'react-redux';
 // import { bindActionCreators }          from 'redux';
 
-// import {}    from './landingActions';
+// import { joinWaitlist, switchPane }    from './BrowseActions';
 import BrowsePage from '../../components/browse/BrowsePage';
 
 export class BrowseContainer extends Component {
@@ -15,7 +15,9 @@ export class BrowseContainer extends Component {
 }
 
 // BrowseContainer.propTypes = {}
-// const mapPropToStates     = (state) => {}
-// const mapDispatchToProps  = () => {}
+// const mapPropToStates = (state) => {}
+// const mapDispatchToProps = () => {}
+//
 // export default connect(mapPropToStates, mapDispatchToProps)(BrowseContainer);
+
 export default BrowseContainer;

@@ -33,4 +33,4 @@ export default class Radio extends Component{
 
 Radio.propTypes = {
   options: PropTypes.array
-}
+};

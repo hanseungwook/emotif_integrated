@@ -7,11 +7,6 @@ import Checkbox from '../Checkbox';
 
 export default class Size extends Component {
 
-
-
-
-
-
   render() {
     let height_units = ['ft-in','cm'];
     let weight_units = ['lbs','kg'];

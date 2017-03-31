@@ -1,6 +1,6 @@
 import { WAITLIST_SUCCESS, WAITLIST_FAILURE, CHANGE_PANE } from './landingActions';
 
-const landingReducer = ( state = {isFetching: false,
+const landing = ( state = { paneId:1, isFetching: false,
 	isAuthenticated: localStorage.getItem('id_token') ? true : false }, action) =>
 {
 	switch (action.type) {
@@ -25,4 +25,4 @@ const landingReducer = ( state = {isFetching: false,
 	}
 };
 
-export default landingReducer;
+export default landing;

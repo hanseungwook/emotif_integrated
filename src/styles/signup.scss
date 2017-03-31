@@ -1,0 +1,41 @@
+/* Variables */
+$neonblue: #67C8FF;
+$neonpink: #FF6EC7;
+$neongreen: #83F52C;
+$neonpurple: #c32aff;
+$neonred: #DD0048;
+
+.signup_form {
+    margin:auto;
+    margin-top: 4%;
+    margin-right: 35%;
+    margin-left: 35%;
+    height: 30em;
+    position: relative;
+    border: 1px solid grey;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+
+    input {
+    	margin-top: 3em;
+    }
+
+	.next_but {
+		background-color: $neonred;
+		color: white;
+		position: absolute;
+		left: 33.3%;
+		top: 5em;
+		text-align: center;
+		font-family: artely;
+		font-size: 2.5em;
+		width: 33.3%;
+		height: 50px;
+		margin-top: 3em;
+		line-height: 1.3em;
+	}
+
+	.next_but:hover {
+		cursor: pointer;
+	}
+}

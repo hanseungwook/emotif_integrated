@@ -1,23 +1,47 @@
-// import React, { Component, PropTypes } from 'react';
-import React, { Component } from 'react';
-// import { connect }                     from 'react-redux';
-// import { bindActionCreators }          from 'redux';
-
-// import { joinWaitlist, switchPane }    from './LandingActions';
-import LandingPage from '../../components/landing/LandingPage';
+import React, { Component, PropTypes } from 'react';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import { joinWaitlist } from './landingActions';
+import LandingPage from '../../components/LandingPage';
+// import BrowsePage from '../../components/browse/BrowsePage';
 
 export class LandingContainer extends Component {
-  render(){
-    return(
-      <LandingPage/>
-    );
-  }
+
+	render(){
+		if (this.props.isAuthenticated){
+			return (
+				<LandingPage
+					onWaitlistClick = {this.props.onWaitlistClick}
+				/>
+			);
+		} else {
+			return (
+				<LandingPage
+					onWaitlistClick = {this.props.onWaitlistClick}
+				/>
+			);
+		}
+	}
 }
 
-// LandingContainer.propTypes = {
-//   isAuthenticated : PropTypes.bool.isRequired
-// }
-// const mapPropToStates = (state) => {}
-// const mapDispatchToProps = () => {}
-// export default connect(mapPropToStates, mapDispatchToProps)(LandingContainer);
-export default LandingContainer;
+LandingContainer.propTypes = {
+	onWaitlistClick	: PropTypes.func.isRequired,
+	isAuthenticated	: PropTypes.bool.isRequired
+};
+
+const mapStateToProps = (state) => {
+	const { isAuthenticated, errorMessage } = state.landingReducer;
+	return {
+		isAuthenticated,
+		errorMessage,
+	};
+};
+
+const mapDispatchToProps = (dispatch) => {
+	return{
+		onWaitlistClick: bindActionCreators(joinWaitlist, dispatch),
+		dispatch
+	};
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(LandingContainer);
