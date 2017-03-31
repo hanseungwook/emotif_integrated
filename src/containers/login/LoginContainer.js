@@ -33,7 +33,7 @@ LoginContainer.propTypes = {
 
 
 const mapStateToProps = (state) => {
-  const { isAuthenticated, errorMessage } = state.login;
+  const { isAuthenticated, errorMessage } = state;
   return {
     isAuthenticated,
     errorMessage

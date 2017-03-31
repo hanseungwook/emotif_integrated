@@ -30,7 +30,7 @@ LandingContainer.propTypes = {
 };
 
 const mapStateToProps = (state) => {
-	const { isAuthenticated, errorMessage } = state.landingReducer;
+	const { isAuthenticated, errorMessage } = state;
 	return {
 		isAuthenticated,
 		errorMessage,
