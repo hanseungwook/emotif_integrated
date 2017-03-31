@@ -36,7 +36,7 @@ export function callApi(endpoint, authenticated) {
 
 	return dispatch => {
 		dispatch(requestQuote());
-		
+
 		if(authenticated) {
 			if(token) {
 				config = {
@@ -91,4 +91,3 @@ export function logoutUser() {
     dispatch(receiveLogout());
   };
 }
-

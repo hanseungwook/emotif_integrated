@@ -1,6 +1,6 @@
 import { SIGNUP_REQUEST, SIGNUP_SUCCESS, SIGNUP_FAILURE } from './signupActions';
 
-const signup = ( state = { isFetching: false, isAuthenticated: localStorage.getItem('id_token') ? true : false }, action) => {
+const signupReducer = ( state = { isFetching: false, isAuthenticated: localStorage.getItem('id_token') ? true : false }, action) => {
 	switch (action.type) {
 	case SIGNUP_REQUEST:
 		return Object.assign({}, state, {
@@ -25,4 +25,4 @@ const signup = ( state = { isFetching: false, isAuthenticated: localStorage.getI
 	}
 };
 
-export default signup;
+export default signupReducer;

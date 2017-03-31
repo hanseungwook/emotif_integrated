@@ -53,7 +53,7 @@ export default class LoginPage extends Component {
 			</div>
 		);
 	}
-	
+
 }
 
 LoginPage.propTypes = {

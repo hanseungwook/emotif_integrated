@@ -32,6 +32,7 @@ $input-label-font : $Lato;
 
 .page{
   padding: 10%;
+  $font-family: $Lato;
   .section{
     clear: both;
 
@@ -59,38 +60,102 @@ $input-label-font : $Lato;
         text-align: left;
       }
 
-      .radio{
-        .radio-option{
-          display: inline-block;
-          float: left;
-          width       : 50px;
-          height      : 30px;
-          line-height : 30px;
-          border      : 1px solid $grey;
-        }
-      }
-
       .checkbox{
         .checkbox-option{
           display     : inline-block;
-          float: left;
+          float       : left;
           border      : 1px solid $grey;
           width       : 50px;
           line-height : 30px;
           height      : 30px;
         }
+        .checkbox-option.selected{
+          background: $blue;
+        }
       }
-
       .selector{
         width: 100%;
 
       }
+    }
+  }
+}
+
+
+
+
+.form.selector{
+
+}
+.skin.selector{
+
+}
+.eye.selector{
+
+}
+.hair.selector{
+
+}
+
+.selector{
+  .primary-items{
+    clear: both;
+    width: 100%;
+  }
+  .secondary-items{
+    clear: both;
+    width: 100%;
+  }
+  .pri-color-opt{
+    &:hover{
+
+    }
+    &:focus{
 
     }
 
-
   }
 }
+
+
+.pri-color-opt, .sec-color-opt{
+  float       : left;
+  display     : inline-block;
+  width       : 80px;
+  height      : 80px;
+  border      : none;
+}
+
+.selector.pri-selected {
+  .pri-color-opt{
+    border: none;
+  }
+  .pri-color-opt.selected{
+    border: 1px solid $blue;
+  }
+  .sec-color-opt{
+    border: none;
+  }
+}
+.selector.sec-selected {
+  .pri-color-opt{
+    border: none;
+  }
+  .pri-color-opt.selected{
+    border: 1px solid $grey;
+  }
+  .sec-color-opt{
+    border: none;
+  }
+  .sec-color-opt.selected{
+    border: 1px solid $blue;
+  }
+}
+
+
+
+
+
 
 
 
@@ -112,31 +177,46 @@ $input-label-font : $Lato;
 }
 
 
-.pref-input{
-  font-family : $input-font;
-  display     : block;
-  text-align  : left;
-  padding-left: 10px;
-  font-weight : lighter;
-  background  : transparent;
-  color       : $grey;
-  border      : 1px solid $grey;
-  margin-right: 0;
-  @include margin-top(  20px,  20px,   20px,   20px);
-  @include font-size($ft_input_320, $ft_input_768,$ft_input_1024,$ft_input_1440);
-  @include height(      $input-320h,  $input-768h, $input-1024h, $input-1440h);
-  @include width(       $input-320w,  $input-768w, $input-1024w, $input-1440w);
-  span{ @include line-height( $input-320h,  $input-768h, $input-1024h, $input-1440h);}
+.input-box{
+  clear: both;
+  width: 100%;
+  height: 30px;
+  margin-top: 30px;
+  .pref-input{
+    font-size     : 20px;
+    font-family   : $input-font;
+    display       : inline-block;
+    float         : left;
+    text-align    : center;
+    padding-left  : 10px;
+    color         : $grey;
+    border        : none;
+    border-bottom : 2px solid $grey;
+    height        : 100%;
+    width         : 50%;
+  }
+  .radio{
+    .radio-option{
+      font-family   : $input-font;
+      display: inline-block;
+      float: left;
+      width       : 50px;
+      height      : 30px;
+      line-height : 30px;
+      border      : 1px solid $grey;
+    }
+    .radio-option.selected{
+      text-decoration: none;
+      color          : $blue;
+    }
+  }
 }
 
 
-
-.radio-selected{
-  background: $blue;
-}
 .checkbox{
   display: block;
   width: 100%;
+  font-family: $input-font;
   .checkbox-option{
     display     : inline-block;
     float: left;
@@ -146,23 +226,10 @@ $input-label-font : $Lato;
     height      : 30px;
   }
 }
-.checkbox-selected{
+.checkbox-option.selected{
   background: $blue;
 }
 
-.height-box, .weight-box{
-  input{
-    display: inline-block;
-    margin-right: 0;
-  }
-  .radio{
-    vertical-align: bottom;
-    display: inline-block;
-  }
-}
-.section{
-  clear: both;
-}
 .body-shape,.body-shape-specific, .body-shape-selected{
   display: inline-block;
   cursor: pointer;
@@ -172,17 +239,12 @@ $input-label-font : $Lato;
   border      : 1px solid $grey;
 }
 
-.color-opt{
-  float       : left;
-  display     : inline-block;
-  width       : 80px;
-  height      : 80px;
-  border: none;
-}
+
 .aesthetics{
   .checkbox{
     float: left;
     margin: 0 auto;
+    // height: 40px;
     // @include background-gradient($peach, $mint, $earth);
     // @include width(600px, 600px, 600px, 600px);
     .checkbox-option{
@@ -194,19 +256,14 @@ $input-label-font : $Lato;
       background  : rgba(255,255,255,.9);
       vertical-align: bottom;
     }
-    .checkbox-selected{
+    .checkbox-option.selected{
       background  : rgba(255,255,255,.2);
     }
   }
 }
 
 
-.skin-color-selected{
-  border      : 1px solid $grey;
-}
-.body-shape-selected{
-  border      : 2px solid $grey;
-}
+
 
 .form1 { @include radial-gradient($color1 );}
 .form2 { @include radial-gradient($color2 );}

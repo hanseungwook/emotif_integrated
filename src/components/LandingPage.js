@@ -35,18 +35,18 @@ export default class LandingPage extends Component {
 				</div>
 				<div className='nav'>
 					<a href='preferences.html'>Clothes</a>
-					<a href='preferences.html'>Designers</a> 
-					<a href='preferences.html'>Values</a>  
+					<a href='preferences.html'>Designers</a>
+					<a href='preferences.html'>Values</a>
 				</div>
-				<div className='waitlist'> 
-					<p> Join the Waitlist </p> 
+				<div className='waitlist'>
+					<p> Join the Waitlist </p>
 					{successMessage}
 					{errorMessage}
 					<form action='hello'>
 						<input type='text' placeholder='Email' name='fname'/><br/>
 					</form>
 				</div>
-				<div className='info'> 
+				<div className='info'>
 					<img src={require('../../images/shape.jpg')}/>
 					<img src={require('../../images/designer.jpg')}/>
 					<img src={require('../../images/art.jpg')}/>
@@ -54,7 +54,6 @@ export default class LandingPage extends Component {
 						<p>Tailored to your <b>tastes</b></p>
 						<p>Tailored to your <b>values</b></p>
 				</div>
-
 			</div>
 			<div className='footer'>
 				<p>Contact Us</p>

@@ -18,8 +18,8 @@ export class LoginContainer extends Component {
 		}
 		else {
 			return (
-				<LoginPage errorMessage={errorMessage} 
-							onLoginClick={onLoginClick}/>
+				<LoginPage errorMessage={errorMessage}
+									 onLoginClick={onLoginClick}/>
 			);
 		}
 	}
@@ -50,4 +50,3 @@ const mapDispatchToProps = (dispatch) => {
 
 
 export default connect(mapStateToProps, mapDispatchToProps)(LoginContainer);
-

@@ -1,11 +1,24 @@
-// export const ACTION_TYPE1 = 'ACTION_TYPE1';
+// export const FORM_VALUE_FILLED = 'FORM_VALUE_FILLED';
+// export const FORM_VALUE_MODIFIED = 'FORM_VALUE_MODIFIED';
 //
-// function action1() {
+// function questionValueSaved(id){
 // 	return {
-// 		type: ACTION_TYPE1
+// 		type     : FORM_VALUE_FILLED,
+//     section  : section,
+//     id       : id,
+//     value    : value,
 // 	};
 // }
 //
-// export function foo(endpoint, authenticated) {
+// function questionValueModified(section){
+// 	return {
+// 		type     : FORM_VALUE_MODIFIED,
+//     section  : section,
+//     id       : id,
+//     value    : value,
+// 	};
+// }
+//
+// export function handleFormValues(values) {
 // 	return dispatch => {};
 // }

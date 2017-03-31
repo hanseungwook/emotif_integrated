@@ -1,6 +1,6 @@
 import { LOGIN_REQUEST, LOGIN_SUCCESS, LOGIN_FAILURE } from './loginActions';
 
-const login = ( state = { isFetching: false, isAuthenticated: localStorage.getItem('id_token') ? true : false }, action) => {
+const loginReducer = ( state = { isFetching: false, isAuthenticated: localStorage.getItem('id_token') ? true : false }, action) => {
 	switch (action.type) {
 	case LOGIN_REQUEST:
 		return Object.assign({}, state, {
@@ -25,4 +25,4 @@ const login = ( state = { isFetching: false, isAuthenticated: localStorage.getIt
 	}
 };
 
-export default login;
+export default loginReducer;

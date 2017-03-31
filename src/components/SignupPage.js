@@ -52,7 +52,7 @@ export default class SignupPage extends Component {
 			</div>
 		);
 	}
-	
+
 }
 
 SignupPage.propTypes = {

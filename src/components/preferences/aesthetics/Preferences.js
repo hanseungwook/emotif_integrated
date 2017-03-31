@@ -2,8 +2,8 @@
 import React, { Component } from 'react';
 import Checkbox from '../Checkbox';
 
-export default class Preferences extends Component
-{
+export default class Preferences extends Component{
+
 	render() {
     let fem_mas  = ['feminine'     , '', 'masculine'];
     let min_max  = ['minimalist'   , '', 'maximalist'];

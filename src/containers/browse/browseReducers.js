@@ -3,7 +3,7 @@ import {
 	LOGOUT_SUCCESS, LOGOUT_FAILURE
 } from './browseActions';
 
-const browse = (state = { isFetching: false, quotes: '', authenticated: false }, action) => {
+const browseReducer = (state = { isFetching: false, quotes: '', authenticated: false }, action) => {
 	switch (action.type) {
 	case QUOTE_REQUEST:
 		return Object.assign({}, state, {
@@ -34,4 +34,4 @@ const browse = (state = { isFetching: false, quotes: '', authenticated: false },
 	}
 };
 
-export default browse;
+export default browseReducer;

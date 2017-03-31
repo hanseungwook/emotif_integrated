@@ -1,13 +1,13 @@
 import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { joinWaitlist, switchPane } from './landingActions';
+import { joinWaitlist } from './landingActions';
 import LandingPage from '../../components/LandingPage';
+// import BrowsePage from '../../components/browse/BrowsePage';
 
 export class LandingContainer extends Component {
 
-	render()
-	{
+	render(){
 		if (this.props.isAuthenticated){
 			return (
 				<LandingPage
@@ -18,8 +18,6 @@ export class LandingContainer extends Component {
 			return (
 				<LandingPage
 					onWaitlistClick = {this.props.onWaitlistClick}
-					onSwitchPane 	= {this.props.onSwitchPane}
-					paneId			= {this.props.paneId}
 				/>
 			);
 		}
@@ -28,25 +26,21 @@ export class LandingContainer extends Component {
 
 LandingContainer.propTypes = {
 	onWaitlistClick	: PropTypes.func.isRequired,
-	onSwitchPane	: PropTypes.func.isRequired,
-	isAuthenticated	: PropTypes.bool.isRequired,
-	paneId			: PropTypes.number.isRequired,
-	errorMessage	: PropTypes.string
+	isAuthenticated	: PropTypes.bool.isRequired
 };
 
 const mapStateToProps = (state) => {
-	const { isAuthenticated, errorMessage, paneId } = state.landing;
+	const { isAuthenticated, errorMessage } = state.landingReducer;
 	return {
 		isAuthenticated,
 		errorMessage,
-		paneId
 	};
 };
 
 const mapDispatchToProps = (dispatch) => {
 	return{
-		onSwitchPane:    bindActionCreators(switchPane,dispatch),
-		onWaitlistClick: bindActionCreators(joinWaitlist, dispatch)
+		onWaitlistClick: bindActionCreators(joinWaitlist, dispatch),
+		dispatch
 	};
 };
 
