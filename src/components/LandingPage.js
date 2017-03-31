@@ -3,7 +3,6 @@ import { Link } from 'react-router';
 
 import '../styles/landing.scss';
 
-
 export default class LandingPage extends Component {
 
 	constructor(props){
