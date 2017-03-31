@@ -1366,13 +1366,6 @@ p h1 h2 h3 h4 h5 h6 span {
         @media screen and (min-width: 1440px) {
           .page .section .sub-section .subtitle {
             font-size: 24px; } }
-      .page .section .sub-section .radio .radio-option {
-        display: inline-block;
-        float: left;
-        width: 50px;
-        height: 30px;
-        line-height: 30px;
-        border: 1px solid #4A4A4A; }
       .page .section .sub-section .checkbox .checkbox-option {
         display: inline-block;
         float: left;
@@ -1380,8 +1373,40 @@ p h1 h2 h3 h4 h5 h6 span {
         width: 50px;
         line-height: 30px;
         height: 30px; }
+      .page .section .sub-section .checkbox .checkbox-option.selected {
+        background: #5EAFDE; }
       .page .section .sub-section .selector {
         width: 100%; }
+
+.selector .primary-items {
+  clear: both;
+  width: 100%; }
+.selector .secondary-items {
+  clear: both;
+  width: 100%; }
+
+.pri-color-opt, .sec-color-opt {
+  float: left;
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  border: none; }
+
+.selector.pri-selected .pri-color-opt {
+  border: none; }
+.selector.pri-selected .pri-color-opt.selected {
+  border: 1px solid #5EAFDE; }
+.selector.pri-selected .sec-color-opt {
+  border: none; }
+
+.selector.sec-selected .pri-color-opt {
+  border: none; }
+.selector.sec-selected .pri-color-opt.selected {
+  border: 1px solid #4A4A4A; }
+.selector.sec-selected .sec-color-opt {
+  border: none; }
+.selector.sec-selected .sec-color-opt.selected {
+  border: 1px solid #5EAFDE; }
 
 .sub-selected {
   color: #5EAFDE; }
@@ -1419,83 +1444,39 @@ p h1 h2 h3 h4 h5 h6 span {
     .input-label {
       margin-bottom: 20px; } }
 
-.pref-input {
-  font-family: "Lato", sans-serif;
-  display: block;
-  text-align: left;
-  padding-left: 10px;
-  font-weight: lighter;
-  background: transparent;
-  color: #4A4A4A;
-  border: 1px solid #4A4A4A;
-  margin-right: 0; }
-  @media screen and (min-width: 0px) {
-    .pref-input {
-      margin-top: 20px; } }
-  @media screen and (min-width: 768px) {
-    .pref-input {
-      margin-top: 20px; } }
-  @media screen and (min-width: 1024px) {
-    .pref-input {
-      margin-top: 20px; } }
-  @media screen and (min-width: 1440px) {
-    .pref-input {
-      margin-top: 20px; } }
-  @media screen and (min-width: 0px) {
-    .pref-input {
-      font-size: 16px; } }
-  @media screen and (min-width: 768px) {
-    .pref-input {
-      font-size: 16px; } }
-  @media screen and (min-width: 1024px) {
-    .pref-input {
-      font-size: 16px; } }
-  @media screen and (min-width: 1440px) {
-    .pref-input {
-      font-size: 16px; } }
-  @media screen and (min-width: 0px) {
-    .pref-input {
-      height: 20px; } }
-  @media screen and (min-width: 768px) {
-    .pref-input {
-      height: 30px; } }
-  @media screen and (min-width: 1024px) {
-    .pref-input {
-      height: 30px; } }
-  @media screen and (min-width: 1440px) {
-    .pref-input {
-      height: 30px; } }
-  @media screen and (min-width: 0px) {
-    .pref-input {
-      width: 200px; } }
-  @media screen and (min-width: 768px) {
-    .pref-input {
-      width: 200px; } }
-  @media screen and (min-width: 1024px) {
-    .pref-input {
-      width: 200px; } }
-  @media screen and (min-width: 1440px) {
-    .pref-input {
-      width: 200px; } }
-  @media screen and (min-width: 0px) {
-    .pref-input span {
-      line-height: 20px; } }
-  @media screen and (min-width: 768px) {
-    .pref-input span {
-      line-height: 30px; } }
-  @media screen and (min-width: 1024px) {
-    .pref-input span {
-      line-height: 30px; } }
-  @media screen and (min-width: 1440px) {
-    .pref-input span {
-      line-height: 30px; } }
-
-.radio-selected {
-  background: #5EAFDE; }
+.input-box {
+  clear: both;
+  width: 100%;
+  height: 30px;
+  margin-top: 30px; }
+  .input-box .pref-input {
+    font-size: 20px;
+    font-family: "Lato", sans-serif;
+    display: inline-block;
+    float: left;
+    text-align: center;
+    padding-left: 10px;
+    color: #4A4A4A;
+    border: none;
+    border-bottom: 2px solid #4A4A4A;
+    height: 100%;
+    width: 50%; }
+  .input-box .radio .radio-option {
+    font-family: "Lato", sans-serif;
+    display: inline-block;
+    float: left;
+    width: 50px;
+    height: 30px;
+    line-height: 30px;
+    border: 1px solid #4A4A4A; }
+  .input-box .radio .radio-option.selected {
+    text-decoration: none;
+    color: #5EAFDE; }
 
 .checkbox {
   display: block;
-  width: 100%; }
+  width: 100%;
+  font-family: "Lato", sans-serif; }
   .checkbox .checkbox-option {
     display: inline-block;
     float: left;
@@ -1504,18 +1485,8 @@ p h1 h2 h3 h4 h5 h6 span {
     line-height: 30px;
     height: 30px; }
 
-.checkbox-selected {
+.checkbox-option.selected {
   background: #5EAFDE; }
-
-.height-box input, .weight-box input {
-  display: inline-block;
-  margin-right: 0; }
-.height-box .radio, .weight-box .radio {
-  vertical-align: bottom;
-  display: inline-block; }
-
-.section {
-  clear: both; }
 
 .body-shape, .body-shape-specific, .body-shape-selected {
   display: inline-block;
@@ -1524,13 +1495,6 @@ p h1 h2 h3 h4 h5 h6 span {
   width: 200px;
   height: 240px;
   border: 1px solid #4A4A4A; }
-
-.color-opt {
-  float: left;
-  display: inline-block;
-  width: 80px;
-  height: 80px;
-  border: none; }
 
 .aesthetics .checkbox {
   float: left;
@@ -1543,14 +1507,8 @@ p h1 h2 h3 h4 h5 h6 span {
     border-width: 1px 1px 1px 1px;
     background: rgba(255, 255, 255, 0.9);
     vertical-align: bottom; }
-  .aesthetics .checkbox .checkbox-selected {
+  .aesthetics .checkbox .checkbox-option.selected {
     background: rgba(255, 255, 255, 0.2); }
-
-.skin-color-selected {
-  border: 1px solid #4A4A4A; }
-
-.body-shape-selected {
-  border: 2px solid #4A4A4A; }
 
 .form1 {
   background: #F2F0F4;

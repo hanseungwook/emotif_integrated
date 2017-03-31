@@ -31,6 +31,7 @@
     "material-ui": "0.15.2",
     "object-assign": "4.1.0",
     "react": "15.2.1",
+    "react-addons-update": "15.4.2",
     "react-dom": "15.2.0",
     "react-fullpage": "0.1.16",
     "react-redux": "5.0.1",

@@ -2,7 +2,7 @@
 import React, { Component } from 'react';
 
 import Preferences from './Preferences';
-import Styles from './Styles';
+import Styles 		 from './Styles';
 
 export default class Aesthetics extends Component {
 

@@ -1,8 +1,13 @@
 // import {} from './preferencesActions';
 
 const initialState = {
-  isAuthenticated : false
+  atSection         : 0,
+  atQuestion        : 0,
+  formValues        : [],
+  isAuthenticated   : true,
 };
+
+
 const preferencesReducer = (state = initialState, action) => {
   switch (action.type) {
     case 0:

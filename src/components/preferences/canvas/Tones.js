@@ -5,7 +5,7 @@ import Selector from './Selector';
 
 export default class Tones extends Component {
 
-	render() {
+  render() {
     let skin_options  = {
       type      : 'skin',
       primary   : [3,9,15,21,27,33],
@@ -24,15 +24,24 @@ export default class Tones extends Component {
       secondary : 3
     };
 
-		return (
+    return (
       <div className='tones sub-section'>
-				<span className='subtitle'>Tones</span>
-        <Selector name='SkinColor' type={skin_options.type} primary={skin_options.primary}/>
-        <Selector name='EyeColor'  type={eye_options.type}  primary={eye_options.primary}/>
-        <Selector name='HairColor' type={hair_options.type} primary={hair_options.primary}/>
-			</div>
-		);
-	}
+        <span className='subtitle'>Tones</span>
+        <Selector name='SkinColor' type       = {skin_options.type}
+                                   primary   = {skin_options.primary}
+                                   secondary = {skin_options.secondary}
+        />
+        <Selector name='EyeColor'  type       = {eye_options.type}
+                                   primary   = {eye_options.primary}
+                                   secondary = {eye_options.secondary}
+        />
+        <Selector name='HairColor' type       = {hair_options.type}
+                                   primary   = {hair_options.primary}
+                                   secondary = {eye_options.secondary}
+        />
+      </div>
+    );
+  }
 }
 
 // PreferencesPage.propTypes = {}

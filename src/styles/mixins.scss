@@ -12,6 +12,8 @@
   @media screen and (min-width: 1024px) { font-size: $size3;}
   @media screen and (min-width: 1440px) { font-size: $size4;}
 }
+
+
 @mixin height($size1, $size2, $size3, $size4){
   @media screen and (min-width: 0px   ) { height: $size1;}
   @media screen and (min-width: 768px ) { height: $size2;}
