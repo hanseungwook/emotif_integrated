@@ -8,8 +8,8 @@ import Aesthetics  from './aesthetics/Aesthetics';
 import Canvas 		 from './canvas/Canvas';
 import Information from './information/Information';
 
+import '../../styles/preferences.scss';
 
-import '../../styles/styles.css';
 export default class PreferencesPage extends Component
 {
 	render() {
