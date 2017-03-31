@@ -1,23 +1,21 @@
-// import React, { Component, PropTypes } from 'react';
 import React, { Component } from 'react';
-// import { connect }                     from 'react-redux';
-// import { bindActionCreators }          from 'redux';
-
-// import { joinWaitlist, switchPane }    from './BrowseActions';
 import BrowsePage from '../../components/browse/BrowsePage';
 
 export class BrowseContainer extends Component {
-  render(){
-    return(
-      <BrowsePage/>
-    );
-  }
+    constructor(props) {
+        super(props);
+    }
+    componentDidMount() {
+        // console.log("Did mount");
+    }
+    componentWillUnmount() {
+        // console.log("Will unmount");
+    }
+    render() {
+        return (
+            <BrowsePage />
+        );
+    }
 }
-
-// BrowseContainer.propTypes = {}
-// const mapPropToStates = (state) => {}
-// const mapDispatchToProps = () => {}
-//
-// export default connect(mapPropToStates, mapDispatchToProps)(BrowseContainer);
 
 export default BrowseContainer;

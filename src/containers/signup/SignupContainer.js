@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { signupUser } from './signupActions';
 import SignupPage from '../../components/SignupPage';
-import BrowseContainer from '../browse/BrowseContainer';
+import BrowsePage from '../../components/browse/BrowsePage';
 
 
 export class SignupContainer extends Component {
@@ -13,12 +13,12 @@ export class SignupContainer extends Component {
 
 		if ( isAuthenticated ){
 			return (
-				<BrowseContainer/>
+				<BrowsePage/>
 			);
 		}
 		else {
 			return (
-				<SignupPage errorMessage={errorMessage} 
+				<SignupPage errorMessage={errorMessage}
 							onSignupClick={onSignupClick}/>
 			);
 		}
