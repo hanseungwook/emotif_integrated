@@ -1,0 +1,1187 @@
+/*! normalize.css v6.0.0 | MIT License | github.com/necolas/normalize.css */
+/* Document
+   ========================================================================== */
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in
+ *    IE on Windows Phone and in iOS.
+ */
+@import url("https://fonts.googleapis.com/css?family=Acme|Pacifico|Mogra|Abel|Amatic+SC|Dosis|Harmattan|Indie+Flower|Lato|Raleway|Source+Sans+Pro|Leckerli+One");
+@import url("https://fonts.googleapis.com/css?family=Acme|Pacifico|Mogra|Abel|Amatic+SC|Dosis|Harmattan|Indie+Flower|Lato|Raleway|Source+Sans+Pro|Leckerli+One");
+html {
+  line-height: 1.15;
+  /* 1 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */ }
+
+/* Sections
+   ========================================================================== */
+/**
+ * Add the correct display in IE 9-.
+ */
+article,
+aside,
+footer,
+header,
+nav,
+section {
+  display: block; }
+
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0; }
+
+/* Grouping content
+   ========================================================================== */
+/**
+ * Add the correct display in IE 9-.
+ * 1. Add the correct display in IE.
+ */
+figcaption,
+figure,
+main {
+  /* 1 */
+  display: block; }
+
+/**
+ * Add the correct margin in IE 8.
+ */
+figure {
+  margin: 1em 40px; }
+
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+hr {
+  box-sizing: content-box;
+  /* 1 */
+  height: 0;
+  /* 1 */
+  overflow: visible;
+  /* 2 */ }
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+pre {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */ }
+
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * 1. Remove the gray background on active links in IE 10.
+ * 2. Remove gaps in links underline in iOS 8+ and Safari 8+.
+ */
+a {
+  background-color: transparent;
+  /* 1 */
+  -webkit-text-decoration-skip: objects;
+  /* 2 */ }
+
+/**
+ * 1. Remove the bottom border in Chrome 57- and Firefox 39-.
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+abbr[title] {
+  border-bottom: none;
+  /* 1 */
+  text-decoration: underline;
+  /* 2 */
+  text-decoration: underline dotted;
+  /* 2 */ }
+
+/**
+ * Prevent the duplicate application of `bolder` by the next rule in Safari 6.
+ */
+b,
+strong {
+  font-weight: inherit; }
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+b,
+strong {
+  font-weight: bolder; }
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+code,
+kbd,
+samp {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */ }
+
+/**
+ * Add the correct font style in Android 4.3-.
+ */
+dfn {
+  font-style: italic; }
+
+/**
+ * Add the correct background and color in IE 9-.
+ */
+mark {
+  background-color: #ff0;
+  color: #000; }
+
+/**
+ * Add the correct font size in all browsers.
+ */
+small {
+  font-size: 80%; }
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+sub {
+  bottom: -0.25em; }
+
+sup {
+  top: -0.5em; }
+
+/* Embedded content
+   ========================================================================== */
+/**
+ * Add the correct display in IE 9-.
+ */
+audio,
+video {
+  display: inline-block; }
+
+/**
+ * Add the correct display in iOS 4-7.
+ */
+audio:not([controls]) {
+  display: none;
+  height: 0; }
+
+/**
+ * Remove the border on images inside links in IE 10-.
+ */
+img {
+  border-style: none; }
+
+/**
+ * Hide the overflow in IE.
+ */
+svg:not(:root) {
+  overflow: hidden; }
+
+/* Forms
+   ========================================================================== */
+/**
+ * Remove the margin in Firefox and Safari.
+ */
+button,
+input,
+optgroup,
+select,
+textarea {
+  margin: 0; }
+
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+button,
+input {
+  /* 1 */
+  overflow: visible; }
+
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+button,
+select {
+  /* 1 */
+  text-transform: none; }
+
+/**
+ * 1. Prevent a WebKit bug where (2) destroys native `audio` and `video`
+ *    controls in Android 4.
+ * 2. Correct the inability to style clickable types in iOS and Safari.
+ */
+button,
+html [type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */ }
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0; }
+
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText; }
+
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
+legend {
+  box-sizing: border-box;
+  /* 1 */
+  color: inherit;
+  /* 2 */
+  display: table;
+  /* 1 */
+  max-width: 100%;
+  /* 1 */
+  padding: 0;
+  /* 3 */
+  white-space: normal;
+  /* 1 */ }
+
+/**
+ * 1. Add the correct display in IE 9-.
+ * 2. Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+progress {
+  display: inline-block;
+  /* 1 */
+  vertical-align: baseline;
+  /* 2 */ }
+
+/**
+ * Remove the default vertical scrollbar in IE.
+ */
+textarea {
+  overflow: auto; }
+
+/**
+ * 1. Add the correct box sizing in IE 10-.
+ * 2. Remove the padding in IE 10-.
+ */
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */ }
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto; }
+
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  outline-offset: -2px;
+  /* 2 */ }
+
+/**
+ * Remove the inner padding and cancel buttons in Chrome and Safari on macOS.
+ */
+[type="search"]::-webkit-search-cancel-button,
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  /* 1 */
+  font: inherit;
+  /* 2 */ }
+
+/* Interactive
+   ========================================================================== */
+/*
+ * Add the correct display in IE 9-.
+ * 1. Add the correct display in Edge, IE, and Firefox.
+ */
+details,
+menu {
+  display: block; }
+
+/*
+ * Add the correct display in all browsers.
+ */
+summary {
+  display: list-item; }
+
+/* Scripting
+   ========================================================================== */
+/**
+ * Add the correct display in IE 9-.
+ */
+canvas {
+  display: inline-block; }
+
+/**
+ * Add the correct display in IE.
+ */
+template {
+  display: none; }
+
+/* Hidden
+   ========================================================================== */
+/**
+ * Add the correct display in IE 10-.
+ */
+[hidden] {
+  display: none; }
+
+/* Mixin */
+/* Mans Greback Fonts */
+body {
+  width: 100%;
+  max-width: 100%;
+  margin: 0; }
+
+div {
+  width: 100%;
+  text-align: center;
+  background: transparent;
+  margin: 0 auto;
+  box-sizing: border-box; }
+
+input {
+  box-sizing: border-box; }
+
+p h1 h2 h3 h4 h5 h6 span {
+  text-align: center; }
+
+.page {
+  width: 100%;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center; }
+
+/* Mans Greback Fonts */
+.page {
+  padding: 10%; }
+  .page .section {
+    clear: both; }
+    .page .section .title {
+      font-family: "Futura", sans-serif;
+      display: table-cell;
+      text-align: left;
+      vertical-align: bottom; }
+      @media screen and (min-width: 0px) {
+        .page .section .title {
+          height: 50px; } }
+      @media screen and (min-width: 768px) {
+        .page .section .title {
+          height: 50px; } }
+      @media screen and (min-width: 1024px) {
+        .page .section .title {
+          height: 50px; } }
+      @media screen and (min-width: 1440px) {
+        .page .section .title {
+          height: 50px; } }
+      @media screen and (min-width: 0px) {
+        .page .section .title {
+          width: 200px; } }
+      @media screen and (min-width: 768px) {
+        .page .section .title {
+          width: 200px; } }
+      @media screen and (min-width: 1024px) {
+        .page .section .title {
+          width: 200px; } }
+      @media screen and (min-width: 1440px) {
+        .page .section .title {
+          width: 200px; } }
+      @media screen and (min-width: 0px) {
+        .page .section .title {
+          font-size: 22px; } }
+      @media screen and (min-width: 768px) {
+        .page .section .title {
+          font-size: 22px; } }
+      @media screen and (min-width: 1024px) {
+        .page .section .title {
+          font-size: 28px; } }
+      @media screen and (min-width: 1440px) {
+        .page .section .title {
+          font-size: 34px; } }
+    .page .section .sub-section {
+      clear: both; }
+      .page .section .sub-section .subtitle {
+        font-family: "Futura", sans-serif;
+        display: block;
+        width: 100%;
+        cursor: pointer;
+        text-align: left; }
+        @media screen and (min-width: 0px) {
+          .page .section .sub-section .subtitle {
+            height: 50px; } }
+        @media screen and (min-width: 768px) {
+          .page .section .sub-section .subtitle {
+            height: 50px; } }
+        @media screen and (min-width: 1024px) {
+          .page .section .sub-section .subtitle {
+            height: 50px; } }
+        @media screen and (min-width: 1440px) {
+          .page .section .sub-section .subtitle {
+            height: 50px; } }
+        @media screen and (min-width: 0px) {
+          .page .section .sub-section .subtitle {
+            width: 120px; } }
+        @media screen and (min-width: 768px) {
+          .page .section .sub-section .subtitle {
+            width: 120px; } }
+        @media screen and (min-width: 1024px) {
+          .page .section .sub-section .subtitle {
+            width: 120px; } }
+        @media screen and (min-width: 1440px) {
+          .page .section .sub-section .subtitle {
+            width: 120px; } }
+        @media screen and (min-width: 0px) {
+          .page .section .sub-section .subtitle {
+            font-size: 16px; } }
+        @media screen and (min-width: 768px) {
+          .page .section .sub-section .subtitle {
+            font-size: 18px; } }
+        @media screen and (min-width: 1024px) {
+          .page .section .sub-section .subtitle {
+            font-size: 20px; } }
+        @media screen and (min-width: 1440px) {
+          .page .section .sub-section .subtitle {
+            font-size: 24px; } }
+      .page .section .sub-section .checkbox .checkbox-option {
+        display: inline-block;
+        float: left;
+        border: 1px solid #4A4A4A;
+        width: 50px;
+        line-height: 30px;
+        height: 30px; }
+      .page .section .sub-section .checkbox .checkbox-option.selected {
+        background: #5EAFDE; }
+      .page .section .sub-section .selector {
+        width: 100%; }
+
+.selector .primary-items {
+  clear: both;
+  width: 100%; }
+.selector .secondary-items {
+  clear: both;
+  width: 100%; }
+
+.pri-color-opt, .sec-color-opt {
+  float: left;
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  border: none; }
+
+.selector.pri-selected .pri-color-opt {
+  border: none; }
+.selector.pri-selected .pri-color-opt.selected {
+  border: 1px solid #5EAFDE; }
+.selector.pri-selected .sec-color-opt {
+  border: none; }
+
+.selector.sec-selected .pri-color-opt {
+  border: none; }
+.selector.sec-selected .pri-color-opt.selected {
+  border: 1px solid #4A4A4A; }
+.selector.sec-selected .sec-color-opt {
+  border: none; }
+.selector.sec-selected .sec-color-opt.selected {
+  border: 1px solid #5EAFDE; }
+
+.sub-selected {
+  color: #5EAFDE; }
+
+.clear {
+  clear: both; }
+
+.input-label {
+  width: 100%;
+  clear: both;
+  font-family: "Lato", sans-serif;
+  text-align: left; }
+  @media screen and (min-width: 0px) {
+    .input-label {
+      margin-top: 20px; } }
+  @media screen and (min-width: 768px) {
+    .input-label {
+      margin-top: 20px; } }
+  @media screen and (min-width: 1024px) {
+    .input-label {
+      margin-top: 20px; } }
+  @media screen and (min-width: 1440px) {
+    .input-label {
+      margin-top: 20px; } }
+  @media screen and (min-width: 0px) {
+    .input-label {
+      margin-bottom: 20px; } }
+  @media screen and (min-width: 768px) {
+    .input-label {
+      margin-bottom: 20px; } }
+  @media screen and (min-width: 1024px) {
+    .input-label {
+      margin-bottom: 20px; } }
+  @media screen and (min-width: 1440px) {
+    .input-label {
+      margin-bottom: 20px; } }
+
+.input-box {
+  clear: both;
+  width: 100%;
+  height: 30px;
+  margin-top: 30px; }
+  .input-box .pref-input {
+    font-size: 20px;
+    font-family: "Lato", sans-serif;
+    display: inline-block;
+    float: left;
+    text-align: center;
+    padding-left: 10px;
+    color: #4A4A4A;
+    border: none;
+    border-bottom: 2px solid #4A4A4A;
+    height: 100%;
+    width: 50%; }
+  .input-box .radio .radio-option {
+    font-family: "Lato", sans-serif;
+    display: inline-block;
+    float: left;
+    width: 50px;
+    height: 30px;
+    line-height: 30px;
+    border: 1px solid #4A4A4A; }
+  .input-box .radio .radio-option.selected {
+    text-decoration: none;
+    color: #5EAFDE; }
+
+.checkbox {
+  display: block;
+  width: 100%;
+  font-family: "Lato", sans-serif; }
+  .checkbox .checkbox-option {
+    display: inline-block;
+    float: left;
+    border: 1px solid #4A4A4A;
+    width: 50px;
+    line-height: 30px;
+    height: 30px; }
+
+.checkbox-option.selected {
+  background: #5EAFDE; }
+
+.body-shape, .body-shape-specific, .body-shape-selected {
+  display: inline-block;
+  cursor: pointer;
+  margin: 0;
+  width: 200px;
+  height: 240px;
+  border: 1px solid #4A4A4A; }
+
+.aesthetics .checkbox {
+  float: left;
+  margin: 0 auto; }
+  .aesthetics .checkbox .checkbox-option {
+    width: 120px;
+    height: 40px;
+    line-height: 40px;
+    border: 1px solid #4A4A4A;
+    border-width: 1px 1px 1px 1px;
+    background: rgba(255, 255, 255, 0.9);
+    vertical-align: bottom; }
+  .aesthetics .checkbox .checkbox-option.selected {
+    background: rgba(255, 255, 255, 0.2); }
+
+.form1 {
+  background: #F2F0F4;
+  background: -webkit-radial-gradient(#F2F0F4 30%, #FFF 70%);
+  background: -o-radial-gradient(#F2F0F4 30%, #FFF 70%);
+  /* For Opera 11.6 to 12.0 */
+  background: -moz-radial-gradient(#F2F0F4 30%, #FFF 70%);
+  /* For Firefox 3.6 to 15 */
+  background: radial-gradient(#F2F0F4 30%, #FFF 70%);
+  /* Standard syntax */ }
+
+.form2 {
+  background: #E9E8E6;
+  background: -webkit-radial-gradient(#E9E8E6 30%, #FFF 70%);
+  background: -o-radial-gradient(#E9E8E6 30%, #FFF 70%);
+  /* For Opera 11.6 to 12.0 */
+  background: -moz-radial-gradient(#E9E8E6 30%, #FFF 70%);
+  /* For Firefox 3.6 to 15 */
+  background: radial-gradient(#E9E8E6 30%, #FFF 70%);
+  /* Standard syntax */ }
+
+.form3 {
+  background: #F9F8F6;
+  background: -webkit-radial-gradient(#F9F8F6 30%, #FFF 70%);
+  background: -o-radial-gradient(#F9F8F6 30%, #FFF 70%);
+  /* For Opera 11.6 to 12.0 */
+  background: -moz-radial-gradient(#F9F8F6 30%, #FFF 70%);
+  /* For Firefox 3.6 to 15 */
+  background: radial-gradient(#F9F8F6 30%, #FFF 70%);
+  /* Standard syntax */ }
+
+.form4 {
+  background: #FDFBE1;
+  background: -webkit-radial-gradient(#FDFBE1 30%, #FFF 70%);
+  background: -o-radial-gradient(#FDFBE1 30%, #FFF 70%);
+  /* For Opera 11.6 to 12.0 */
+  background: -moz-radial-gradient(#FDFBE1 30%, #FFF 70%);
+  /* For Firefox 3.6 to 15 */
+  background: radial-gradient(#FDFBE1 30%, #FFF 70%);
+  /* Standard syntax */ }
+
+.form5 {
+  background: #FDF5E1;
+  background: -webkit-radial-gradient(#FDF5E1 30%, #FFF 70%);
+  background: -o-radial-gradient(#FDF5E1 30%, #FFF 70%);
+  /* For Opera 11.6 to 12.0 */
+  background: -moz-radial-gradient(#FDF5E1 30%, #FFF 70%);
+  /* For Firefox 3.6 to 15 */
+  background: radial-gradient(#FDF5E1 30%, #FFF 70%);
+  /* Standard syntax */ }
+
+.form6 {
+  background: #FEF6E0;
+  background: -webkit-radial-gradient(#FEF6E0 30%, #FFF 70%);
+  background: -o-radial-gradient(#FEF6E0 30%, #FFF 70%);
+  /* For Opera 11.6 to 12.0 */
+  background: -moz-radial-gradient(#FEF6E0 30%, #FFF 70%);
+  /* For Firefox 3.6 to 15 */
+  background: radial-gradient(#FEF6E0 30%, #FFF 70%);
+  /* Standard syntax */ }
+
+.form7 {
+  background: #FAEEEC;
+  background: -webkit-radial-gradient(#FAEEEC 30%, #FFF 70%);
+  background: -o-radial-gradient(#FAEEEC 30%, #FFF 70%);
+  /* For Opera 11.6 to 12.0 */
+  background: -moz-radial-gradient(#FAEEEC 30%, #FFF 70%);
+  /* For Firefox 3.6 to 15 */
+  background: radial-gradient(#FAEEEC 30%, #FFF 70%);
+  /* Standard syntax */ }
+
+.form8 {
+  background: #F2E7E1;
+  background: -webkit-radial-gradient(#F2E7E1 30%, #FFF 70%);
+  background: -o-radial-gradient(#F2E7E1 30%, #FFF 70%);
+  /* For Opera 11.6 to 12.0 */
+  background: -moz-radial-gradient(#F2E7E1 30%, #FFF 70%);
+  /* For Firefox 3.6 to 15 */
+  background: radial-gradient(#F2E7E1 30%, #FFF 70%);
+  /* Standard syntax */ }
+
+.form9 {
+  background: #F2EFE7;
+  background: -webkit-radial-gradient(#F2EFE7 30%, #FFF 70%);
+  background: -o-radial-gradient(#F2EFE7 30%, #FFF 70%);
+  /* For Opera 11.6 to 12.0 */
+  background: -moz-radial-gradient(#F2EFE7 30%, #FFF 70%);
+  /* For Firefox 3.6 to 15 */
+  background: radial-gradient(#F2EFE7 30%, #FFF 70%);
+  /* Standard syntax */ }
+
+.form10 {
+  background: #F2F0F4;
+  background: -webkit-radial-gradient(#F2F0F4 30%, #FFF 70%);
+  background: -o-radial-gradient(#F2F0F4 30%, #FFF 70%);
+  /* For Opera 11.6 to 12.0 */
+  background: -moz-radial-gradient(#F2F0F4 30%, #FFF 70%);
+  /* For Firefox 3.6 to 15 */
+  background: radial-gradient(#F2F0F4 30%, #FFF 70%);
+  /* Standard syntax */ }
+
+.form11 {
+  background: #FCF7EA;
+  background: -webkit-radial-gradient(#FCF7EA 30%, #FFF 70%);
+  background: -o-radial-gradient(#FCF7EA 30%, #FFF 70%);
+  /* For Opera 11.6 to 12.0 */
+  background: -moz-radial-gradient(#FCF7EA 30%, #FFF 70%);
+  /* For Firefox 3.6 to 15 */
+  background: radial-gradient(#FCF7EA 30%, #FFF 70%);
+  /* Standard syntax */ }
+
+.form12 {
+  background: #FEF5DC;
+  background: -webkit-radial-gradient(#FEF5DC 30%, #FFF 70%);
+  background: -o-radial-gradient(#FEF5DC 30%, #FFF 70%);
+  /* For Opera 11.6 to 12.0 */
+  background: -moz-radial-gradient(#FEF5DC 30%, #FFF 70%);
+  /* For Firefox 3.6 to 15 */
+  background: radial-gradient(#FEF5DC 30%, #FFF 70%);
+  /* Standard syntax */ }
+
+.eye1 {
+  background: #90E9E6;
+  background: -webkit-radial-gradient(#90E9E6 30%, #FFF 70%);
+  background: -o-radial-gradient(#90E9E6 30%, #FFF 70%);
+  /* For Opera 11.6 to 12.0 */
+  background: -moz-radial-gradient(#90E9E6 30%, #FFF 70%);
+  /* For Firefox 3.6 to 15 */
+  background: radial-gradient(#90E9E6 30%, #FFF 70%);
+  /* Standard syntax */ }
+
+.eye2 {
+  background: #429BBC;
+  background: -webkit-radial-gradient(#429BBC 30%, #FFF 70%);
+  background: -o-radial-gradient(#429BBC 30%, #FFF 70%);
+  /* For Opera 11.6 to 12.0 */
+  background: -moz-radial-gradient(#429BBC 30%, #FFF 70%);
+  /* For Firefox 3.6 to 15 */
+  background: radial-gradient(#429BBC 30%, #FFF 70%);
+  /* Standard syntax */ }
+
+.eye3 {
+  background: #42C2B7;
+  background: -webkit-radial-gradient(#42C2B7 30%, #FFF 70%);
+  background: -o-radial-gradient(#42C2B7 30%, #FFF 70%);
+  /* For Opera 11.6 to 12.0 */
+  background: -moz-radial-gradient(#42C2B7 30%, #FFF 70%);
+  /* For Firefox 3.6 to 15 */
+  background: radial-gradient(#42C2B7 30%, #FFF 70%);
+  /* Standard syntax */ }
+
+.eye4 {
+  background: #8F914E;
+  background: -webkit-radial-gradient(#8F914E 30%, #FFF 70%);
+  background: -o-radial-gradient(#8F914E 30%, #FFF 70%);
+  /* For Opera 11.6 to 12.0 */
+  background: -moz-radial-gradient(#8F914E 30%, #FFF 70%);
+  /* For Firefox 3.6 to 15 */
+  background: radial-gradient(#8F914E 30%, #FFF 70%);
+  /* Standard syntax */ }
+
+.eye5 {
+  background: #A08400;
+  background: -webkit-radial-gradient(#A08400 30%, #FFF 70%);
+  background: -o-radial-gradient(#A08400 30%, #FFF 70%);
+  /* For Opera 11.6 to 12.0 */
+  background: -moz-radial-gradient(#A08400 30%, #FFF 70%);
+  /* For Firefox 3.6 to 15 */
+  background: radial-gradient(#A08400 30%, #FFF 70%);
+  /* Standard syntax */ }
+
+.eye6 {
+  background: #C87A00;
+  background: -webkit-radial-gradient(#C87A00 30%, #FFF 70%);
+  background: -o-radial-gradient(#C87A00 30%, #FFF 70%);
+  /* For Opera 11.6 to 12.0 */
+  background: -moz-radial-gradient(#C87A00 30%, #FFF 70%);
+  /* For Firefox 3.6 to 15 */
+  background: radial-gradient(#C87A00 30%, #FFF 70%);
+  /* Standard syntax */ }
+
+.eye7 {
+  background: #54382D;
+  background: -webkit-radial-gradient(#54382D 30%, #FFF 70%);
+  background: -o-radial-gradient(#54382D 30%, #FFF 70%);
+  /* For Opera 11.6 to 12.0 */
+  background: -moz-radial-gradient(#54382D 30%, #FFF 70%);
+  /* For Firefox 3.6 to 15 */
+  background: radial-gradient(#54382D 30%, #FFF 70%);
+  /* Standard syntax */ }
+
+.skin1 {
+  background: #F2F0F4;
+  background: -webkit-radial-gradient(#F2F0F4 30%, #FFF 70%);
+  background: -o-radial-gradient(#F2F0F4 30%, #FFF 70%);
+  /* For Opera 11.6 to 12.0 */
+  background: -moz-radial-gradient(#F2F0F4 30%, #FFF 70%);
+  /* For Firefox 3.6 to 15 */
+  background: radial-gradient(#F2F0F4 30%, #FFF 70%);
+  /* Standard syntax */ }
+
+.skin2 {
+  background: #E9E8E6;
+  background: -webkit-radial-gradient(#E9E8E6 30%, #FFF 70%);
+  background: -o-radial-gradient(#E9E8E6 30%, #FFF 70%);
+  /* For Opera 11.6 to 12.0 */
+  background: -moz-radial-gradient(#E9E8E6 30%, #FFF 70%);
+  /* For Firefox 3.6 to 15 */
+  background: radial-gradient(#E9E8E6 30%, #FFF 70%);
+  /* Standard syntax */ }
+
+.skin3 {
+  background: #F9F8F6;
+  background: -webkit-radial-gradient(#F9F8F6 30%, #FFF 70%);
+  background: -o-radial-gradient(#F9F8F6 30%, #FFF 70%);
+  /* For Opera 11.6 to 12.0 */
+  background: -moz-radial-gradient(#F9F8F6 30%, #FFF 70%);
+  /* For Firefox 3.6 to 15 */
+  background: radial-gradient(#F9F8F6 30%, #FFF 70%);
+  /* Standard syntax */ }
+
+.skin4 {
+  background: #FDFBE1;
+  background: -webkit-radial-gradient(#FDFBE1 30%, #FFF 70%);
+  background: -o-radial-gradient(#FDFBE1 30%, #FFF 70%);
+  /* For Opera 11.6 to 12.0 */
+  background: -moz-radial-gradient(#FDFBE1 30%, #FFF 70%);
+  /* For Firefox 3.6 to 15 */
+  background: radial-gradient(#FDFBE1 30%, #FFF 70%);
+  /* Standard syntax */ }
+
+.skin5 {
+  background: #FDF5E1;
+  background: -webkit-radial-gradient(#FDF5E1 30%, #FFF 70%);
+  background: -o-radial-gradient(#FDF5E1 30%, #FFF 70%);
+  /* For Opera 11.6 to 12.0 */
+  background: -moz-radial-gradient(#FDF5E1 30%, #FFF 70%);
+  /* For Firefox 3.6 to 15 */
+  background: radial-gradient(#FDF5E1 30%, #FFF 70%);
+  /* Standard syntax */ }
+
+.skin6 {
+  background: #FEF6E0;
+  background: -webkit-radial-gradient(#FEF6E0 30%, #FFF 70%);
+  background: -o-radial-gradient(#FEF6E0 30%, #FFF 70%);
+  /* For Opera 11.6 to 12.0 */
+  background: -moz-radial-gradient(#FEF6E0 30%, #FFF 70%);
+  /* For Firefox 3.6 to 15 */
+  background: radial-gradient(#FEF6E0 30%, #FFF 70%);
+  /* Standard syntax */ }
+
+.skin7 {
+  background: #FAEEEC;
+  background: -webkit-radial-gradient(#FAEEEC 30%, #FFF 70%);
+  background: -o-radial-gradient(#FAEEEC 30%, #FFF 70%);
+  /* For Opera 11.6 to 12.0 */
+  background: -moz-radial-gradient(#FAEEEC 30%, #FFF 70%);
+  /* For Firefox 3.6 to 15 */
+  background: radial-gradient(#FAEEEC 30%, #FFF 70%);
+  /* Standard syntax */ }
+
+.skin8 {
+  background: #F2E7E1;
+  background: -webkit-radial-gradient(#F2E7E1 30%, #FFF 70%);
+  background: -o-radial-gradient(#F2E7E1 30%, #FFF 70%);
+  /* For Opera 11.6 to 12.0 */
+  background: -moz-radial-gradient(#F2E7E1 30%, #FFF 70%);
+  /* For Firefox 3.6 to 15 */
+  background: radial-gradient(#F2E7E1 30%, #FFF 70%);
+  /* Standard syntax */ }
+
+.skin9 {
+  background: #F2EFE7;
+  background: -webkit-radial-gradient(#F2EFE7 30%, #FFF 70%);
+  background: -o-radial-gradient(#F2EFE7 30%, #FFF 70%);
+  /* For Opera 11.6 to 12.0 */
+  background: -moz-radial-gradient(#F2EFE7 30%, #FFF 70%);
+  /* For Firefox 3.6 to 15 */
+  background: radial-gradient(#F2EFE7 30%, #FFF 70%);
+  /* Standard syntax */ }
+
+.skin10 {
+  background: #F2F0F4;
+  background: -webkit-radial-gradient(#F2F0F4 30%, #FFF 70%);
+  background: -o-radial-gradient(#F2F0F4 30%, #FFF 70%);
+  /* For Opera 11.6 to 12.0 */
+  background: -moz-radial-gradient(#F2F0F4 30%, #FFF 70%);
+  /* For Firefox 3.6 to 15 */
+  background: radial-gradient(#F2F0F4 30%, #FFF 70%);
+  /* Standard syntax */ }
+
+.skin11 {
+  background: #FCF7EA;
+  background: -webkit-radial-gradient(#FCF7EA 30%, #FFF 70%);
+  background: -o-radial-gradient(#FCF7EA 30%, #FFF 70%);
+  /* For Opera 11.6 to 12.0 */
+  background: -moz-radial-gradient(#FCF7EA 30%, #FFF 70%);
+  /* For Firefox 3.6 to 15 */
+  background: radial-gradient(#FCF7EA 30%, #FFF 70%);
+  /* Standard syntax */ }
+
+.skin12 {
+  background: #FEF5DC;
+  background: -webkit-radial-gradient(#FEF5DC 30%, #FFF 70%);
+  background: -o-radial-gradient(#FEF5DC 30%, #FFF 70%);
+  /* For Opera 11.6 to 12.0 */
+  background: -moz-radial-gradient(#FEF5DC 30%, #FFF 70%);
+  /* For Firefox 3.6 to 15 */
+  background: radial-gradient(#FEF5DC 30%, #FFF 70%);
+  /* Standard syntax */ }
+
+.skin13 {
+  background: #FFF8DB;
+  background: -webkit-radial-gradient(#FFF8DB 30%, #FFF 70%);
+  background: -o-radial-gradient(#FFF8DB 30%, #FFF 70%);
+  /* For Opera 11.6 to 12.0 */
+  background: -moz-radial-gradient(#FFF8DB 30%, #FFF 70%);
+  /* For Firefox 3.6 to 15 */
+  background: radial-gradient(#FFF8DB 30%, #FFF 70%);
+  /* Standard syntax */ }
+
+.skin14 {
+  background: #FFF8DB;
+  background: -webkit-radial-gradient(#FFF8DB 30%, #FFF 70%);
+  background: -o-radial-gradient(#FFF8DB 30%, #FFF 70%);
+  /* For Opera 11.6 to 12.0 */
+  background: -moz-radial-gradient(#FFF8DB 30%, #FFF 70%);
+  /* For Firefox 3.6 to 15 */
+  background: radial-gradient(#FFF8DB 30%, #FFF 70%);
+  /* Standard syntax */ }
+
+.skin15 {
+  background: #EFE4B9;
+  background: -webkit-radial-gradient(#EFE4B9 30%, #FFF 70%);
+  background: -o-radial-gradient(#EFE4B9 30%, #FFF 70%);
+  /* For Opera 11.6 to 12.0 */
+  background: -moz-radial-gradient(#EFE4B9 30%, #FFF 70%);
+  /* For Firefox 3.6 to 15 */
+  background: radial-gradient(#EFE4B9 30%, #FFF 70%);
+  /* Standard syntax */ }
+
+.skin16 {
+  background: #BEB280;
+  background: -webkit-radial-gradient(#BEB280 30%, #FFF 70%);
+  background: -o-radial-gradient(#BEB280 30%, #FFF 70%);
+  /* For Opera 11.6 to 12.0 */
+  background: -moz-radial-gradient(#BEB280 30%, #FFF 70%);
+  /* For Firefox 3.6 to 15 */
+  background: radial-gradient(#BEB280 30%, #FFF 70%);
+  /* Standard syntax */ }
+
+.skin17 {
+  background: #DCCD84;
+  background: -webkit-radial-gradient(#DCCD84 30%, #FFF 70%);
+  background: -o-radial-gradient(#DCCD84 30%, #FFF 70%);
+  /* For Opera 11.6 to 12.0 */
+  background: -moz-radial-gradient(#DCCD84 30%, #FFF 70%);
+  /* For Firefox 3.6 to 15 */
+  background: radial-gradient(#DCCD84 30%, #FFF 70%);
+  /* Standard syntax */ }
+
+.skin18 {
+  background: #F1DF88;
+  background: -webkit-radial-gradient(#F1DF88 30%, #FFF 70%);
+  background: -o-radial-gradient(#F1DF88 30%, #FFF 70%);
+  /* For Opera 11.6 to 12.0 */
+  background: -moz-radial-gradient(#F1DF88 30%, #FFF 70%);
+  /* For Firefox 3.6 to 15 */
+  background: radial-gradient(#F1DF88 30%, #FFF 70%);
+  /* Standard syntax */ }
+
+.skin19 {
+  background: #E9D191;
+  background: -webkit-radial-gradient(#E9D191 30%, #FFF 70%);
+  background: -o-radial-gradient(#E9D191 30%, #FFF 70%);
+  /* For Opera 11.6 to 12.0 */
+  background: -moz-radial-gradient(#E9D191 30%, #FFF 70%);
+  /* For Firefox 3.6 to 15 */
+  background: radial-gradient(#E9D191 30%, #FFF 70%);
+  /* Standard syntax */ }
+
+.skin20 {
+  background: #E9D574;
+  background: -webkit-radial-gradient(#E9D574 30%, #FFF 70%);
+  background: -o-radial-gradient(#E9D574 30%, #FFF 70%);
+  /* For Opera 11.6 to 12.0 */
+  background: -moz-radial-gradient(#E9D574 30%, #FFF 70%);
+  /* For Firefox 3.6 to 15 */
+  background: radial-gradient(#E9D574 30%, #FFF 70%);
+  /* Standard syntax */ }
+
+.skin21 {
+  background: #E0BD55;
+  background: -webkit-radial-gradient(#E0BD55 30%, #FFF 70%);
+  background: -o-radial-gradient(#E0BD55 30%, #FFF 70%);
+  /* For Opera 11.6 to 12.0 */
+  background: -moz-radial-gradient(#E0BD55 30%, #FFF 70%);
+  /* For Firefox 3.6 to 15 */
+  background: radial-gradient(#E0BD55 30%, #FFF 70%);
+  /* Standard syntax */ }
+
+.skin22 {
+  background: #DEBA59;
+  background: -webkit-radial-gradient(#DEBA59 30%, #FFF 70%);
+  background: -o-radial-gradient(#DEBA59 30%, #FFF 70%);
+  /* For Opera 11.6 to 12.0 */
+  background: -moz-radial-gradient(#DEBA59 30%, #FFF 70%);
+  /* For Firefox 3.6 to 15 */
+  background: radial-gradient(#DEBA59 30%, #FFF 70%);
+  /* Standard syntax */ }
+
+.skin23 {
+  background: #DCBA6B;
+  background: -webkit-radial-gradient(#DCBA6B 30%, #FFF 70%);
+  background: -o-radial-gradient(#DCBA6B 30%, #FFF 70%);
+  /* For Opera 11.6 to 12.0 */
+  background: -moz-radial-gradient(#DCBA6B 30%, #FFF 70%);
+  /* For Firefox 3.6 to 15 */
+  background: radial-gradient(#DCBA6B 30%, #FFF 70%);
+  /* Standard syntax */ }
+
+.skin24 {
+  background: #DBB067;
+  background: -webkit-radial-gradient(#DBB067 30%, #FFF 70%);
+  background: -o-radial-gradient(#DBB067 30%, #FFF 70%);
+  /* For Opera 11.6 to 12.0 */
+  background: -moz-radial-gradient(#DBB067 30%, #FFF 70%);
+  /* For Firefox 3.6 to 15 */
+  background: radial-gradient(#DBB067 30%, #FFF 70%);
+  /* Standard syntax */ }
+
+.skin25 {
+  background: #C19A55;
+  background: -webkit-radial-gradient(#C19A55 30%, #FFF 70%);
+  background: -o-radial-gradient(#C19A55 30%, #FFF 70%);
+  /* For Opera 11.6 to 12.0 */
+  background: -moz-radial-gradient(#C19A55 30%, #FFF 70%);
+  /* For Firefox 3.6 to 15 */
+  background: radial-gradient(#C19A55 30%, #FFF 70%);
+  /* Standard syntax */ }
+
+.skin26 {
+  background: #B58D54;
+  background: -webkit-radial-gradient(#B58D54 30%, #FFF 70%);
+  background: -o-radial-gradient(#B58D54 30%, #FFF 70%);
+  /* For Opera 11.6 to 12.0 */
+  background: -moz-radial-gradient(#B58D54 30%, #FFF 70%);
+  /* For Firefox 3.6 to 15 */
+  background: radial-gradient(#B58D54 30%, #FFF 70%);
+  /* Standard syntax */ }
+
+.skin27 {
+  background: #936038;
+  background: -webkit-radial-gradient(#936038 30%, #FFF 70%);
+  background: -o-radial-gradient(#936038 30%, #FFF 70%);
+  /* For Opera 11.6 to 12.0 */
+  background: -moz-radial-gradient(#936038 30%, #FFF 70%);
+  /* For Firefox 3.6 to 15 */
+  background: radial-gradient(#936038 30%, #FFF 70%);
+  /* Standard syntax */ }
+
+.skin28 {
+  background: #844E34;
+  background: -webkit-radial-gradient(#844E34 30%, #FFF 70%);
+  background: -o-radial-gradient(#844E34 30%, #FFF 70%);
+  /* For Opera 11.6 to 12.0 */
+  background: -moz-radial-gradient(#844E34 30%, #FFF 70%);
+  /* For Firefox 3.6 to 15 */
+  background: radial-gradient(#844E34 30%, #FFF 70%);
+  /* Standard syntax */ }
+
+.skin29 {
+  background: #6F4428;
+  background: -webkit-radial-gradient(#6F4428 30%, #FFF 70%);
+  background: -o-radial-gradient(#6F4428 30%, #FFF 70%);
+  /* For Opera 11.6 to 12.0 */
+  background: -moz-radial-gradient(#6F4428 30%, #FFF 70%);
+  /* For Firefox 3.6 to 15 */
+  background: radial-gradient(#6F4428 30%, #FFF 70%);
+  /* Standard syntax */ }
+
+.skin30 {
+  background: #48220F;
+  background: -webkit-radial-gradient(#48220F 30%, #FFF 70%);
+  background: -o-radial-gradient(#48220F 30%, #FFF 70%);
+  /* For Opera 11.6 to 12.0 */
+  background: -moz-radial-gradient(#48220F 30%, #FFF 70%);
+  /* For Firefox 3.6 to 15 */
+  background: radial-gradient(#48220F 30%, #FFF 70%);
+  /* Standard syntax */ }
+
+.skin31 {
+  background: #5B2A1B;
+  background: -webkit-radial-gradient(#5B2A1B 30%, #FFF 70%);
+  background: -o-radial-gradient(#5B2A1B 30%, #FFF 70%);
+  /* For Opera 11.6 to 12.0 */
+  background: -moz-radial-gradient(#5B2A1B 30%, #FFF 70%);
+  /* For Firefox 3.6 to 15 */
+  background: radial-gradient(#5B2A1B 30%, #FFF 70%);
+  /* Standard syntax */ }
+
+.skin32 {
+  background: #562B1C;
+  background: -webkit-radial-gradient(#562B1C 30%, #FFF 70%);
+  background: -o-radial-gradient(#562B1C 30%, #FFF 70%);
+  /* For Opera 11.6 to 12.0 */
+  background: -moz-radial-gradient(#562B1C 30%, #FFF 70%);
+  /* For Firefox 3.6 to 15 */
+  background: radial-gradient(#562B1C 30%, #FFF 70%);
+  /* Standard syntax */ }
+
+.skin33 {
+  background: #4E2C24;
+  background: -webkit-radial-gradient(#4E2C24 30%, #FFF 70%);
+  background: -o-radial-gradient(#4E2C24 30%, #FFF 70%);
+  /* For Opera 11.6 to 12.0 */
+  background: -moz-radial-gradient(#4E2C24 30%, #FFF 70%);
+  /* For Firefox 3.6 to 15 */
+  background: radial-gradient(#4E2C24 30%, #FFF 70%);
+  /* Standard syntax */ }
+
+.skin34 {
+  background: #391D14;
+  background: -webkit-radial-gradient(#391D14 30%, #FFF 70%);
+  background: -o-radial-gradient(#391D14 30%, #FFF 70%);
+  /* For Opera 11.6 to 12.0 */
+  background: -moz-radial-gradient(#391D14 30%, #FFF 70%);
+  /* For Firefox 3.6 to 15 */
+  background: radial-gradient(#391D14 30%, #FFF 70%);
+  /* Standard syntax */ }
+
+.skin35 {
+  background: #2B2125;
+  background: -webkit-radial-gradient(#2B2125 30%, #FFF 70%);
+  background: -o-radial-gradient(#2B2125 30%, #FFF 70%);
+  /* For Opera 11.6 to 12.0 */
+  background: -moz-radial-gradient(#2B2125 30%, #FFF 70%);
+  /* For Firefox 3.6 to 15 */
+  background: radial-gradient(#2B2125 30%, #FFF 70%);
+  /* Standard syntax */ }
+
+.skin36 {
+  background: #191A29;
+  background: -webkit-radial-gradient(#191A29 30%, #FFF 70%);
+  background: -o-radial-gradient(#191A29 30%, #FFF 70%);
+  /* For Opera 11.6 to 12.0 */
+  background: -moz-radial-gradient(#191A29 30%, #FFF 70%);
+  /* For Firefox 3.6 to 15 */
+  background: radial-gradient(#191A29 30%, #FFF 70%);
+  /* Standard syntax */ }
+
+/*# sourceMappingURL=preferences.css.map */

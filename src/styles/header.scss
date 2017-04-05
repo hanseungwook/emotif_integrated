@@ -1,0 +1,75 @@
+
+$ft_hdr_1440 : 16px;
+$ft_hdr_1024 : 18px;
+$ft_hdr_768  : 20px;
+$ft_hdr_320  : 24px;
+
+$ft_logo_1440: 40px;
+$ft_logo_1024: 28px;
+$ft_logo_768 : 22px;
+$ft_logo_320 : 22px;
+
+// $logo-font            : $Actonia;
+// $logo-font            : $ActoniaHand;
+// $logo-font            : $AveFedan;
+$logo-font            : $Pacifico;
+// $logo-font            : $Plicata;
+
+$header-font          : $Futura;
+
+.header{
+  position    : fixed;
+  z-index     : 500;
+  font-family : $header-font;
+  @include vertical-gradient;
+
+  .navigation{
+    margin: 0 auto;
+    @include height(      120px, 150px, 150px, 150px);
+    @include width(       100%,  720px, 960px,  1200px);
+    .header-link {
+      @include font-size(    $ft_hdr_320, $ft_hdr_768,$ft_hdr_1024,$ft_hdr_1440);
+      @include height(       $ft_hdr_320, $ft_hdr_768,$ft_hdr_1024,$ft_hdr_1440);
+    }
+    .side{
+      @include padding-top( 50px,  60px,  60px,   60px);
+      @include width(       100%,  210px, 280px,  350px);
+      @media screen and (min-width: 0px)   { display: none; }
+      @media screen and (min-width: 768px) { display: inline-block;}
+      &:hover{
+        color: $blue;
+      }
+    }
+    #logo {
+      position    : absolute;
+      left        : 0;
+      right       : 0;
+      font-family : $logo-font;
+      font-style: italic;
+      @include font-size( $ft_logo_320, $ft_logo_768,$ft_logo_1024,$ft_logo_1440);
+      @include width(     100%,  300px,  400px,  500px);
+      @include padding-top( 32px,  40px,  40px,   40px);
+    }
+    #left {  float: left; }
+    #right{  float: right; }
+  }
+  .menu{
+    z-index        : 600;
+    margin: 0 auto;
+    bottom: 0;
+    @include height(       30px, 40px, 50px, 50px);
+    .menu-item{
+      z-index        : 1000;
+      cursor         : pointer;
+      text-align     : center;
+      display        : inline-block;
+      @include width(   100px, 100px, 100px, 100px);
+      @include height(   30px, 40px, 50px, 50px);
+
+    }
+  }
+}
+
+.selected{
+  text-decoration: underline;
+}

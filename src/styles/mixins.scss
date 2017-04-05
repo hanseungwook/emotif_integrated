@@ -1,0 +1,105 @@
+/* Mixin */
+@mixin font-face($name, $path, $weight) {
+    font-family: $name;
+    src: url($path) format('otf'),
+         url($path + '.ttf') format('truetype');
+    font-weight: $weight;
+}
+
+@mixin font-size($size1, $size2, $size3, $size4){
+  @media screen and (min-width: 0px   ) { font-size: $size1;}
+  @media screen and (min-width: 768px ) { font-size: $size2;}
+  @media screen and (min-width: 1024px) { font-size: $size3;}
+  @media screen and (min-width: 1440px) { font-size: $size4;}
+}
+
+
+@mixin height($size1, $size2, $size3, $size4){
+  @media screen and (min-width: 0px   ) { height: $size1;}
+  @media screen and (min-width: 768px ) { height: $size2;}
+  @media screen and (min-width: 1024px) { height: $size3;}
+  @media screen and (min-width: 1440px) { height: $size4;}
+}
+@mixin min-height($size1, $size2, $size3, $size4){
+  @media screen and (min-width: 0px   ) { min-height: $size1;}
+  @media screen and (min-width: 768px ) { min-height: $size2;}
+  @media screen and (min-width: 1024px) { min-height: $size3;}
+  @media screen and (min-width: 1440px) { min-height: $size4;}
+}
+@mixin width($size1, $size2, $size3, $size4){
+  @media screen and (min-width: 0px   ) { width: $size1;}
+  @media screen and (min-width: 768px ) { width: $size2;}
+  @media screen and (min-width: 1024px) { width: $size3;}
+  @media screen and (min-width: 1440px) { width: $size4;}
+}
+@mixin padding-top($size1, $size2, $size3, $size4){
+  @media screen and (min-width: 0px   ) { padding-top: $size1;}
+  @media screen and (min-width: 768px ) { padding-top: $size2;}
+  @media screen and (min-width: 1024px) { padding-top: $size3;}
+  @media screen and (min-width: 1440px) { padding-top: $size4;}
+}
+@mixin margin-top($size1, $size2, $size3, $size4){
+  @media screen and (min-width: 0px   ) { margin-top: $size1;}
+  @media screen and (min-width: 768px ) { margin-top: $size2;}
+  @media screen and (min-width: 1024px) { margin-top: $size3;}
+  @media screen and (min-width: 1440px) { margin-top: $size4;}
+}
+@mixin margin-bottom($size1, $size2, $size3, $size4){
+  @media screen and (min-width: 0px   ) { margin-bottom: $size1;}
+  @media screen and (min-width: 768px ) { margin-bottom: $size2;}
+  @media screen and (min-width: 1024px) { margin-bottom: $size3;}
+  @media screen and (min-width: 1440px) { margin-bottom: $size4;}
+}
+@mixin line-height($size1, $size2, $size3, $size4){
+  @media screen and (min-width: 0px   ) { line-height: $size1;}
+  @media screen and (min-width: 768px ) { line-height: $size2;}
+  @media screen and (min-width: 1024px) { line-height: $size3;}
+  @media screen and (min-width: 1440px) { line-height: $size4;}
+}
+
+@mixin vertical-gradient {
+  background: -webkit-linear-gradient(top,rgba(255,255,255,1),rgba(255,255,255,0));
+  background: -o-linear-gradient(  bottom,rgba(255,255,255,1),rgba(255,255,255,0));
+  background: -moz-linear-gradient(bottom,rgba(255,255,255,1),rgba(255,255,255,0));
+  background: linear-gradient(to   bottom,rgba(255,255,255,1),rgba(255,255,255,0));
+}
+@mixin vertical-gradient-reverse {
+  background: -webkit-linear-gradient(bottom,rgba(255,255,255,.5),rgba(255,255,255,0));
+  background: -o-linear-gradient(     top,rgba(255,255,255,.5),rgba(255,255,255,0));
+  background: -moz-linear-gradient(   top,rgba(255,255,255,.5),rgba(255,255,255,0));
+  background: linear-gradient(to      top,rgba(255,255,255,.5),rgba(255,255,255,0));
+}
+
+@mixin radial-gradient($color){
+  background: $color;
+  background: -webkit-radial-gradient(  $color 30%, #FFF 70%);
+  background: -o-radial-gradient(       $color 30%, #FFF 70%); /* For Opera 11.6 to 12.0 */
+  background: -moz-radial-gradient(     $color 30%, #FFF 70%); /* For Firefox 3.6 to 15 */
+  background: radial-gradient(          $color 30%, #FFF 70%); /* Standard syntax */
+}
+@mixin background-gradient($color1, $color2, $color3) {
+  background: -webkit-linear-gradient(left, $color1 0%, $color2 50%, $color3 100%);
+  background: -o-linear-gradient(     left, $color1 0%, $color2 50%, $color3 100%);
+  background: -moz-linear-gradient(   left, $color1 0%, $color2 50%, $color3 100%);
+  background:     linear-gradient(to right, $color1 0%, $color2 50%, $color3 100%);
+}
+
+@mixin blur($size){
+  -webkit-filter: blur($size);
+  -moz-filter:    blur($size);
+  -ms-filter:     blur($size);
+  filter:         blur($size);
+}
+
+@mixin border-gradient($size, $color1, $color2, $color3){
+  border-width: $size $size $size $size;
+  border-style: solid;
+  -webkit-border-image:
+    -webkit-linear-gradient(left, $color1 0%, $color2 50%, $color3 100%);
+  -moz-border-image:
+    -moz-linear-gradient(left, $color1 0%, $color2 50%, $color3 100%);
+  border-image:
+    linear-gradient(to right, $color1 0%, $color2 50%, $color3 100%);
+	  border-image-slice: 1;
+
+}

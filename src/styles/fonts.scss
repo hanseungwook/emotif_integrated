@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css?family=Acme|Pacifico|Mogra|Abel|Amatic+SC|Dosis|Harmattan|Indie+Flower|Lato|Raleway|Source+Sans+Pro|Leckerli+One');
+
+// @font-face {
+//   font-family: 'Adam';
+//   src: url('../../assets/fonts/adam.otf') format('opentype');
+//   font-weight: normal;
+// }
+// @font-face {
+//   font-family: 'Buffalo';
+//   src: url('../../assets/fonts/BuffaloScript-Regular.otf') format('opentype');
+//   font-weight: normal;
+// }
+// @font-face {
+//     font-family: 'HelveticaNeue';
+//     src: url('../../assets/fonts/HelveticaNeue/HelveticaNeue.otf') format('opentype'),
+//        url('../../assets/fonts/HelveticaNeue/HelveticaNeue.ttf') format('truetype');
+//     font-weight: normal;
+// }
+// @font-face {
+//     font-family: 'HoneyScript';
+//     src: url('../../assets/fonts/HoneyScript/HoneyScript-Light.ttf') format('truetype');
+//     font-weight: lighter;
+// }
+// @font-face {
+//     font-family: 'HoneyScript';
+//     src: url('../../assets/fonts/HoneyScript/HoneyScript-SemiBold.ttf') format('truetype');
+//     font-weight: normal;
+// }
+//
+// @font-face{
+//     font-family: 'Khadija';
+//     src: url('../../assets/fonts/Khadija/Khadija.ttf') format('truetype');
+//     font-weight: normal;
+// }
+// @font-face{
+//     font-family: 'LaBelleAurore';
+//     src: url('../../assets/fonts/LaBelleAurore/LaBelleAurore.ttf') format('truetype');
+//     font-weight: normal;
+// }
+// @font-face{
+//     font-family: 'BuffaloScript';
+//     src: url('../../assets/fonts/BuffaloScript-Regular.otf') format('opentype');
+//     font-weight: normal;
+// }
+// @font-face{
+//     font-family: 'TheWoodlands';
+//     src: url('../../assets/fonts/TheWoodlands-Regular.otf') format('opentype');
+//     font-weight: normal;
+// }
+// @font-face{
+//     font-family: 'Damion';
+//     src: url('../../assets/fonts/Damion/Damion-Regular.ttf') format('truetype');
+//     font-weight: normal;
+// }
+// @font-face{
+//     font-family: 'WisdomScript';
+//     src: url('../../assets/fonts/WisdomScript.otf') format('opentype');
+//     font-weight: normal;
+// }
+// @font-face{
+//     font-family: 'Actonia';
+//     src: url('../../assets/fonts/MansGrebackFonts/Actonia/Actonia.ttf') format('truetype');
+//     font-weight: normal;
+// }
+// @font-face{
+//     font-family: 'ActoniaHand';
+//     src: url('../../assets/fonts/MansGrebackFonts/ActoniaHand/ActoniaHand.ttf') format('truetype');
+//     font-weight: normal;
+// }
+// @font-face{
+//     font-family: 'AveFedan';
+//     src: url('../../assets/fonts/MansGrebackFonts/AveFedan/AveFedan.ttf') format('truetype');
+//     font-weight: normal;
+// }
+// @font-face{
+//     font-family: 'CaneletterScript';
+//     src: url('../../assets/fonts/MansGrebackFonts/CaneletterScript/CaneletterScript.ttf') format('truetype');
+//     font-weight: normal;
+// }
+// @font-face{
+//     font-family: 'CaneletterScript';
+//     src: url('../../assets/fonts/MansGrebackFonts/CaneletterScript/CaneletterScriptThin.otf') format('opentype');
+//     font-weight: lighter;
+// }
+// @font-face{
+//     font-family: 'EchinosParkScript';
+//     src: url('../../assets/fonts/MansGrebackFonts/EchinosParkScript/EchinosParkScript.ttf') format('truetype');
+//     font-weight: normal;
+// }
+// @font-face{
+//     font-family: 'Finition';
+//     src: url('../../assets/fonts/MansGrebackFonts/Finition/Finition.ttf') format('truetype');
+//     font-weight: normal;
+// }
+// @font-face{
+//     font-family: 'HaydonBrush';
+//     src: url('../../assets/fonts/MansGrebackFonts/HaydonBrush/HaydonBrush.ttf') format('truetype');
+//     font-weight: normal;
+// }
+// @font-face{
+//     font-family: 'IndianaScript';
+//     src: url('../../assets/fonts/MansGrebackFonts/IndianaScript/IndianaScript.ttf') format('truetype');
+//     font-weight: normal;
+// }
+// @font-face{
+//     font-family: 'Krinkes';
+//     src: url('../../assets/fonts/MansGrebackFonts/Krinkes/KrinkesRegular.ttf') format('truetype');
+//     font-weight: normal;
+// }
+// @font-face{
+//     font-family: 'KrinkesDecor';
+//     src: url('../../assets/fonts/MansGrebackFonts/Krinkes/KrinkesDecor.ttf') format('truetype');
+//     font-weight: normal;
+// }
+// @font-face{
+//     font-family: 'Lakesight';
+//     src: url('../../assets/fonts/MansGrebackFonts/Lakesight/Lakesight.ttf') format('truetype');
+//     font-weight: normal;
+// }
+// @font-face{
+//     font-family: 'Mochary';
+//     src: url('../../assets/fonts/MansGrebackFonts/Mochary/Mochary.ttf') format('truetype');
+//     font-weight: normal;
+// }
+// @font-face{
+//     font-family: 'MotionPicture';
+//     src: url('../../assets/fonts/MansGrebackFonts/MotionPicture/MotionPicture.ttf') format('truetype');
+//     font-weight: normal;
+// }
+// @font-face{
+//     font-family: 'Painter';
+//     src: url('../../assets/fonts/MansGrebackFonts/Painter/Painter.ttf') format('truetype');
+//     font-weight: normal;
+// }
+// @font-face{
+//     font-family: 'Plicata';
+//     src: url('../../assets/fonts/MansGrebackFonts/Plicata/Plicata.ttf') format('truetype');
+//     font-weight: normal;
+// }
+// @font-face{
+//     font-family: 'QaskinBlack';
+//     src: url('../../assets/fonts/MansGrebackFonts/QaskinBlack/QaskinBlack.ttf') format('truetype');
+//     font-weight: normal;
+// }
+// @font-face{
+//     font-family: 'QaskinWhite';
+//     src: url('../../assets/fonts/MansGrebackFonts/QaskinBlack/QaskinWhite.ttf') format('truetype');
+//     font-weight: normal;
+// }
+// @font-face{
+//     font-family: 'QinchoScript';
+//     src: url('../../assets/fonts/MansGrebackFonts/QuinchoScript/QuinchoScript.ttf') format('truetype');
+//     font-weight: normal;
+// }
+// @font-face{
+//     font-family: 'Ristella';
+//     src: url('../../assets/fonts/MansGrebackFonts/Ristella/Ristella.ttf') format('truetype');
+//     font-weight: normal;
+// }
+// @font-face{
+//     font-family: 'SafirScript';
+//     src: url('../../assets/fonts/MansGrebackFonts/SafirScript/SafirScript.ttf') format('truetype');
+//     font-weight: normal;
+// }
+// @font-face{
+//     font-family: 'ThirstyScript';
+//     src: url('../../assets/fonts/MansGrebackFonts/ThirstyScript/ThirstyScriptExtraBold.otf') format('opentype');
+//     font-weight: normal;
+// }
+// @font-face{
+//     font-family: 'Ventography';
+//     src: url('../../assets/fonts/MansGrebackFonts/Ventography/Ventography.ttf') format('truetype');
+//     font-weight: normal;
+// }
+// @font-face {
+//     font-family: 'FabFeltScriptBold';
+//     src: url('../../assets/fonts/FabFeltScriptBold/fabfeltscript-bold.eot');
+//     src: url('../../assets/fonts/FabFeltScriptBold/fabfeltscript-bold.eot?#iefix') format('embedded-opentype'),
+//          url('../../assets/fonts/FabFeltScriptBold/fabfeltscript-bold.woff2') format('woff2'),
+//          url('../../assets/fonts/FabFeltScriptBold/fabfeltscript-bold.woff') format('woff'),
+//          url('../../assets/fonts/FabFeltScriptBold/fabfeltscript-bold.ttf') format('truetype'),
+//          url('../../assets/fonts/FabFeltScriptBold/fabfeltscript-bold.svg#fabfeltscriptbold') format('svg');
+//     font-weight: normal;
+//     font-style: normal;
+// }
