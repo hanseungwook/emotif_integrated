@@ -1,4 +1,4 @@
-# Logs
+<<<<<<< HEAD
 # Logs
 logs
 *.log
@@ -56,3 +56,5 @@ parse-dashboard-config.json
 
 # Test Javascript SDK
 test.js
+
+>>>>>>> emotif_parse/master
