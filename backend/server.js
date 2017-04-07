@@ -1,4 +1,4 @@
-  //==================Server Setup==================//
+//==================Server Setup==================//
 //================================================//
 
 var express = require('express'),
@@ -6,7 +6,7 @@ var express = require('express'),
     ParseServer = require('parse-server').ParseServer,
     port = process.env.PORT || 1337,
     bodyParser = require('body-parser'),
-    S3Adapter = require('parse-server').S3Adapter,
+    S3Adapter = require('parse-server-s3-adapter'),
     dotenv = require('dotenv').config();
 
 var api = new ParseServer({

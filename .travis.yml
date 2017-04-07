@@ -3,6 +3,11 @@ node_js:
   - "6"
   - "5"
   - "4"
+sudo: false
+cache:
+  directories:
+    - frontend/node_modules
+    - backend/node_modules
 after_success:
   # Send coverage data to coveralls.
   - npm run test:cover:travis

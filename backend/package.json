@@ -1,5 +1,5 @@
 {
-  "name": "emotif_parse",
+  "name": "emotif_integrated",
   "version": "1.0.0",
   "description": "emotif backend using parse-server",
   "main": "server.js",
@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
   },
-  "repository": "www.github.com/hanseungwook/emotif_parse",
+  "repository": "www.github.com/hanseungwook/emotif_integrated",
   "author": "Seungwook Han",
   "license": "MIT",
   "dependencies": {
@@ -16,8 +16,13 @@
     "express": "^4.15.2",
     "mongoose": "^4.9.0",
     "parse-server": "^2.3.7",
+    "parse-server-s3-adapter": "^1.0.6",
     "request": "^2.81.0",
     "stripe": "^4.15.1",
     "uuid": "^3.0.1"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^3.2.0"
   }
 }
