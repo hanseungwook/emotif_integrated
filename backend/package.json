@@ -4,7 +4,7 @@
   "description": "emotif backend using parse-server",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "mocha --timeout 10000",
     "start": "node server.js"
   },
   "repository": "www.github.com/hanseungwook/emotif_integrated",
@@ -23,6 +23,7 @@
   },
   "devDependencies": {
     "chai": "^3.5.0",
+    "chai-http": "^3.0.0",
     "mocha": "^3.2.0"
   }
 }
