@@ -84,7 +84,7 @@ Parse.Cloud.define("createStripeCustomer", function(req, res) {
 
 // Create idempotent Stripe charge
 Parse.Cloud.define("createTransaction", function(req, res) {
-    var custEmail = req.params.email;
+    var custEmail = req.body.email;
     var User = Parse.Object.extend("_User");
     var query = new Parse.Query(User);
     query.equalTo("email", custEmail);
@@ -97,7 +97,7 @@ Parse.Cloud.define("createTransaction", function(req, res) {
             stripe.charges.create({
                 amount: req.params.amount || req.body.amount,
                 currency: "usd",
-                customer: custStripeId,
+                source: custStripeId,
                 idempotency_key: uuidV1()
                 }).then(function(charge) {
                     res.success(charge);
