@@ -1,14 +1,25 @@
 language: node_js
+env:
+  matrix:
+  - DB_USER=shan
+  - MONGODB_URI=mongodb://shan:emotif123@ds133670.mlab.com:33670/emotif_dev
+  - APP_ID=emotifAppId
+  - SERVER_URL=http://localhost:1337/parse
+  - PORT=1337
+  - BUCKET_NAME=emotif-db-dev
+  - AWS_REGION=us-east-1
+  - secure: rSGf50BRkbhyKW92XJ20ebvZ0x/qaQWDf4fHQd0Dy5qGXxL+gMrivQeAO40kW2G2TnlEKIDFHIJoawFj9xhRvMmPjEmbPSiPjk6sfiXSUTkyPZ1azNmxpxy7nBcvpZhxerVD4jiOWK79S8MYUl+VqCPsUiK9MgEh8OiYa3rcbWrdii0Ajitwdog66qTsG+EapsZuxqnFeXRNjuytlkhKiaVdaD1fp2gHKyOZAFo/7m1i1p2rYr6xJ7F/2dPRPCY4E1uX26bHTk56enYxNaajc4ysjA7PNJYV9PkJUeVrLuXfeQqQmuD+RWRt7cDpVXbaRllYA9HvouHZj5fhIIKPL1wYs0mpCxkjqJROFUrMBMgtH7I0ybAEKb82XS1HEqjaJNb1kwutciZ/b8ccqYX3Q2sfwrr6XDCeO8bccEwVSXeTyQouNxBL/I0xqtNximoCurupj8g1Zj8PGkVqlTuKVyxInb2UZ+S0CsJDNGKrRwZAMpdQscpRuzjCQGcLKaLkDR/5tmytjkqZxTp/xFtZzrHUcU5f26tcJixINcTrz+gcWWyqDw3wH2spOqeosGdnqZdzbPgYXfthfJ10bhdMJeI/3AC9Q8IoRTUPkHBTJ/5tlA14kN52USxRH5GfFdStztvt3fxiokMePLux73Lu+VHuDofz3WgKiL5fn6xMYLk=
+  - secure: j8ZvaenjGKi+YMEpc5P8kMRNneVUQWNma5L6E0QoJX4LeHRAHZKkRI+/aqyJnbvsgRfYq2zCUaSDS05ZvZ7mn9yQ6fsFJA9fVXsTYu460RAJUjU/dJ+fgTuFLsBTKipBK5r8YoS95CYzdCCp6v5nGhK4Rx/rRIVtbpYNUlkXdEqsGWFNDDFwLUbQKdIl+bCn3f2GgzQs6/LaHHEA8Vyqj/QUgDuE9v7/i6wl/DlnlcAJW7zKt3YueEdGBZvzLofpFkAbtuUhw7twUsVmJvW+R7AeYcdhFJucBcib+BKezL8A+XRIYc5icQ2oGpxVPIO5IpzvT1OOqZ5428pCUEv8oa20SjKSFzoAjZe7cngHm1+WTGlLAdm6V1oFpWTgCV2k3GT5CWek/3L8NwWXsh7nJzLFuBUecf/jBEBl/mchPJD+KL/qcZtQAwBeBCh3te4VYLr9vBk+83JHCE8JmlcSPbQ6reup8x4lXIM4SenmMvRq7eZQOFZ4ZD4ELp/6OKfILh5q9gqAPU+6kAC33kfFbs/y3t7SAbk05VZD8fGWRP9z//z7/OYPthJGCQJkAQ6OFM1ubxlYuPQirFuGMIjYIxFNVVenPdA/JibgCD2i5OzKn7aHQSCcWTeqTKvY8fx1bjzWCmgDbodZeEmhISmyI5BBRkN2c52/1k3AAlFLpFw=
+  - secure: LALCvtUICT/cBVfzfY24eQkq7ujvgRjIiG74seFw9lYMtA6rtj/+1mUQMMT9LL4MUmlBULzolBnXyb3K3yfvu8RTg2p9eRl3DQE03iEoHd9McTcDjwuY9bsjRz7/CVbKRJ2W9P5nw0UGs/QoXz+lu0TkXuqRWlCXCPTxLVmS641ovpfmWVDZc7VzQDDKT5xgf23tWim4tjXlPQZDDxOuD0aihSKidSK/fhYnNmkVc0dDqLkMgQV7/Nm+ibICdfy7b0GgHEHw3twEryIGGwCBIO9avrA+XNSPcewDUHnZU2Pqte9EG9KXFx4xYka0pDipJd3MFgNbkhxxlIsJNvLHm2uiY7XyJI0o1bKv2brS2FVbhl4WBe1OhAFs+tMDCupN54jHgIN/Qhj1zcrAVia5oyDa6vzjklmirmFXyRKw0ciyNvIikfaRaVkHsPhp6NQo8a39dqY2E3hmOc6HEc5wWIbCT8L0D+dPiPlbbxnikwrnUlIIipIMRSN6Srm5wSYPAE23I1Kzw1HsxCN2mGxgv0qZ4khpSGCjUAvxx8UCIlwnm9tQqfMQdrBer2i+R5Wmgqp0tgqy4naZSVocVnDSau6sZ3ab0EHRevRBZYsrN160V52ZOmt61Ii5dzDDK0YD1hrdMofH83Ocr+8i8MnWdygn968tghvkTB1nr/qzz0E=
 node_js:
-  - "6"
-  - "5"
-  - "4"
+- '6'
+- '5'
+- '4'
 sudo: false
 script: cd ./backend && npm test
 cache:
   directories:
-    - frontend/node_modules
-    - backend/node_modules
+  - frontend/node_modules
+  - backend/node_modules
 after_success:
-  # Send coverage data to coveralls.
-  - npm run test:cover:travis
+- npm run test:cover:travis
