@@ -4,6 +4,7 @@ node_js:
   - "5"
   - "4"
 sudo: false
+script: cd ./backend && npm test
 cache:
   directories:
     - frontend/node_modules
