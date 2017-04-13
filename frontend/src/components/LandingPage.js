@@ -24,44 +24,127 @@ export default class LandingPage extends Component {
 
 		return (
 			<div>
-			<Link to={'/'} className='title_ref'><div className='title'> Émotif </div></Link>
-			<div className='subtitle'> <b> Clothing made for your figure </b> </div>
-			<div className='content'>
-				<div className='slides'>
-					<Link to={'signup'}><div className='signup_but'> Sign Up </div></Link>
-					<Link to={'login'}><div className='login_but'> Login </div></Link>
-					<img src={require('../../images/art2.jpg')}/>
-				</div>
+			<div id='cbp-fbscroller' className='cbp-fbscroller'>
+			<nav>
+				<a href='#fbsection1' className='cbp-fbcurrent'>Section 1</a>
+				<a href='#fbsection2'>Section 2</a>
+				<a href='#fbsection3'>Section 3</a>
+				<a href='#fbsection4'>Section 4</a>
+				<a href='#fbsection5'>Section 5</a>
+			</nav>
+			{successMessage}
+			{errorMessage}
+
+			<section id='fbsection1'>
 				<div className='nav'>
-					<a href='preferences.html'>Clothes</a>
-					<a href='preferences.html'>Designers</a>
-					<a href='preferences.html'>Values</a>
+					<a href='#fbsection2'>About Us</a>
+					<a href='#fbsection3'>Designers</a>
+					<a href='#fbsection4'>Values</a>
+					<a href='#fbsection5'>Contact Us</a>
 				</div>
-				<div className='waitlist'>
-					<p> Join the Waitlist </p>
-					{successMessage}
-					{errorMessage}
-					<form action='hello'>
-						<input type='text' placeholder='Email' name='fname'/><br/>
-					</form>
+				<Link to={'/'} className='title_ref'>
+				<div className = 'title'>
+					<h1>Émotif </h1>
+					<h2> Designer Clothes, made for you. </h2>
 				</div>
-				<div className='info'>
-					<img src={require('../../images/shape.jpg')}/>
-					<img src={require('../../images/designer.jpg')}/>
-					<img src={require('../../images/art.jpg')}/>
-						<p>Tailored to your <b>shape</b></p>
-						<p>Tailored to your <b>tastes</b></p>
-						<p>Tailored to your <b>values</b></p>
+				</Link>
+
+				
+				<a id='start_but' className='link' href='#fbsection2'>Get Started</a>
+
+			</section>
+
+			<section id='fbsection2'>
+				<div className = 'ex_con'>
+					<h2>How does this work? </h2>
+					<a className='step' href='http://www.emotif-us.com'>
+						<img src={require('../../images/woman.png')} className='step_img1'></img>
+						<div id='step1'>
+							<h4>Inputing your body type </h4><p> Go through our seamless 30 second form to give us a better idea of what you look like.</p>
+						</div>
+					</a>
+
+					<a className='step' href='http://www.emotif-us.com'>
+						<img className='step_img2' src={require('../../images/designer_icon.png')}></img>
+						<div id='step2'> 
+							<h4>Browse Designer Collections</h4><p> The designers that work with us have designed their clothing line specifically for your figure.</p>
+						</div>
+					</a>
+
+					<a className='step' href='http://www.emotif-us.com'>
+						<img className='step_img3' src={require('../../images/shopping.png')}></img>
+						<div id='step3'>
+							<h4>Pre-Order and Profit</h4><p> We are environmentally & socially conscious and therefore prefer not to have overstock or understock. </p>
+						</div>
+					</a>
+
 				</div>
-			</div>
-			<div className='footer'>
-				<p>Contact Us</p>
-				<p>Press</p>
-				<p>Policies</p>
-				<p>Help</p>
-				<p>Manufacturing</p>
-			</div>
-			</div>
+
+			</section>
+
+			<section id='fbsection3'>
+				<div className = 'design_con'>
+
+					<div className='designer' id='desi1'> SongZio </div>
+					<div className='designer' id='desi2'> Comme Des Garcons</div>
+					<div className='designer' id='desi3'> Altazurra </div>
+					<div className='designer' id='desi4'> Others</div>
+
+				</div>
+
+			</section>
+
+			<section id='fbsection4'>
+				<div className = 'new_con'>
+					<div className='art_text'>
+							<h2> Coming Soon </h2>
+							<h3> Designers currently creating a line with Émotif </h3>
+							
+							<p>ROSINA MAE</p>
+							<p>REIN LONDON</p>
+							<p>KAER</p>
+							<p>CHANHO JANG</p>
+							<p>GRACIELA RIVAS</p>
+							<p>ALLEB ASOR</p>
+							<p>JOVAN OCONNOR</p>
+
+						</div>
+
+					<div className='art'>
+						<img src={require('../../images/fashion10.jpg')}/>
+						<img src={require('../../images/fashion11.jpg')}/>
+					</div>
+				</div>
+			</section>
+
+			<section id='fbsection5'>
+				<div className = 'contact_con'>
+					<h2>Contact Us</h2>
+					<a className='contact' href='http://www.emotif-us.com'>
+						<div className='contact_img'> Press</div>
+					</a>
+
+					<a className='contact' href='http://www.emotif-us.com'>
+						<div className='contact_img'> Designers </div>
+					</a>
+
+					<a className='contact' href='http://www.emotif-us.com'>
+						<div className='contact_img'> Customers </div>
+					</a>
+
+					<div className='footer'>
+						<p>FAQ</p>
+						<p>Careers</p>
+						<p>Policies</p>
+						<p>Help</p>
+						<p>Manufacturing</p>
+					</div>
+
+				</div>
+
+			</section>
+		</div>
+		</div>
 		);
 	}
 
