@@ -5,37 +5,72 @@ $neongreen: #83F52C;
 $neonpurple: #c32aff;
 $neonred: #DD0048;
 
-.signup_form {
-    margin:auto;
-    margin-top: 4%;
-    margin-right: 35%;
-    margin-left: 35%;
-    height: 30em;
-    position: relative;
-    border: 1px solid grey;
-    text-align: center;
-    font-family: 'Open Sans', sans-serif;
+.signup {
 
-    input {
-    	margin-top: 3em;
-    }
+	background-image: url("../../images/fashion12.jpg");
+	margin-top: -12px;
+	height: 57vw;
+	width: 100%;
+	padding: 0;
 
-	.next_but {
-		background-color: $neonred;
-		color: white;
-		position: absolute;
-		left: 33.3%;
-		top: 5em;
-		text-align: center;
+	.title{
 		font-family: artely;
-		font-size: 2.5em;
-		width: 33.3%;
-		height: 50px;
-		margin-top: 3em;
-		line-height: 1.3em;
+		color: #DD0048;
+		font-size: 7em;
+		margin-top: 0.1em;
+		text-align: center;
 	}
 
-	.next_but:hover {
-		cursor: pointer;
+	.subtitle{
+	    font-family: 'Open Sans', sans-serif;
+	    font-size: 1em;
+	    margin-top: -2em;
+	    margin-left: -3.5em;
+	    text-align: center;
+	    color: white;
+	}
+
+
+	.form {
+		// box-shadow: 5px 5px 5px black;
+	    margin:auto;
+	    margin-top: 4%;
+	    margin-right: 35%;
+	    margin-left: 35%;
+	    height: 30em;
+	    padding: 1em;
+	    position: relative;
+	    background-color: white;
+	    text-align: center;
+	    font-family: 'Open Sans', sans-serif;
+
+		input[type=text] {
+		    margin-top:3em;
+		    border: none;
+		    border-bottom: 2px solid black;
+		    width: 50%;
+		    font-family: 'Open Sans', sans-serif;
+		    font-size: 110%;
+		}
+
+		.next_but {
+			background-color: $neonred;
+			color: white;
+			position: absolute;
+			left: 33.3%;
+			top: 13em;
+			text-align: center;
+			font-family: 'Open Sans', sans-serif;
+			font-size: 1.25em;
+			width: 33.3%;
+			height: 50px;
+			margin-top: 3em;
+			line-height: 2em;
+		}
+
+		.next_but:hover {
+			cursor: pointer;
+		}
 	}
 }
+

@@ -23,7 +23,7 @@ export default class LandingPage extends Component {
 		let successMessage = '';
 
 		return (
-			<div>
+			<div className='landing'>
 			<div id='cbp-fbscroller' className='cbp-fbscroller'>
 			<nav>
 				<a href='#fbsection1' className='cbp-fbcurrent'>Section 1</a>
@@ -39,9 +39,12 @@ export default class LandingPage extends Component {
 				<div className='nav'>
 					<a href='#fbsection2'>About Us</a>
 					<a href='#fbsection3'>Designers</a>
-					<a href='#fbsection4'>Values</a>
+					<a href='#fbsection4'>Coming Soon</a>
 					<a href='#fbsection5'>Contact Us</a>
 				</div>
+				
+				<Link to={'/login'} className="login_but">Login</Link>
+
 				<Link to={'/'} className='title_ref'>
 				<div className = 'title'>
 					<h1>Émotif </h1>
@@ -49,8 +52,7 @@ export default class LandingPage extends Component {
 				</div>
 				</Link>
 
-				
-				<a id='start_but' className='link' href='#fbsection2'>Get Started</a>
+				<Link to={'/signup'} className='link'> Get Started </Link>
 
 			</section>
 

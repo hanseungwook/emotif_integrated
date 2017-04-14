@@ -9,10 +9,6 @@ html, body,
 	padding: 0;
 }
 
-a {
-	text-decoration: none;
-}
-
 body{
 	text-align: center;
 	/*overflow-y: scroll;*/
@@ -20,328 +16,27 @@ body{
 
 }
 
-
-#fbsection1 {
-	height: 60vw; 
-	// margin-top: -8px;
-	// margin-left: -8px;
-	background: url("../../images/fashion.jpg");
-	background-size: cover;
-}
-
-#fbsection2 {
-	// margin-left: -8px;
-	height: 40vw; 
-}
-
-#fbsection3 {
-	height: 60vw; 
-	// margin-left: -8px;
-	background-color: #DD0048;
-}
-
-#fbsection4 {
-	height: 60vw; 
-	// margin-left: -8px;
-	background: url("../../images/fashion5.jpg");
-	background-size: cover;
-}
-
-#fbsection5 {
-	height: 40vw; 
-	// margin-left: -8px;
-	background:#DD0048;
-}
-
-/************** SECTION 1 **************/
-
-.title{
-	position: absolute;
-	// top:-10%;
-	left:35%;
-	right:35%;
-	h1{
-		color: #DD0048;
-		font-family:artely;
-		font-size:17vw;
-		width: 30%;
-	}
-	h2{
-		color: white;
-		font-family: adam;
-		text-align: center;
-
-		font-size: 1.2vw;
-		width:72%;
-		margin-top: -14.5vw;
-	}
-}
-
-.title:hover{
-	cursor: pointer;
-}
-
-.link{
-	position:absolute;
-	top:65%;
-	left:40%;
-	right:40%;
-
-	width:20%;
-	height: 2em;
-	line-height: 2em;
-	font-size: 1.3vw;
-
-	color: white;
-	text-align: center;
-	font-family: adam;
+a {
 	text-decoration: none;
-	background-color: #DD0048;
 }
 
-.link:hover{
-	cursor:pointer;
-	background-color: rgba(221, 0, 72, 0.8);
-}
-
-
-.nav {
-	font-family:adam;
-	font-size:1vw;
-	width: 30%;
-	display: flex;
-	justify-content: space-between;
-	position: absolute;
-	top:1%;
-	left:1%;
-	color: rgb(255,255,255);
-
-	a {
-		color: #ffffff;
-		color: rgb(255,255,255);
-		text-decoration: none;
-	}
-
-	a:hover {
-		color: #9d967d;
-		cursor: pointer;
-	}
-}
-
-
-
-/************** SECTION 2 **************/
-
-.ex_con{
-	width: 80%;
-	position: absolute;
-	top:1%;
-	left:10%;
-	right:10%;
-}
-
-.ex_con h2{
-	font-family: adam;
-	font-size: 2vw;
-}
-
-.step_img1{
-	width: 30%;
-	height: 12vw;
-}
-
-.step_img2{
-	width: 40%;
-	height: 12vw;
-}
-
-.step_img3{
-	width: 40%;
-	height: 12vw;
-}
-
-.step{
-	color: black;
-	height: 10em;
-	margin-top: 5em;
-	font-family: adam;
-	font-size: 1vw;
-	width: 33%;
-	display: inline-block;
-
-	p {
-		font-family: 'Open Sans', sans-serif;
-	}
-}
-
-
-#step1 {
-	/*background: url('../../images/shape.jpg');*/
-	background: white;
-}
-#step2 {
-	/*background: url('../../images/art.jpg');*/
-	background: white;
-}
-#step3 {
-	/*background: url('../../images/designer.jpg');*/
-	background: white;
-}
-
-
-/************** SECTION 3 **************/
-
-.design_con{
-	color:white;
-	width: 100%;
-	font-family: adam;
-}
-
-.designer{
-	display: inline-block;
-	line-height: 23vw;
-	font-size: 3vw;
-	margin: 2.5%;
-	width: 40%;
-	height: 23vw;
-	color: black;
-}
-
-#desi1{
-	background: url("../../images/fashion9.jpg");
-	background-size: cover;
-}
-
-#desi2{
-	background: url("../../images/fashion4.png");
-	background-size: cover;
-}
-
-#desi3{
-	background: url("../../images/fashion5.jpg");
-	background-size: cover;
-}
-
-#desi4{
-	background: white;
-	/*background: url("../../images/fashion8.jpg");*/
-	/*background-size: cover;*/
-}
-
-
-#desi1:hover{
-	cursor: pointer;
-	background: white;
-}
-
-#desi2:hover{
-	background: white;
-	cursor: pointer;
-}
-
-#desi3:hover{
-	background: white;
-	cursor: pointer;
-}
-
-#desi4:hover{
-	background: rgb(240, 240, 240);
-	cursor: pointer;
-}
-
-
-
-
-/************** SECTION 4 **************/
-
-
-.new_con{
-	width: 90%;
-	position: absolute;
-	top:1%;
-	left:5%;
-	right:5%;
-}
-
-.art{
-	width: 50%;
-	float: left;
-	padding-top: 5vw;
-
-	img{
-		padding-top: 1em;
-		width: 35vw;
-		height: 20vw;
-	}
-}
-
-
-.art_text{
-	padding-top: 5vw;
-	float: right;
-	width: 50%;
-	color: black;
-	font-size: 1.3vw;
-	h2{
+@font-face {
 		font-family: adam;
-	}
-	h3{
-		font-family: adam;
-	}
-	p{
-		font-family: adam;
-	}
-	p:hover{
-		cursor: pointer;
-		color: rgba(0, 0, 0, 0.5);
-	}
-}
-
-/************** SECTION 5 **************/
-
-
-
-.contact_con{
-	width: 80%;
-	position: absolute;
-	top:1%;
-	left:10%;
-	right:10%;
-	color: white;
-	h2{
-		font-family: adam;
-		font-size: 2vw;
-	}
-}
-
-.contact_img{
-	color: black;
-	line-height: 20vw;
-	font-size: 2vw;
-	width: 90%;
-	height: 20vw;
-	background: white;
-}
-
-.contact{
-	color: white;
-	height: 10em;
-	margin-top: 5em;
-	font-family: adam;
-	font-size: 1vw;
-	width: 33%;
-	display: inline-block;
-	p{
-		font-family: 'Open Sans', sans-serif;
-	}
+		src: url("fonts/adam.otf") format("opentype");
 }
 
 
+@font-face {
+    font-family: artely;
+    src: url("fonts/artely.ttf") format("opentype");
+}
 
 .footer {
-    margin-top: 15vw;
-    margin-right: 10%;
-    margin-left: 10%;
+	position: absolute;
+	display: block;
+	right: 10%;
+	left: 10%;
+	top: 160%;
     width: 80%;
     display: flex;
     justify-content: space-between;
@@ -356,65 +51,395 @@ body{
 	}
 }
 
-@font-face {
+
+
+.landing {
+
+
+	#fbsection1 {
+		height: 60vw; 
+		// margin-top: -8px;
+		// margin-left: -8px;
+		background: url("../../images/fashion12.jpg");
+		background-size: cover;
+	}
+
+	#fbsection2 {
+		// margin-left: -8px;
+		height: 40vw; 
+	}
+
+	#fbsection3 {
+		height: 60vw; 
+		// margin-left: -8px;
+		background-color: #DD0048;
+	}
+
+	#fbsection4 {
+		height: 60vw; 
+		// margin-left: -8px;
+		background: url("../../images/fashion7.jpg");
+		background-size: cover;
+		background-position: -10px;
+	}
+
+	#fbsection5 {
+		height: 40vw; 
+		// margin-left: -8px;
+		background:#DD0048;
+	}
+
+	/************** SECTION 1 **************/
+
+	.title{
+		position: absolute;
+		top:8%;
+		left:40%;
+		right:40%;
+		h1{
+			color: #DD0048;
+			font-family:artely;
+			font-size:13vw;
+			width: 20%;
+		}
+		h2{
+			color: white;
+			font-family: adam;
+			text-align: center;
+
+			font-size: 0.9vw;
+			width:90%;
+			margin-top: -12vw;
+		}
+	}
+
+	.title:hover{
+		cursor: pointer;
+	}
+
+	.link{
+		position:absolute;
+		top:55%;
+		left:40%;
+		right:40%;
+
+		width:20%;
+		height: 2em;
+		line-height: 2em;
+		font-size: 1.3vw;
+
+		color: white;
+		text-align: center;
 		font-family: adam;
-		src: url("fonts/adam.otf") format("opentype");
+		text-decoration: none;
+		background-color: #DD0048;
+	}
+
+	.link:hover{
+		cursor:pointer;
+		background-color: rgba(221, 0, 72, 0.8);
+	}
+
+	.login_but {
+		font-family:adam;
+		font-size:1vw;
+		position: absolute;
+		top:1%;
+		right:4%;
+		color: rgb(255,255,255);
+
+		a {
+			color: #ffffff;
+			color: rgb(255,255,255);
+			text-decoration: none;
+		}
+
+		a:hover {
+			color: #9d967d;
+			cursor: pointer;
+		}
+	}
+
+
+	.nav {
+		font-family:adam;
+		font-size:1vw;
+		width: 30%;
+		display: flex;
+		justify-content: space-between;
+		position: absolute;
+		top:1%;
+		left:1%;
+		color: rgb(255,255,255);
+
+		a {
+			color: #ffffff;
+			color: rgb(255,255,255);
+			text-decoration: none;
+		}
+
+		a:hover {
+			color: #9d967d;
+			cursor: pointer;
+		}
+	}
+
+
+
+	/************** SECTION 2 **************/
+
+	.ex_con{
+		width: 80%;
+		position: absolute;
+		top:1%;
+		left:10%;
+		right:10%;
+	}
+
+	.ex_con h2{
+		font-family: adam;
+		font-size: 2vw;
+	}
+
+	.step_img1{
+		width: 30%;
+		height: 12vw;
+	}
+
+	.step_img2{
+		width: 40%;
+		height: 12vw;
+	}
+
+	.step_img3{
+		width: 40%;
+		height: 12vw;
+	}
+
+	.step{
+		color: black;
+		height: 10em;
+		margin-top: 5em;
+		font-family: adam;
+		font-size: 1vw;
+		width: 33%;
+		display: inline-block;
+
+		p {
+			font-family: 'Open Sans', sans-serif;
+		}
+	}
+
+
+	#step1 {
+		/*background: url('../../images/shape.jpg');*/
+		background: white;
+	}
+	#step2 {
+		/*background: url('../../images/art.jpg');*/
+		background: white;
+	}
+	#step3 {
+		/*background: url('../../images/designer.jpg');*/
+		background: white;
+	}
+
+
+	/************** SECTION 3 **************/
+
+	.design_con{
+		color:white;
+		width: 100%;
+		font-family: adam;
+	}
+
+	.designer{
+		display: inline-block;
+		line-height: 23vw;
+		font-size: 3vw;
+		margin: 2.5%;
+		width: 37.5%;
+		height: 23vw;
+		color: black;
+	}
+
+	#desi1{
+		background: url("../../images/fashion9.jpg");
+		background-size: cover;
+	}
+
+	#desi2{
+		background: url("../../images/fashion4.png");
+		background-size: cover;
+	}
+
+	#desi3{
+		background: url("../../images/fashion5.jpg");
+		background-size: cover;
+	}
+
+	#desi4{
+		background: white;
+		/*background: url("../../images/fashion8.jpg");*/
+		/*background-size: cover;*/
+	}
+
+
+	#desi1:hover{
+		cursor: pointer;
+		background: white;
+	}
+
+	#desi2:hover{
+		background: white;
+		cursor: pointer;
+	}
+
+	#desi3:hover{
+		background: white;
+		cursor: pointer;
+	}
+
+	#desi4:hover{
+		background: rgb(240, 240, 240);
+		cursor: pointer;
+	}
+
+
+
+
+	/************** SECTION 4 **************/
+
+
+	.new_con{
+		width: 90%;
+		position: absolute;
+		top:1%;
+		left:5%;
+		right:5%;
+	}
+
+	.art{
+		width: 50%;
+		float: left;
+		padding-top: 5vw;
+
+		img{
+			padding-top: 1em;
+			width: 35vw;
+			height: 20vw;
+		}
+	}
+
+
+	.art_text{
+		padding-top: 5vw;
+		float: right;
+		width: 50%;
+		color: black;
+		font-size: 1.3vw;
+		h2{
+			font-family: adam;
+		}
+		h3{
+			font-family: adam;
+		}
+		p{
+			font-family: adam;
+		}
+		p:hover{
+			cursor: pointer;
+			color: rgba(0, 0, 0, 0.5);
+		}
+	}
+
+	/************** SECTION 5 **************/
+
+
+
+	.contact_con{
+		width: 80%;
+		position: absolute;
+		top:1%;
+		left:10%;
+		right:10%;
+		color: white;
+		h2{
+			font-family: adam;
+			font-size: 2vw;
+		}
+	}
+
+	.contact_img{
+		color: black;
+		line-height: 20vw;
+		font-size: 2vw;
+		width: 90%;
+		height: 20vw;
+		background: white;
+	}
+
+	.contact{
+		color: white;
+		height: 10em;
+		margin-top: 5em;
+		font-family: adam;
+		font-size: 1vw;
+		width: 33%;
+		display: inline-block;
+		p{
+			font-family: 'Open Sans', sans-serif;
+		}
+	}
+
+
+
+	/************ SCORLLING CIRCLES********************/
+
+
+	/* The nav is fixed on the right side  and we center it by translating it 50% 
+	(we don't know it's height so we can't use the negative margin trick) */
+	.cbp-fbscroller > nav {
+		position: fixed;
+		z-index: 9999;
+		right: 70px;
+		top: 50%;
+		-webkit-transform: translateY(-50%);
+		-moz-transform: translateY(-50%);
+		-ms-transform: translateY(-50%);
+		transform: translateY(-50%);
+	}
+
+	.cbp-fbscroller > nav a {
+		display: block;
+		position: relative;
+		color: transparent;
+		height: 50px;
+	}
+
+	.cbp-fbscroller > nav a:after {
+		content: '';
+		position: absolute;
+		width: 1vw;
+		height: 1vw;
+		border-radius: 50%;
+		border: 4px solid #333333;
+	}
+
+	.cbp-fbscroller > nav a:hover:after {
+		background: #DD0048;
+	}
+
+	.cbp-fbscroller > nav a.cbp-fbcurrent:after {
+		background: #DD0048;
+	}
+
+	/* background-attachment does the trick */
+	.cbp-fbscroller section {
+		position: relative;
+		background-position: top center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-attachment: fixed;
+	}
 }
-
-
-@font-face {
-    font-family: artely;
-    src: url("fonts/artely.ttf") format("opentype");
-}
-
-
-
-/************ SCORLLING CIRCLES********************/
-
-
-/* The nav is fixed on the right side  and we center it by translating it 50% 
-(we don't know it's height so we can't use the negative margin trick) */
-.cbp-fbscroller > nav {
-	position: fixed;
-	z-index: 9999;
-	right: 70px;
-	top: 50%;
-	-webkit-transform: translateY(-50%);
-	-moz-transform: translateY(-50%);
-	-ms-transform: translateY(-50%);
-	transform: translateY(-50%);
-}
-
-.cbp-fbscroller > nav a {
-	display: block;
-	position: relative;
-	color: transparent;
-	height: 50px;
-}
-
-.cbp-fbscroller > nav a:after {
-	content: '';
-	position: absolute;
-	width: 1vw;
-	height: 1vw;
-	border-radius: 50%;
-	border: 4px solid #333333;
-}
-
-.cbp-fbscroller > nav a:hover:after {
-	background: #DD0048;
-}
-
-.cbp-fbscroller > nav a.cbp-fbcurrent:after {
-	background: #DD0048;
-}
-
-/* background-attachment does the trick */
-.cbp-fbscroller section {
-	position: relative;
-	background-position: top center;
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-attachment: fixed;
-}
-
