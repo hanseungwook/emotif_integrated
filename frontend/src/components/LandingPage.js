@@ -74,7 +74,7 @@ export default class LandingPage extends Component {
 					<a className='step' href='http://www.emotif-us.com'>
 						<img className='step_img3' src={require('../../images/shopping.png')}></img>
 						<div id='step3'>
-							<h4>Pre-Order and Profit</h4><p> We are environmentally & socially conscious and therefore prefer not to have overstock or understock. </p>
+							<h4>Pre-Order and Profit</h4><p> Pre-order and get 20% off. Or wait for retail season and get your clothes faster. </p>
 						</div>
 					</a>
 
