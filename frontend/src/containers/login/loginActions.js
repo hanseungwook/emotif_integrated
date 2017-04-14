@@ -1,4 +1,5 @@
 import fetch from 'isomorphic-fetch';
+import URLSearchParams from 'url-search-params';
 
 export const LOGIN_REQUEST = 'LOGIN_REQUEST';
 export const LOGIN_SUCCESS = 'LOGIN_SUCCESS';
@@ -39,17 +40,24 @@ function loginError(message) {
 
 export function loginUser(creds) {
 
+    const searchParams = new URLSearchParams();
+    searchParams.set('password', creds.password);
+    searchParams.set('username', creds.email);
+
+
 	let config = {
-		method: 'POST',
-		headers: { 'Content-Type' : 'application/x-www-form-urlencoded' },
-		body: `email=${creds.email}&password=${creds.password}`
+		method: 'GET',
+		headers: {
+			'X-Parse-Application-Id': 'emotifAppId',
+			'X-Parse-REST-API-Key': 'emotifRestKey',
+			'Content-Type': 'application/x-www-form-urlencoded'
+		},
+		body: searchParams
 	};
 
 	return dispatch => {
-
 		dispatch(requestLogin(creds));
-
-		return fetch('http://localhost:6001/sessions/create', config)
+		return fetch('http://emotif-parse-dev.us-east-1.elasticbeanstalk.com/parse/classes/_User', config)
 		.then(response =>
 			response.json().then(user => ({ user, response }))
 		).then(({ user, response }) =>  {
@@ -65,6 +73,7 @@ export function loginUser(creds) {
 		}).catch(err => console.log("Error: ", err));
 	};
 }
+
 
 
 

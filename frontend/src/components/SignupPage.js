@@ -12,8 +12,8 @@ export default class SignupPage extends Component {
 	}
 
 	handleClickSignup () {
-		const user = this.refs.email.getValue().trim();
-		const pass = this.refs.password.getValue().trim();
+		const user = this.refs.email;
+		const pass = this.refs.password;
 		const creds = { email: user, password: pass };
 		this.props.onSignupClick(creds);
 	}
@@ -36,7 +36,7 @@ export default class SignupPage extends Component {
 						<h2> Sign Up </h2>
 						<input type='text' ref='email' placeholder='Email'/>
 						<input type='text' ref='password' placeholder='Password'/>
-						<div className='next_but' onClick={() => {this.handleClickSignup(); successMessage="hey";}}>Next</div>
+						<div className='next_but' onClick={() => {this.handleClickSignup(); successMessage="hey";}}>NEXT</div>
 						{errorMessage &&
 							<p>{errorMessage}</p>
 						}

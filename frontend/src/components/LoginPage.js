@@ -13,8 +13,8 @@ export default class LoginPage extends Component {
 	}
 
 	handleClickLogin () {
-		const user = this.refs.email.getValue().trim();
-		const pass = this.refs.password.getValue().trim();
+		const user = this.refs.email;
+		const pass = this.refs.password;
 		const creds = { email: user, password: pass };
 		this.props.onLoginClick(creds);
 	}
@@ -37,7 +37,7 @@ export default class LoginPage extends Component {
 							<h2> Login </h2>
 							<input type='text' ref='email' placeholder='Email'/>
 							<input type='text' ref='password' placeholder='Password'/>
-							<div className='next_but' onClick={() => {this.handleClickLogin(); successMessage="hey";}}>Login</div>
+							<div className='next_but' onClick={() => {this.handleClickLogin(); successMessage="hey";}}>LOGIN</div>
 							{errorMessage &&
 								<p>{errorMessage}</p>
 							}

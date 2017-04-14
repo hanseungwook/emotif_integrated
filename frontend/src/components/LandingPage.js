@@ -43,7 +43,7 @@ export default class LandingPage extends Component {
 					<a href='#fbsection5'>Contact Us</a>
 				</div>
 				
-				<Link to={'/login'} className="login_but">Login</Link>
+				<Link to={'/login'} className='login_but'>Login</Link>
 
 				<Link to={'/'} className='title_ref'>
 				<div className = 'title'>
