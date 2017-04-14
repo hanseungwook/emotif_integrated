@@ -17,8 +17,7 @@ export class LoginContainer extends Component {
 		}
 		else {
 			return (
-				<LoginPage errorMessage={errorMessage}
-									 onLoginClick={onLoginClick}/>
+				<LoginPage errorMessage={errorMessage} onLoginClick={onLoginClick}/>
 			);
 		}
 	}
