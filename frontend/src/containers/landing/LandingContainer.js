@@ -17,7 +17,7 @@ export class LandingContainer extends Component {
 		} else {
 			return (
 				<LandingPage
-					onWaitlistClick = {this.props.onWaitlistClick}
+					// onWaitlistClick = {this.props.onWaitlistClick}
 				/>
 			);
 		}

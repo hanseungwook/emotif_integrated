@@ -12,8 +12,10 @@ export default class SignupPage extends Component {
 	}
 
 	handleClickSignup () {
-		const user = this.refs.email;
-		const pass = this.refs.password;
+		const user = this.refs.email.value;
+		const pass = this.refs.password.value;
+		console.log(user);
+		console.log(pass);
 		const creds = { email: user, password: pass };
 		this.props.onSignupClick(creds);
 	}
