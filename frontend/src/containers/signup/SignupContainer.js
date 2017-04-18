@@ -33,7 +33,7 @@ SignupContainer.propTypes = {
 
 
 const mapStateToProps = (state) => {
-	const { isAuthenticated, errorMessage } = state;
+	const { isAuthenticated, errorMessage } = state.signupReducer;
 	return {
 		isAuthenticated,
 		errorMessage

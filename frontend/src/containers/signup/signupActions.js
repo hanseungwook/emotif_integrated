@@ -24,7 +24,7 @@ function receiveSignup(user) {
     type: SIGNUP_SUCCESS,
     isFetching: false,
     isAuthenticated: true,
-    id_token: user.id_token
+    id_token: user.getAccessToken()
   };
 }
 
