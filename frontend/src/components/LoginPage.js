@@ -13,8 +13,8 @@ export default class LoginPage extends Component {
 	}
 
 	handleClickLogin () {
-		const user = this.refs.email;
-		const pass = this.refs.password;
+		const user = this.refs.email.value;
+		const pass = this.refs.password.value;
 		const creds = { email: user, password: pass };
 		this.props.onLoginClick(creds);
 	}

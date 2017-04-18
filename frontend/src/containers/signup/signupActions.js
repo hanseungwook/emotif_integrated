@@ -1,5 +1,3 @@
-// import fetch from 'isomorphic-fetch';
-import URLSearchParams from 'url-search-params';
 import Parse from 'parse';
 
 export const SIGNUP_REQUEST = 'SIGNUP_REQUEST';
@@ -43,40 +41,24 @@ export function signupUser(creds) {
 
   return dispatch => {
     dispatch(requestSignup(creds));
-    console.log("email");
     let user = new Parse.User();
+    console.log("email", creds.email);
+    console.log("pass", creds.password);
+
+    user.set('email',    creds.email)
+    user.set('username', creds.email)
+    user.set('password', creds.password)
 
     user.signUp(null, {
       success: function(user) {
-          console.log("logged in");
+          localStorage.setItem('id_token', user.getSessionToken());
           dispatch(receiveSignup(user));
       },
       error: function(user, error) {
         // Show the error message somewhere and let the user try again.
         console.log("Error: " + error.code + " " + error.message);
         dispatch(signupError("error"));
-
       }
     });
-
-
-
-  // return dispatch => {
-    // dispatch(requestSignup(creds));
-    // // return fetch('http://emotif-parse-dev.us-east-1.elasticbeanstalk.com/parse/classes/_User', config)
-    // user.signUp(null)
-    // .then(response =>
-    //   response.json().then(user => ({ user, response }))
-    // ).then(({ user, response }) =>  {
-    //   // ERROR
-    //   if (!response.ok) {
-    //     dispatch(signupError(user.message));
-    //     return Promise.reject(user);
-    //   // SUCCESS
-    //   } else {
-    //     localStorage.setItem('id_token', user.id_token);
-    //     dispatch(receiveSignup(user));
-    //   }
-    // }).catch(err => console.log("Error: ", err.code));
   };
 }
