@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { signupUser } from './signupActions';
 import SignupPage from '../../components/SignupPage';
-import BrowsePage from '../../components/browse/BrowsePage';
+import BrowseContainer from '../../containers/browse/BrowseContainer';
 
 
 export class SignupContainer extends Component {
@@ -13,7 +13,7 @@ export class SignupContainer extends Component {
 
 		if ( isAuthenticated ){
 			return (
-				<BrowsePage/>
+				<BrowseContainer/>
 			);
 		}
 		else {
@@ -23,7 +23,6 @@ export class SignupContainer extends Component {
 			);
 		}
 	}
-
 }
 
 SignupContainer.propTypes = {
@@ -34,7 +33,7 @@ SignupContainer.propTypes = {
 
 
 const mapStateToProps = (state) => {
-	const { isAuthenticated, errorMessage } = state;
+	const { isAuthenticated, errorMessage } = state.signupReducer;
 	return {
 		isAuthenticated,
 		errorMessage

@@ -13,8 +13,8 @@ export default class LoginPage extends Component {
 	}
 
 	handleClickLogin () {
-		const user = this.refs.email.getValue().trim();
-		const pass = this.refs.password.getValue().trim();
+		const user = this.refs.email.value;
+		const pass = this.refs.password.value;
 		const creds = { email: user, password: pass };
 		this.props.onLoginClick(creds);
 	}
@@ -26,30 +26,23 @@ export default class LoginPage extends Component {
 		let successMessage = "";
 
 		return (
-			<div>
-			<Link to='/' className='title_ref'><div className='title'> Émotif </div></Link>
-			<div className='subtitle'> <b> Clothing made for your figure </b> </div>
-			<div className='content'>
-				<div className='login_form'>
-						{successMessage &&
-							<p>{successMessage}</p>
-						}
-						<h2> Login </h2>
-						<input type='text' ref='email' placeholder='Email'/>
-						<input type='text' ref='password' placeholder='Password'/>
-						<div className='next_but' onClick={() => {this.handleClickLogin(); successMessage="hey";}}>Login</div>
-						{errorMessage &&
-							<p>{errorMessage}</p>
-						}
+			<div className='login'>
+				<Link to='/'><div className='title'>Émotif</div></Link>
+				<div className='subtitle'> <b> Join the movement. </b> </div>
+				<div className='content'>
+					<div className='form'>
+							{successMessage &&
+								<p>{successMessage}</p>
+							}
+							<h2> Login </h2>
+							<input type='text' ref='email' placeholder='Email'/>
+							<input type='text' ref='password' placeholder='Password'/>
+							<div className='next_but' onClick={() => {this.handleClickLogin(); successMessage="hey";}}>LOGIN</div>
+							{errorMessage &&
+								<p>{errorMessage}</p>
+							}
+					</div>
 				</div>
-			</div>
-			<div className='footer'>
-				<p>Contact Us</p>
-				<p>Press</p>
-				<p>Policies</p>
-				<p>Help</p>
-				<p>Manufacturing</p>
-			</div>
 			</div>
 		);
 	}

@@ -12,8 +12,10 @@ export default class SignupPage extends Component {
 	}
 
 	handleClickSignup () {
-		const user = this.refs.email.getValue().trim();
-		const pass = this.refs.password.getValue().trim();
+		const user = this.refs.email.value;
+		const pass = this.refs.password.value;
+		console.log(user);
+		console.log(pass);
 		const creds = { email: user, password: pass };
 		this.props.onSignupClick(creds);
 	}
@@ -25,29 +27,22 @@ export default class SignupPage extends Component {
 		let successMessage = "";
 
 		return (
-			<div>
+			<div className='signup'>
 			<Link to='/' className='title_ref'><div className='title'> Émotif </div></Link>
-			<div className='subtitle'> <b> Clothing made for your figure </b> </div>
+			<div className='subtitle'> <b> Join the movement. </b> </div>
 			<div className='content'>
-				<div className='signup_form'>
+				<div className='form'>
 						{successMessage &&
 							<p>{successMessage}</p>
 						}
 						<h2> Sign Up </h2>
 						<input type='text' ref='email' placeholder='Email'/>
 						<input type='text' ref='password' placeholder='Password'/>
-						<div className='next_but' onClick={() => {this.handleClickSignup(); successMessage="hey";}}>Next</div>
+						<div className='next_but' onClick={() => {this.handleClickSignup(); successMessage="hey";}}>NEXT</div>
 						{errorMessage &&
 							<p>{errorMessage}</p>
 						}
 				</div>
-			</div>
-			<div className='footer'>
-				<p>Contact Us</p>
-				<p>Press</p>
-				<p>Policies</p>
-				<p>Help</p>
-				<p>Manufacturing</p>
 			</div>
 			</div>
 		);
