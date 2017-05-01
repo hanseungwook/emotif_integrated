@@ -1,0 +1,226 @@
+{
+"image": "https://emotif-products.s3.amazonaws.com/1.jpg",
+"name": "Velvet Jacket with Roses",
+"designer": "Christian Vierig",
+"description": "A floral print on a denim jacket with Sylvie Web trim on the cuffs. The front is enhanced by ruffle detail down the placket and a self-tie neck bow. The Sylvie Web is an evolution of émotif seen throughout the Cruise 2017 collection.",
+"price": 500,
+"category": "top",
+"style": ["streetwear"]
+}
+{
+"image": "https://emotif-products.s3.amazonaws.com/2.jpg",
+"name": "Overfit Denim Jacket",
+"designer": "Stella McCartney",
+"description": "The denim jacket is richly embellished with needlepoint florals and a bee sitting on the front collar. The back features an embroidered tiger and “Blind for Love” appliqués that are applied by hand, a process that takes hours to complete. The textured fabric has a heavyweight and soft feel that is obtained from a stonewashing treatment.",
+"price": 500,
+"category": "top",
+"style": ["streetwear"]
+}
+{
+"image": "https://emotif-products.s3.amazonaws.com/3.jpg",
+"name": "Short Denim Pants",
+"designer": "Raf Simons",
+"description": "Denim short with the new GG pearl button with chain detail.",
+"price": 100,
+"category": "bottom",
+"style": ["streetwear"]
+}
+{
+"image": "https://emotif-products.s3.amazonaws.com/4.jpg",
+"name": "Patchwork Print Viscose Dress",
+"designer": "Emilio Pucci",
+"description": "New motifs are combined with iconic elements of the House to form the new patchwork technique. This viscose dress brings together the Tiger face, rose, Flora and Flora Snake prints. Each pattern is specifically placed to achieve the final look.",
+"price": 500,
+"category": "dress",
+"style": ["streetwear", "elegant"]
+}
+{
+"image": "https://emotif-products.s3.amazonaws.com/5.jpg",
+"name": "Leopard Print Cotton T-shirt",
+"designer": "Renzo Rosso",
+"description": "The now classic t-shirt silhouette with the California embroidery, a reference to the Hollywood Forever cemetery in LA.",
+"price": 100,
+"category": "top",
+"style": ["streetwear"]
+}
+{
+"image": "https://emotif-products.s3.amazonaws.com/6.jpg",
+"name": "Scribbled Writing Denim Pant",
+"designer": "Sergio Valente",
+"description": "Light blue bleach washed denim with scribbled writing print.",
+"price": 300,
+"category": "bottom",
+"style": ["streetwear"]
+}
+{
+"image": "https://emotif-products.s3.amazonaws.com/7.jpg",
+"name": "Washed Oxford Off-Shoulder Shirt",
+"designer": "Hedi Silamne",
+"description": "A washed oxford off-shoulder shirt with a detachable bow brooch.",
+"price": 100,
+"category": "top",
+"style": ["streetwear", "elegant"]
+}
+{
+"image": "https://emotif-products.s3.amazonaws.com/8.jpg",
+"name": "Rabbit fil coupé shirt",
+"designer": "Gianni Verske",
+"description": "A cotton dress with rabbit fil coupé, a fabric with laboriously interwoven threads that create an embroidered or jacquard-like effect. The ruffles and neck bow add subtly femininity.",
+"price": 300,
+"category": "dress",
+"style": ["streetwear", "elegant"]
+}
+{
+"image": "https://emotif-products.s3.amazonaws.com/9.jpg",
+"name": "Sequin Cotton Shirt",
+"designer": "Hedi Silamne",
+"description": "A crew neck t-shirt with a tiger head print.",
+"price": 100,
+"category": "top",
+"style": ["streetwear"]
+}
+{
+"image": "https://emotif-products.s3.amazonaws.com/10.jpg",
+"name": "Mermaid Embroidered Cotton Crop-top",
+"designer": "Hedi Silamne",
+"description": "Cut from cotton jersey in a classic fitting silhouette, this crop-top captures the contemporary spirit of Alessandro Michele’s collections. At the center is a new embroidery for this Spring Summer collection the mermaid.",
+"price": 100,
+"category": "top",
+"style": ["streetwear"]
+}
+{
+"image": "https://emotif-products.s3.amazonaws.com/11.jpg",
+"name": "Strech Viscose Jersey Dress",
+"designer": "Sergio Valente",
+"description": "The pleated Sylvie Web trim decorates this shirt dress.",
+"price": 300,
+"category": "dress",
+"style": ["streetwear", "elegant"]
+}
+{
+"image": "https://emotif-products.s3.amazonaws.com/12.jpg",
+"name": "Bee fil coupé shirt",
+"designer": "Sergio Valente",
+"description": "The shirt is made from a fil coupé fabric featuring the bee-one. Fil coupé fabric features laboriously interwoven threads that create an embroidered or jacquard-like effect.",
+"price": 100,
+"category": "top",
+"style": ["streetwear", "elegant"]
+}
+{
+"image": "https://emotif-products.s3.amazonaws.com/13.jpg",
+"name": "Palm Tree Print T-shirt",
+"designer": "Hedi Silamne",
+"description": "This style has a vintaged, weathered look featuring palm trees of California.",
+"price": 100,
+"category": "top",
+"style": ["streetwear"]
+}
+{
+"image": "https://emotif-products.s3.amazonaws.com/14.jpg",
+"name": "Silk Button-down Shirt",
+"designer": "Gloria Beene",
+"description": "A silk button-down shirt with ruffle trim on the cuffs.",
+"price": 100,
+"category": "top",
+"style": ["streetwear"]
+}
+{
+"image": "https://emotif-products.s3.amazonaws.com/15.jpg",
+"name": "California Cotton T-shirt",
+"designer": "Gloria Beene",
+"description": "The now classic t-shirt silhouette with the California embroidery, a reference to the Hollywood Forever cemetery in LA.",
+"price": 100,
+"category": "top",
+"style": ["streetwear"]
+}
+{
+"image": "https://emotif-products.s3.amazonaws.com/16.jpg",
+"name": "Wool Silk Dress with Web",
+"designer": "Hattie Carnegia",
+"description": "First developed in the 50s, the Web instantly became the hallmark of a cultured club. Here it is used to frame the edges of this knee length dress. The GG pearl buttons are a new signature element of the brand. The crêpe wool silk is a light soft fabric with a creased appearance.",
+"price": "300",
+"category": "dress",
+"style": ["elegant"]
+}
+{
+"image": "https://emotif-products.s3.amazonaws.com/17.jpg",
+"name": "Crêpe wool silk dress",
+"designer": "Donatella Cassini",
+"description": "Exaggerated puff sleeves balance a fitted a-line shape dress. The v-neckline is mirrored from the front to the back. The crêpe wool silk is a light soft fabric with a creased appearance.",
+"price": 500,
+"category": "dress",
+"style": ["elegant"]
+}
+{
+"image": "https://emotif-products.s3.amazonaws.com/18.jpg",
+"name": "Black Denim Pant",
+"designer": "Donatella Cassini",
+"description": "A skinny black denim pant with a slight mix of vintage style.",
+"price": 500,
+"category": "dress",
+"style": ["streetwear", "elegant"]
+}
+{
+"image": "https://emotif-products.s3.amazonaws.com/19.jpg",
+"name": "Single-breasted Wool Coat",
+"designer": "Perry Ellis",
+"description": "A single-breasted wool coat with pearl GG buttons.",
+"price": 500,
+"category": "top",
+"style": ["elegant"]
+}
+{
+"image": "https://emotif-products.s3.amazonaws.com/20.jpg",
+"name": "Patched viscose sablé",
+"designer": "Donatella Cassini",
+"description": "Inspired by nature, this dress is imbued with blocks and patches.",
+"price": 300,
+"category": "dress",
+"style": ["elegant"]
+}
+{
+"image": "https://emotif-products.s3.amazonaws.com/21.jpg",
+"name": "Corsage Print Cotton Dress",
+"designer": "Helmut Lang",
+"description": "For Cruise 2017, there is a new floral print in soft colors, the corsage print depicts symbolic Gucci motifs brought together by flowers. Here the dress is further enhanced by ruffle detail that gives the dress a cape effect.",
+"price": 500,
+"category": "dress",
+"style": ["elegant"]
+}
+{
+"image": "https://emotif-products.s3.amazonaws.com/22.jpg",
+"name": "Gabardine Embroidered Trench Coat",
+"designer": "Perry Ellis",
+"description": "Menswear double-breasted trench coat with a sequin embroidered tiger surrounded by two single flowers. The tiger represents a powerful energy and brings new life to an oversize trench.",
+"price": "500",
+"category": "top",
+"style": ["elegant"]
+}
+{
+"image": "https://emotif-products.s3.amazonaws.com/23.jpg",
+"name": "Silk Button-down Shirt",
+"designer": "Helmut Lang",
+"description": "A silk button-down shirt with ruffle trim on the cuffs.",
+"price": 100,
+"category": "top",
+"style": ["elegant"]
+}
+{
+"image": "https://emotif-products.s3.amazonaws.com/24.jpg",
+"name": "Romain Print Silk Pant",
+"designer": "Nino Cerruti",
+"description": "Prints are an important feature of Nino Cerruti’s collections, the Romain print is inspired by a classical design and gives a relief effect by the printing technique.",
+"price": 100,
+"category": "top",
+"style": ["elegant"]
+}
+{
+"image": "https://emotif-products.s3.amazonaws.com/25.jpg",
+"name": "Viscose Black Dress",
+"designer": "Nino Cerruti",
+"description": "A black viscose jersey dress with a Web neck bow. The ruffle detail is a key detail throughout Alessandro's collections for added volume and movement.",
+"price": 300,
+"category": "dress",
+"style": ["elegant"]
+}
+
