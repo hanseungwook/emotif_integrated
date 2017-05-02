@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import BrowsePage from '../../components/browse/BrowsePage';
+import BrowsePage from '../../components/Browse/BrowsePage';
 
 export class BrowseContainer extends Component {
     constructor(props) {
