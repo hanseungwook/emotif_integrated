@@ -109,6 +109,8 @@ Parse.Cloud.define("createTransaction", function(req, res) {
     });
 });
 
+// Takes in the style (elegant or streetwear) as a parameter
+// and returns all clothes of that style in JSON
 Parse.Cloud.define("pullProducts", function(req, res) {
     var style = req.params.style || req.body.style;
     var Product = Parse.Object.extend("Product");
