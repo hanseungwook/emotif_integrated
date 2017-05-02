@@ -11,9 +11,11 @@ export class PreferencesContainer extends Component {
   render(){
     const { onFormUpdate, onFormSubmit } = this.props;
     return(
-      
+
       <PreferencesPage onFormUpdate={onFormUpdate}
-                       onFormSubmit={onFormSubmit(this.props.form)}
+                       onFormSubmit={onFormSubmit}
+                       form={this.props.form}
+
       />
     );
   }

@@ -20,7 +20,7 @@ export default class PreferencesPage extends Component
         <Canvas      onFormUpdate={this.props.onFormUpdate}/>
         <Aesthetics  onFormUpdate={this.props.onFormUpdate}/>
         <Information onFormUpdate={this.props.onFormUpdate}
-                     onFormSubmit={this.props.onFormSubmit}/>
+                     onFormSubmit={this.props.onFormSubmit} form={this.props.form}/>
       </div>
     );
   }

@@ -8,7 +8,6 @@ export default class InputBox extends Component {
   }
   handleChange(e){
     this.setState({value: e.target.value});
-    console.log(e.target.value);
     this.props.onFormUpdate({id:e.target.id, value:e.target.value});
   }
 

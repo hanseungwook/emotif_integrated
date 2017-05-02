@@ -4,7 +4,17 @@ import InputBox from './InputBox';
 
 
 export default class Information extends Component {
+constructor(props) {
+    super(props);
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
 
+
+    handleSubmit(){
+        console.log("trying to submit");
+        this.props.onFormSubmit(this.props.form)
+
+    }
 
   render() {
     const fields = [{ph: 'first name', type:'text',     id:'firstName'},
@@ -28,7 +38,7 @@ export default class Information extends Component {
       <div className='information pref-section'>
       <span className='section-label'>Information</span>
          {input_items}
-        <div id='submit'className='pref-button' onClick={()=>this.props.onFormSubmit}
+        <div id='submit'className='pref-button' onClick={()=>this.handleSubmit()}
         >Start Browsing</div>
       </div>
     );

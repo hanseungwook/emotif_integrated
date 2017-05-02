@@ -39,6 +39,7 @@ function signupError(message) {
 }
 
 export function submitForm(form) {
+    console.log("SUBMITTING FORM")
   return dispatch => {
     dispatch(formRequest());
       let user = new Parse.User();
@@ -64,6 +65,7 @@ export function submitForm(form) {
       user.set('lastName',  form.lastName)
       user.signUp(null, {
         success: function(user) {
+            console.log("YAY")
             localStorage.setItem('id_token', user.getSessionToken());
             dispatch(formSubmit(user));
         },
