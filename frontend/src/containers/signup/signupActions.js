@@ -8,7 +8,7 @@ export const SIGNUP_FAILURE = 'SIGNUP_FAILURE';
 //*****************************  SIGNUP  *******************************//
 
 Parse.initialize("emotifAppId");
-Parse.serverURL = 'http://emotif-parse-dev.us-east-1.elasticbeanstalk.com/parse';
+Parse.serverURL = 'http://localhost:1337/parse';
 
 function requestSignup(creds) {
   return {
@@ -40,7 +40,9 @@ function signupError(message) {
 export function signupUser(creds) {
 
   return dispatch => {
+
     dispatch(requestSignup(creds));
+    
     let user = new Parse.User();
     console.log("email", creds.email);
     console.log("pass", creds.password);

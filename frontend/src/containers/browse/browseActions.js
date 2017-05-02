@@ -1,38 +1,49 @@
-// export const SET_VISIBILITY_FILTER = 'SET_VISIBILITY_FILTER';
-// export const PRODUCTS_REQUEST = 'PRODUCTS_REQUEST';
-// export const PRODUCTS_RECEIVE = 'PRODUCTS_RECEIVE';
-// export const PRODUCTS_FAILURE = 'PRODUCTS_FAILURE'
-//
-// export const VisibilityFilters = {
-// 	SHOW_ALL: 'SHOW_ALL',
-// 	SHOW_TOPS: 'SHOW_TOPS',
-// 	SHOW_BOTTOMS: 'SHOW_BOTTOMS',
-// 	SHOW_DRESSES: 'SHOW_DRESSES'
-// };
-//
-// function setVisibilityFilter(filter) {
-// 	return {
-// 		type: SET_VISIBILITY, filter
-// 	}
-// };
-//
-// function requestProducts() {
-//     return {
-//         type: PRODUCTS_REQUEST
-//     };
-// }
-//
-// function receiveProducts(products) {
-//     return {
-//         type: PRODUCTS_RECEIVE,
-//         authenticated: true
-//     };
-// }
-//
-// function productError(error) {
-//     return {
-//         type: PRODUCTS_FAILURE,
-//         authenticated: true,
-//         error
-//     };
-// }
+import fetch from 'isomorphic-fetch';
+
+export const PRODUCT_REQUEST = 'PRODUCT_REQUEST';
+export const PRODUCT_SUCCESS = 'PRODUCT_SUCCESS';
+export const PRODUCT_FAILURE = 'PRODUCT_FAILURE';
+
+function requestProducts() {
+	return {
+		type: PRODUCT_REQUEST
+	};
+}
+
+function receiveProducts(products) {
+	return {
+		type: PRODUCT_SUCCESS,
+		authenticated: true,
+		products
+	};
+}
+
+function productError(error) {
+	return {
+		type: PRODUCT_FAILURE,
+		error
+	};
+}
+
+
+
+
+export function callApi(endpoint, authenticated) {
+
+	return dispatch => {
+		dispatch(requestProducts());
+
+		return fetch('http://localhost:1337/' + endpoint)
+			.then(response =>
+				response.text().then(text => ({ text, response }))
+			)
+			.then(({ text, response }) => {
+				if (!response.ok) {
+					dispatch(productError(text));
+					return Promise.reject(text);
+				}
+				dispatch(receiveProducts(text));
+			})
+			.catch(err => console.log(err));
+	};
+}

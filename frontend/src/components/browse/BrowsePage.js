@@ -8,9 +8,9 @@ import '../../styles/browse.scss';
 export default class BrowsePage extends Component {
     render() {
         return(
-            <div>
+            <div className='browse'>
                 <Header />
-                <div id='content-container'>
+                <div className="content_container">
                     <SideBar />
                     <Products />
                 </div>
