@@ -38,11 +38,6 @@ app.get('/', function(req, res) {
 app.listen(port, function() {
     console.log('Emotif backend with parse running on ' + port + '.');
 });
-<<<<<<< HEAD
 
 // For testing
 module.exports = app;
-
-
-=======
->>>>>>> 758aeec575c93900c75b619271756398e47e8da2

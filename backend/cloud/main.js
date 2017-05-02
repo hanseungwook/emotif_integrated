@@ -109,4 +109,18 @@ Parse.Cloud.define("createTransaction", function(req, res) {
     });
 });
 
+Parse.Cloud.define("pullProducts", function(req, res) {
+    var style = req.params.style || req.body.style;
+    var Product = Parse.Object.extend("Product");
+    var query = new Parse.Query(Product);
+    query.equalTo("style", style);
+    query.find({
+        success: function(results) {
+            res.success(results);
+        },
+        error: function() {
+            res.error("Product pull fail");
+        }
+    });
+});
 
