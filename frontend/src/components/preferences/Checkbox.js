@@ -1,6 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import update from 'react-addons-update';
 
+
 export default class Checkbox extends Component {
   constructor(props) {
     super(props);
@@ -17,46 +18,59 @@ export default class Checkbox extends Component {
   }
 
   handleSelection(e){
-    let target_value = parseInt(e.target.id);
+    let target_value = (e.target.id).split('-');
+    let value = parseInt(target_value[1]);
+    let id    = target_value[0];
     let selected     = update(this.state.selected, {
-      $splice: [[target_value,1,1]]
+      $splice: [[value,1,1]]
     });
     this.setState({ selected: selected});
+    this.props.onFormUpdate({id:id, value:selected})
+
   }
 
   handleUnselection(e){
-    let target_value = parseInt(e.target.id);
+    let target_value = (e.target.id).split('-');
+    let value = parseInt(target_value[1]);
+    let id    = target_value[0];
     let selected     = update(this.state.selected, {
-      $splice: [[target_value,1,0]]
+      $splice: [[value,1,0]]
     });
     this.setState({selected: selected});
+    this.props.onFormUpdate({id:id, value:selected})
   }
 
+
+
   render() {
+    const name            = this.props.name;
     const selected        = this.state.selected;
     const options         = this.props.options;
     const checkbox_items  = options.map((option,index) =>
-      <div key={option}
-           id ={index}
+      <div key={name + '-' + index}
+           id ={name + '-' + index}
            className =
-           {'' + (selected[index]?('selected '):('')) + 'checkbox-option'}
+           {'' + (selected[index]?('selected '):('')) + ((this.props.type)+ ' option')}
            onClick  = {(e) =>(selected[index]? this.handleUnselection(e):
                                                this.handleSelection(e))}>
            {option}
       </div>
     );
 
-
     return (
-      <div className='checkbox'>
-      <div className='input-label'>{this.props.name}</div>
+      <div className={(this.props.type)+ ' options pref-container'}>
+      <div className='container-label'>{this.props.label}</div>
         {checkbox_items}
       </div>
     );
   }
 }
 
+
+
 Checkbox.propTypes = {
+  label: PropTypes.string,
+  type: PropTypes.string,
   options: PropTypes.array,
   name: PropTypes.string
 

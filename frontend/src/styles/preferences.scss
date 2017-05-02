@@ -1,286 +1,236 @@
 @import 'base';
 @import 'fonts';
 @import 'variables';
+$red : #DD0048;
 
-$ft_title_1440: 34px;
-$ft_title_1024: 28px;
-$ft_title_768 : 22px;
-$ft_title_320 : 22px;
+$input-font: $Futura;
+$label-font: $Futura;
+$options-font: $Futura;
 
-$ft_sub_1440: 24px;
-$ft_sub_1024: 20px;
-$ft_sub_768 : 18px;
-$ft_sub_320 : 16px;
-
-$ft_input_1440: 16px;
-$ft_input_1024: 16px;
-$ft_input_768 : 16px;
-$ft_input_320 : 16px;
-
-$input-320h           :20px;
-$input-768h           :30px;
-$input-1024h          :30px;
-$input-1440h          :30px;
-$input-320w           :200px;
-$input-768w           :200px;
-$input-1024w          :200px;
-$input-1440w          :200px;
-
-$title-font       : $Futura;
-$subtitle-font    : $Futura;
-$input-font       : $Lato;
-$input-label-font : $Lato;
-
-
-
-.page{
-  padding: 10%;
-  $font-family: $Lato;
-  .section{
-    clear: both;
-
-    .title{
-      font-family: $title-font;
-      @include height(50px, 50px, 50px, 50px);
-      @include width(200px,200px,200px,200px);
-      @include font-size($ft_title_320, $ft_title_768,$ft_title_1024,$ft_title_1440);
-      display:table-cell;
-      text-align: left;
-      vertical-align:bottom;
-    }
-
-    .sub-section{
-      clear: both;
-
-      .subtitle{
-        font-family: $subtitle-font;
-        @include height(50px, 50px, 50px, 50px);
-        @include width(120px,120px,120px,120px);
-        @include font-size($ft_sub_320, $ft_sub_768,$ft_sub_1024,$ft_sub_1440);
-        display: block;
-        width: 100%;
-        cursor: pointer;
-        text-align: left;
-      }
-
-      .checkbox{
-        .checkbox-option{
-          display     : inline-block;
-          float       : left;
-          border      : 1px solid $grey;
-          width       : 50px;
-          line-height : 30px;
-          height      : 30px;
-        }
-        .checkbox-option.selected{
-          background: $blue;
-        }
-      }
-      .selector{
-        width: 100%;
-
-      }
-    }
-  }
-}
-
-
-
-
-.form.selector{
-
-}
-.skin.selector{
-
-}
-.eye.selector{
-
-}
-.hair.selector{
-
-}
-
-.selector{
-  .primary-items{
-    clear: both;
-    width: 100%;
-  }
-  .secondary-items{
-    clear: both;
-    width: 100%;
-  }
-  .pri-color-opt{
-    &:hover{
-
-    }
-    &:focus{
-
-    }
-
-  }
-}
-
-
-.pri-color-opt, .sec-color-opt{
-  float       : left;
-  display     : inline-block;
-  width       : 80px;
-  height      : 80px;
-  border      : none;
-}
-
-.selector.pri-selected {
-  .pri-color-opt{
-    border: none;
-  }
-  .pri-color-opt.selected{
-    border: 1px solid $blue;
-  }
-  .sec-color-opt{
-    border: none;
-  }
-}
-.selector.sec-selected {
-  .pri-color-opt{
-    border: none;
-  }
-  .pri-color-opt.selected{
-    border: 1px solid $grey;
-  }
-  .sec-color-opt{
-    border: none;
-  }
-  .sec-color-opt.selected{
-    border: 1px solid $blue;
-  }
-}
-
-
-
-
-
-
-
-
-.sub-selected{
-  color: $blue;
-}
-.clear{
-  clear: both;
-}
-
-
-.input-label{
+#pref-nav{
+  position: fixed;
+  top: 0;
+  z-index: 2000;
   width: 100%;
-  clear: both;
-  @include margin-top( 20px, 20px, 20px, 20px);
-  @include margin-bottom( 20px, 20px, 20px, 20px);
-  font-family: $input-label-font;
-  text-align: left;
-}
-
-
-.input-box{
-  clear: both;
-  width: 100%;
-  height: 30px;
-  margin-top: 30px;
-  .pref-input{
-    font-size     : 20px;
-    font-family   : $input-font;
-    display       : inline-block;
-    float         : left;
-    text-align    : center;
-    padding-left  : 10px;
-    color         : $grey;
-    border        : none;
-    border-bottom : 2px solid $grey;
-    height        : 100%;
-    width         : 50%;
-  }
-  .radio{
-    .radio-option{
-      font-family   : $input-font;
+  .nav-options{
+    width: 429px;
+    margin: 0 auto;
+    display: block;
+    .nav-option{
+      font-family: $Futura;
       display: inline-block;
-      float: left;
-      width       : 50px;
-      height      : 30px;
-      line-height : 30px;
-      border      : 1px solid $grey;
+      line-height: 100px;
+      height: 100px;
+      width: 140px;
     }
-    .radio-option.selected{
-      text-decoration: none;
-      color          : $blue;
+    .nav-option.done{
+      color: $blue;
     }
   }
 }
 
+#preferences{
+  height: 100vh;
+  padding-top: 20vh;
+}
+.pref-section, .pref-subsection, .pref-container{
+  // display: none;
+}
+.pref-section{
+  min-height: 100vh;
+}
+.pref-section.show{display: block}
+.pref-subsection.show{display: block}
+.pref-container.show{display: block}
 
-.checkbox{
+
+.section-label{
+  margin-top: 40px;
+  font-family: $Lato;
+  color: #4F5D63;
+  font-size: 50px;
+  text-align: center;
   display: block;
   width: 100%;
-  font-family: $input-font;
-  .checkbox-option{
-    display     : inline-block;
-    float: left;
-    border      : 1px solid $grey;
-    width       : 50px;
-    line-height : 30px;
-    height      : 30px;
-  }
 }
-.checkbox-option.selected{
-  background: $blue;
+.subsection-label{
+  margin-top: 40px;
+  font-family: $Lato;
+  color: #4F5D63;
+  font-size: 30px;
+  text-align: center;
+  display: block;
+  width: 100%;
 }
 
-.body-shape,.body-shape-specific, .body-shape-selected{
+.quote{
+  font-family: $Lato;
+  text-align: center;
+}
+.pref-subsection{
+  margin-top: 100px;
+}
+.pref-container{
+  margin: 30px auto;
+  clear: both;
+}
+
+.container-label{
+  font-family: $label-font;
+  display: block;
+  text-align: center;
+  margin: 20px;
+}
+
+.options{
+  display: block;
+  vertical-align: top;
+  @include width(      555px,  555px,  734px,  734px);
+  margin: 0 auto;
+  .option{
+    font-family: $options-font;
+    width: auto;
+    vertical-align: top;
+    display: inline-block;
+    border: 1px solid $dark-grey;
+    &:hover{
+      border: 1px solid $red;
+      opacity: 1 !important;
+    }
+  }
+  .option.selected{
+    border:  1px solid $red;
+  }
+  .option.nonselected{
+    opacity: .4;
+  }
+}
+
+.checkbox.options{
+  .option{
+    text-align: center;
+    @include line-height(     75px,  75px,  100px,  100px);
+    @include width(      75px,  75px,  100px,  100px);
+    @include height(     75px,  75px,  100px,  100px);
+  }
+  .option.hide{
+    display: none;
+  }
+}
+
+.color.options{
+  .option{
+    @include width(      75px,  75px,  100px,  100px);
+    @include height(     75px,  75px,  100px,  100px);
+  }
+}
+.skin.color.options{
+  margin: 0 auto;
+  @include width(      480px,  480px,  630px,  630px);
+}
+.eye.color.options{
+  margin: 0 auto;
+  @include width(      240px,  240px,  315px,  315px);
+}
+.hair.color.options{
+  margin: 0 auto;
+  @include width(      240px,  315px,  315px,  315px);
+}
+.option-nav{
   display: inline-block;
-  cursor: pointer;
-  margin: 0;
-  width       : 200px;
-  height      : 240px;
-  border      : 1px solid $grey;
+  @include width(      75px,  75px,  100px,  100px);
+  .option-nav-img{
+    margin: 0 auto;
+    @include height(     75px,  75px,  100px,  100px);
+  }
+}
+.option-nav.right{
+  .option-nav-img{
+    float: right;
+}}
+
+.primary.options{
+  display: block;
+  width: auto;
+  margin: 0 auto;
+}
+.secondary.options{
+  width: auto;
+  margin: 0 auto;
+  display: none;
+}
+.secondary.options.show{
+  display: block;
 }
 
+.options.shape{
+  @include width(      458px,  458px,  458px,  458px);
 
-.aesthetics{
-  .checkbox{
-    float: left;
-    margin: 0 auto;
-    // height: 40px;
-    // @include background-gradient($peach, $mint, $earth);
-    // @include width(600px, 600px, 600px, 600px);
-    .checkbox-option{
-      width       : 120px;
-      height      : 40px;
-      line-height : 40px;
-      border      : 1px solid $grey;
-      border-width: 1px 1px 1px 1px;
-      background  : rgba(255,255,255,.9);
-      vertical-align: bottom;
-    }
-    .checkbox-option.selected{
-      background  : rgba(255,255,255,.2);
-    }
+}
+.shape-img{
+  @include width(      148px,  148px,  148px,  148px);
+  @include height(     148px,  148px,  148px,  148px);
+}
+
+.hair.options{
+  .option{
+    @include height(      60px,  100px,  100px,  100px);
+    @include width(      45px,  75px,  75px,  75px);
+    display: inline-block;
+    background-size: contain;
+    background-repeat: no-repeat;
   }
 }
 
+.pref.options{
+  width: 720px;
+}
+.pref.option{
+  height: 60px;
+  width: 140px;
+  line-height: 30px;
+  text-align: center;
+}
 
+.pref-input{
+  display: block;
+  width: 30%;
+  height: 40px;
+  border: none;
+  border-bottom: 2px solid #4F5D63;
+  margin: 0 auto;
+  text-align: center;
+  font-family: $input-font;
+  @include font-size(20px,20px,20px,20px);
+}
 
-
-.form1 { @include radial-gradient($color1 );}
-.form2 { @include radial-gradient($color2 );}
-.form3 { @include radial-gradient($color3 );}
-.form4 { @include radial-gradient($color4 );}
-.form5 { @include radial-gradient($color5 );}
-.form6 { @include radial-gradient($color6 );}
-.form7 { @include radial-gradient($color7 );}
-.form8 { @include radial-gradient($color8 );}
-.form9 { @include radial-gradient($color9 );}
-.form10{ @include radial-gradient($color10);}
-.form11{ @include radial-gradient($color11);}
-.form12{ @include radial-gradient($color12);}
-
+.pref-button{
+  border: 1px solid #4F5D63;
+  font-family: $Lato;
+  line-height: 40px;
+  width: 200px;
+  height: 40px;
+  text-align: center;
+  margin: 40px auto;
+}
+.radio{
+   display: block;
+    margin: 20px auto;
+    width: 244px;
+  .radio-option{
+    font-family : $input-font;
+    display     : inline-block;
+    float       : left;
+    width       : 120px;
+    height      : 50px;
+    line-height : 50px;
+    border      : 1px solid $grey;
+  }
+  .radio-option.selected{
+    text-decoration: none;
+    color          : $blue;
+  }
+}
 .eye1 {@include radial-gradient($eye-color1);}
 .eye2 {@include radial-gradient($eye-color2);}
 .eye3 {@include radial-gradient($eye-color3);}
@@ -288,6 +238,29 @@ $input-label-font : $Lato;
 .eye5 {@include radial-gradient($eye-color5);}
 .eye6 {@include radial-gradient($eye-color6);}
 .eye7 {@include radial-gradient($eye-color7);}
+
+.hair1 {background-image: url('../../images/hair-black-1.png');}
+.hair2 {background-image: url('../../images/hair-black-2.png');}
+.hair3 {background-image: url('../../images/hair-black-3.png');}
+.hair4 {background-image: url('../../images/hair-brown-1.png');}
+.hair5 {background-image: url('../../images/hair-brown-2.png');}
+.hair6 {background-image: url('../../images/hair-brown-3.png');}
+.hair7 {background-image: url('../../images/hair-blonde-1.png');}
+.hair8 {background-image: url('../../images/hair-blonde-2.png');}
+.hair9 {background-image: url('../../images/hair-blonde-3.png');}
+.hair10 {background-image: url('../../images/hair-red-1.png');}
+.hair11 {background-image: url('../../images/hair-red-2.png');}
+.hair12 {background-image: url('../../images/hair-red-3.png');}
+
+.shape1 {img{content: url('../../images/body1.png')};}
+.shape2 {img{content: url('../../images/body2.png')};}
+.shape3 {img{content: url('../../images/body3.png')};}
+.shape4 {img{content: url('../../images/body4.png')};}
+.shape5 {img{content: url('../../images/body5.png')};}
+.shape6 {img{content: url('../../images/body6.png')};}
+.shape7 {img{content: url('../../images/body7.png')};}
+.shape8 {img{content: url('../../images/body8.png')};}
+
 
 .skin1 { @include radial-gradient($color1 );}
 .skin2 { @include radial-gradient($color2 );}
@@ -325,3 +298,297 @@ $input-label-font : $Lato;
 .skin34{ @include radial-gradient($color34);}
 .skin35{ @include radial-gradient($color35);}
 .skin36{ @include radial-gradient($color36);}
+
+// //
+// // .page{
+// //   padding: 10%;
+// //   $font-family: $Lato;
+// //   .section{
+// //     clear: both;
+// //
+// //     .title{
+// //       font-family: $title-font;
+// //       @include height(50px, 50px, 50px, 50px);
+// //       @include width(200px,200px,200px,200px);
+// //       @include font-size($ft_title_320, $ft_title_768,$ft_title_1024,$ft_title_1440);
+// //       display:table-cell;
+// //       text-align: left;
+// //       vertical-align:bottom;
+// //     }
+// //
+// //     .sub-section{
+// //       clear: both;
+// //
+// //       .subtitle{
+// //         font-family: $subtitle-font;
+// //         @include height(50px, 50px, 50px, 50px);
+// //         @include width(120px,120px,120px,120px);
+// //         @include font-size($ft_sub_320, $ft_sub_768,$ft_sub_1024,$ft_sub_1440);
+// //         display: block;
+// //         width: 100%;
+// //         cursor: pointer;
+// //         text-align: left;
+// //       }
+// //
+// //       .checkbox{
+// //         .checkbox-option{
+// //           display     : inline-block;
+// //           float       : left;
+// //           border      : 1px solid $grey;
+// //           width       : 50px;
+// //           line-height : 30px;
+// //           height      : 30px;
+// //         }
+// //         .checkbox-option.selected{
+// //           background: $blue;
+// //         }
+// //       }
+// //       .selector{
+// //         width: 100%;
+// //
+// //       }
+// //     }
+// //   }
+// // }
+// //
+// //
+// //
+// //
+// // .form.selector{
+// //
+// // }
+// // .skin.selector{
+// //
+// // }
+// // .eye.selector{
+// //
+// // }
+// // .hair.selector{
+// //
+// // }
+// //
+// // .selector{
+// //   .primary-items{
+// //     clear: both;
+// //     width: 100%;
+// //   }
+// //   .secondary-items{
+// //     clear: both;
+// //     width: 100%;
+// //   }
+// //   .pri-color-opt{
+// //     &:hover{
+// //
+// //     }
+// //     &:focus{
+// //
+// //     }
+// //
+// //   }
+// // }
+// //
+// //
+// // .pri-color-opt, .sec-color-opt{
+// //   float       : left;
+// //   display     : inline-block;
+// //   width       : 80px;
+// //   height      : 80px;
+// //   border      : none;
+// // }
+// //
+// // .selector.pri-selected {
+// //   .pri-color-opt{
+// //     border: none;
+// //   }
+// //   .pri-color-opt.selected{
+// //     border: 1px solid $blue;
+// //   }
+// //   .sec-color-opt{
+// //     border: none;
+// //   }
+// // }
+// // .selector.sec-selected {
+// //   .pri-color-opt{
+// //     border: none;
+// //   }
+// //   .pri-color-opt.selected{
+// //     border: 1px solid $grey;
+// //   }
+// //   .sec-color-opt{
+// //     border: none;
+// //   }
+// //   .sec-color-opt.selected{
+// //     border: 1px solid $blue;
+// //   }
+// // }
+// //
+// //
+// //
+// //
+// //
+// //
+// //
+// //
+// // .sub-selected{
+// //   color: $blue;
+// // }
+// // .clear{
+// //   clear: both;
+// // }
+// //
+// //
+// // .input-label{
+// //   width: 100%;
+// //   clear: both;
+// //   @include margin-top( 20px, 20px, 20px, 20px);
+// //   @include margin-bottom( 20px, 20px, 20px, 20px);
+// //   font-family: $input-label-font;
+// //   text-align: left;
+// // }
+// //
+// //
+// // .input-box{
+// //   clear: both;
+// //   width: 100%;
+// //   height: 30px;
+// //   margin-top: 30px;
+// //   .pref-input{
+// //     font-size     : 20px;
+// //     font-family   : $input-font;
+// //     display       : inline-block;
+// //     float         : left;
+// //     text-align    : center;
+// //     padding-left  : 10px;
+// //     color         : $grey;
+// //     border        : none;
+// //     border-bottom : 2px solid $grey;
+// //     height        : 100%;
+// //     width         : 50%;
+// //   }
+// //   .radio{
+// //     .radio-option{
+// //       font-family   : $input-font;
+// //       display: inline-block;
+// //       float: left;
+// //       width       : 50px;
+// //       height      : 30px;
+// //       line-height : 30px;
+// //       border      : 1px solid $grey;
+// //     }
+// //     .radio-option.selected{
+// //       text-decoration: none;
+// //       color          : $blue;
+// //     }
+// //   }
+// // }
+// //
+// //
+// // .checkbox{
+// //   display: block;
+// //   width: 100%;
+// //   font-family: $input-font;
+// //   .checkbox-option{
+// //     display     : inline-block;
+// //     float: left;
+// //     border      : 1px solid $grey;
+// //     width       : 50px;
+// //     line-height : 30px;
+// //     height      : 30px;
+// //   }
+// // }
+// // .checkbox-option.selected{
+// //   background: $blue;
+// // }
+// //
+// // .body-shape,.body-shape-specific, .body-shape-selected{
+// //   display: inline-block;
+// //   cursor: pointer;
+// //   margin: 0;
+// //   width       : 200px;
+// //   height      : 240px;
+// //   border      : 1px solid $grey;
+// // }
+// //
+// //
+// // .aesthetics{
+// //   .checkbox{
+// //     float: left;
+// //     margin: 0 auto;
+// //     // height: 40px;
+// //     // @include background-gradient($peach, $mint, $earth);
+// //     // @include width(600px, 600px, 600px, 600px);
+// //     .checkbox-option{
+// //       width       : 120px;
+// //       height      : 40px;
+// //       line-height : 40px;
+// //       border      : 1px solid $grey;
+// //       border-width: 1px 1px 1px 1px;
+// //       background  : rgba(255,255,255,.9);
+// //       vertical-align: bottom;
+// //     }
+// //     .checkbox-option.selected{
+// //       background  : rgba(255,255,255,.2);
+// //     }
+// //   }
+// // }
+// //
+// //
+// //
+// //
+// // .form1 { @include radial-gradient($color1 );}
+// // .form2 { @include radial-gradient($color2 );}
+// // .form3 { @include radial-gradient($color3 );}
+// // .form4 { @include radial-gradient($color4 );}
+// // .form5 { @include radial-gradient($color5 );}
+// // .form6 { @include radial-gradient($color6 );}
+// // .form7 { @include radial-gradient($color7 );}
+// // .form8 { @include radial-gradient($color8 );}
+// // .form9 { @include radial-gradient($color9 );}
+// // .form10{ @include radial-gradient($color10);}
+// // .form11{ @include radial-gradient($color11);}
+// // .form12{ @include radial-gradient($color12);}
+// //
+// // .eye1 {@include radial-gradient($eye-color1);}
+// // .eye2 {@include radial-gradient($eye-color2);}
+// // .eye3 {@include radial-gradient($eye-color3);}
+// // .eye4 {@include radial-gradient($eye-color4);}
+// // .eye5 {@include radial-gradient($eye-color5);}
+// // .eye6 {@include radial-gradient($eye-color6);}
+// // .eye7 {@include radial-gradient($eye-color7);}
+// //
+// // .skin1 { @include radial-gradient($color1 );}
+// // .skin2 { @include radial-gradient($color2 );}
+// // .skin3 { @include radial-gradient($color3 );}
+// // .skin4 { @include radial-gradient($color4 );}
+// // .skin5 { @include radial-gradient($color5 );}
+// // .skin6 { @include radial-gradient($color6 );}
+// // .skin7 { @include radial-gradient($color7 );}
+// // .skin8 { @include radial-gradient($color8 );}
+// // .skin9 { @include radial-gradient($color9 );}
+// // .skin10{ @include radial-gradient($color10);}
+// // .skin11{ @include radial-gradient($color11);}
+// // .skin12{ @include radial-gradient($color12);}
+// // .skin13{ @include radial-gradient($color13);}
+// // .skin14{ @include radial-gradient($color14);}
+// // .skin15{ @include radial-gradient($color15);}
+// // .skin16{ @include radial-gradient($color16);}
+// // .skin17{ @include radial-gradient($color17);}
+// // .skin18{ @include radial-gradient($color18);}
+// // .skin19{ @include radial-gradient($color19);}
+// // .skin20{ @include radial-gradient($color20);}
+// // .skin21{ @include radial-gradient($color21);}
+// // .skin22{ @include radial-gradient($color22);}
+// // .skin23{ @include radial-gradient($color23);}
+// // .skin24{ @include radial-gradient($color24);}
+// // .skin25{ @include radial-gradient($color25);}
+// // .skin26{ @include radial-gradient($color26);}
+// // .skin27{ @include radial-gradient($color27);}
+// // .skin28{ @include radial-gradient($color28);}
+// // .skin29{ @include radial-gradient($color29);}
+// // .skin30{ @include radial-gradient($color30);}
+// // .skin31{ @include radial-gradient($color31);}
+// // .skin32{ @include radial-gradient($color32);}
+// // .skin33{ @include radial-gradient($color33);}
+// // .skin34{ @include radial-gradient($color34);}
+// // .skin35{ @include radial-gradient($color35);}
+// // .skin36{ @include radial-gradient($color36);}
