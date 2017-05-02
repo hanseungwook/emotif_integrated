@@ -3,3 +3,5 @@
 .elasticbeanstalk/*
 !.elasticbeanstalk/*.cfg.yml
 !.elasticbeanstalk/*.global.yml
+
+MONGODB_URI=mongodb://shan:emotif123@ds133670.mlab.com:33670/emotif_db

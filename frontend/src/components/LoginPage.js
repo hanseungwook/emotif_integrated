@@ -36,7 +36,7 @@ export default class LoginPage extends Component {
 							}
 							<h2> Login </h2>
 							<input type='text' ref='email' placeholder='Email'/>
-							<input type='text' ref='password' placeholder='Password'/>
+							<input type='password' ref='password' placeholder='Password'/>
 							<div className='next_but' onClick={() => {this.handleClickLogin(); successMessage="hey";}}>LOGIN</div>
 							{errorMessage &&
 								<p>{errorMessage}</p>

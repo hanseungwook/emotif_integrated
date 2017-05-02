@@ -53,6 +53,15 @@ $neonred: #DD0048;
 		    font-size: 110%;
 		}
 
+        input[type=password] {
+            margin-top:3em;
+            border: none;
+            border-bottom: 1px solid black;
+            width: 50%;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 110%;
+        }
+
 		.next_but {
 			background-color: $neonred;
 			color: white;
