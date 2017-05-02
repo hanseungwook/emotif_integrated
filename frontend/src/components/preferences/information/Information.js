@@ -1,36 +1,45 @@
 // import React, { Component, PropTypes } from 'react';
 import React, { Component } from 'react';
-
+import InputBox from './InputBox';
 
 
 export default class Information extends Component {
+constructor(props) {
+    super(props);
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
 
 
+    handleSubmit(){
+        console.log("trying to submit");
+        this.props.onFormSubmit(this.props.form)
 
+    }
 
   render() {
-    const fields = [{ph: 'first name', type:'text',     id:'first-name'},
-                    {ph: 'last  name', type:'text',     id:'last-name'},
+    const fields = [{ph: 'first name', type:'text',     id:'firstName'},
+                    {ph: 'last  name', type:'text',     id:'lastName'},
                     {ph: 'email',      type:'email',    id:'email'},
                     {ph: 'password',   type:'password', id:'pw'},
                     {ph: 'password',   type:'password', id:'pw-comf'}];
 
     const input_items = fields.map((x,index) =>
-      <div className='input-box'>
-        <input id={x.id}
-         key={'info' + index.toString()}
-         className='pref-input'
-         type={x.type}
-         placeholder={x.ph}/>
-      </div>
+      <InputBox
+          onFormUpdate={this.props.onFormUpdate}
+          key={'information' + index.toString()}
+          id={x.id}
+          type={x.type}
+          ph={x.ph}
+      />
     )
 
-    
+
     return (
-      <div className='information section'>
-      <span className='title'>Information</span>
+      <div className='information pref-section'>
+      <span className='section-label'>Information</span>
          {input_items}
-        <div id='submit'className='button'>Start Browsing</div>
+        <div id='submit'className='pref-button' onClick={()=>this.handleSubmit()}
+        >Start Browsing</div>
       </div>
     );
   }
