@@ -1,23 +1,50 @@
-// import React, { Component, PropTypes } from 'react';
-import React, { Component } from 'react';
-// import { connect }                     from 'react-redux';
-// import { bindActionCreators }          from 'redux';
-
-// import { joinWaitlist, switchPane }    from './PreferencesActions';
+import React, { Component, PropTypes } from 'react';
+import { connect }                     from 'react-redux';
+import { bindActionCreators }          from 'redux';
+import { updateForm, submitForm }    from './preferencesActions';
 import PreferencesPage from '../../components/preferences/PreferencesPage';
 
 export class PreferencesContainer extends Component {
+  constructor(props) {
+    super(props);
+  }
   render(){
+    const { onFormUpdate, onFormSubmit } = this.props;
     return(
-      <PreferencesPage/>
+      
+      <PreferencesPage onFormUpdate={onFormUpdate}
+                       onFormSubmit={onFormSubmit(this.props.form)}
+      />
     );
   }
 }
 
-// PreferencesContainer.propTypes = {}
-// const mapPropToStates = (state) => {}
-// const mapDispatchToProps = () => {}
-//
-// export default connect(mapPropToStates, mapDispatchToProps)(PreferencesContainer);
 
-export default PreferencesContainer;
+PreferencesContainer.propTypes = {
+  isAuthenticated: PropTypes.bool,
+  onFormUpdate: PropTypes.func,
+  onFormSubmit: PropTypes.func,
+  errorMessage: PropTypes.string
+};
+
+
+const mapStateToProps = (state) => {
+  const { form, isAuthenticated, errorMessage } = state.preferencesReducer;
+  return {
+    form,
+    isAuthenticated,
+    errorMessage
+  };
+};
+
+const mapDispatchToProps = (dispatch) => {
+  return{
+    onFormUpdate: bindActionCreators(updateForm, dispatch),
+    onFormSubmit: bindActionCreators(submitForm, dispatch),
+    dispatch
+  };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(PreferencesContainer);
+//
+// export default PreferencesContainer;

@@ -1,6 +1,5 @@
 // import React, { Component, PropTypes } from 'react';
 import React, { Component } from 'react';
-
 import Radio from '../Radio';
 // import Slider from '../Slider';
 import Checkbox from '../Checkbox';
@@ -8,28 +7,50 @@ import Checkbox from '../Checkbox';
 export default class Size extends Component {
 
   render() {
-    let height_units = ['ft-in','cm'];
-    let weight_units = ['lbs','kg'];
-    let top_size     = ['XS','S','M','L','XL', 'XXL'];
-    let bra_size     = ['XS','S','M','L','XL', 'XXL'];
-    let pants_waist  = ['XS','S','M','L','XL', 'XXL'];
-    let pants_length = ['XS','S','M','L','XL', 'XXL'];
+    // let height_units = ['ft-in','cm'];
+    // let weight_units = ['lbs','kg'];
+    let top_size     = {
+      options: ['XS','S','M','L','XL'],
+      label:  'choose the size(s) you wear for tops'
+    }
+
+    // let bra_size     = {
+    //   options : ['XS','S','M','L','XL'],
+    //   label   : 'choose the bra size(s) you wear'
+    // }
+    let pants_waist  = {
+      options : ['XS','S','M','L','XL'],
+      label   : 'choose the waist size(s) you wear for pants'
+    }
+    let pants_length = {
+      options: ['XS','S','M','L','XL'],
+      label   :'choose the length size(s) you wear for pants'
+    }
 
     return (
       <div className='size sub-section'>
-        <span className='subtitle'>Size</span>
-        <div className='input-box'>
-          <input className='pref-input' placeholder='height'/>
-          <Radio options={height_units}/>
-        </div>
-        <div className='input-box'>
-          <input className='pref-input' placeholder='weight'/>
-          <Radio options={weight_units}/>
-        </div>
-        <Checkbox name='top  size'     options={top_size}/>
-        <Checkbox name='bust size'     options={bra_size}/>
-        <Checkbox name='pants waist'  options={pants_waist}/>
-        <Checkbox name='pants length' options={pants_length}/>
+        <span className='subsection-label'>Size</span>
+
+        <Checkbox    key='top'
+                     name='top'
+                     options={top_size.options}
+                     type='checkbox'
+                     label={top_size.label}
+                     onFormUpdate={this.props.onFormUpdate}/>
+
+        <Checkbox    key='bottomWaist'
+                     name='bottomWaist'
+                     options={pants_waist.options}
+                     type='checkbox'
+                     label={pants_waist.label}
+                     onFormUpdate={this.props.onFormUpdate}/>
+
+        <Checkbox    key='bottomLength'
+                     name='bottomLength'
+                     options={pants_length.options}
+                     type='checkbox'
+                     label={pants_length.label}
+                     onFormUpdate={this.props.onFormUpdate}/>
       </div>
     );
   }

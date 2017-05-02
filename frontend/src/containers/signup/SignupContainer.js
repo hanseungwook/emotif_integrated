@@ -7,6 +7,13 @@ import BrowseContainer from '../../containers/browse/BrowseContainer';
 
 
 export class SignupContainer extends Component {
+		constructor(props) {
+		super(props);
+	}
+	shouldComponentUpdate(nextProps) {
+		console.log("should update : ",(nextProps.isAuthenticated !== this.props.isAuthenticated))
+		return this.props.isAuthenticated !== nextProps.isAuthenticated;
+	}
 
 	render(){
 		const { isAuthenticated, errorMessage, onSignupClick } = this.props;

@@ -6,6 +6,15 @@ import LandingPage from '../../components/LandingPage';
 // import BrowsePage from '../../components/browse/BrowsePage';
 
 export class LandingContainer extends Component {
+	constructor(props) {
+			super(props);
+	}
+
+	shouldComponentUpdate(nextProps, nextState) {
+		console.log("should update : ",(nextProps.isAuthenticated !== this.props.isAuthenticated))
+    return nextProps.isAuthenticated !== this.props.isAuthenticated;
+  }
+
 
 	render(){
 		if (this.props.isAuthenticated){
