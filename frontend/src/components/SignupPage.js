@@ -37,7 +37,7 @@ export default class SignupPage extends Component {
 						}
 						<h2> Sign Up </h2>
 						<input type='text' ref='email' placeholder='Email'/>
-						<input type='text' ref='password' placeholder='Password'/>
+						<input type='password' ref='password' placeholder='Password'/>
 						<div className='next_but' onClick={() => {this.handleClickSignup(); successMessage="hey";}}>NEXT</div>
 						{errorMessage &&
 							<p>{errorMessage}</p>

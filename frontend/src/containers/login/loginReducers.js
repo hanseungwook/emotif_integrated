@@ -1,4 +1,4 @@
-import { LOGIN_REQUEST, LOGIN_SUCCESS, LOGIN_FAILURE } from './loginActions';
+import { LOGIN_REQUEST, LOGIN_SUCCESS, LOGIN_FAILURE, LOGOUT_SUCCESS } from './loginActions';
 
 const loginReducer = ( state = { isFetching: false, isAuthenticated: localStorage.getItem('id_token') ? true : false }, action) => {
 	switch (action.type) {
@@ -20,6 +20,11 @@ const loginReducer = ( state = { isFetching: false, isAuthenticated: localStorag
 			isAuthenticated: false,
 			errorMessage: action.message
 		});
+    case LOGOUT_SUCCESS:
+        return Object.assign({}, state, {
+            isFetching: true,
+            isAuthenticated: false
+        });
 	default:
 		return state;
 	}
