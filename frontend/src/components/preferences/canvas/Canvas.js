@@ -9,11 +9,11 @@ export default class Canvas extends Component
 {
 	render() {
 		return (
-			<div className='canvas section'>
-				<span className='title'>Canvas</span>
-				<Size/>
-				<Form/>
-				<Tones/>
+			<div className='canvas pref-section'>
+				<span className='section-label'>Canvas</span>
+				<Form  onFormUpdate={this.props.onFormUpdate}/>
+				<Size  onFormUpdate={this.props.onFormUpdate}/>
+				<Tones onFormUpdate={this.props.onFormUpdate}/>
 			</div>
 		);
 	}

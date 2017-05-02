@@ -39,6 +39,7 @@ export function loginUser(creds) {
 		dispatch(requestLogin(creds));
 		Parse.User.logIn(creds.email, creds.password, {
 			success: function(user) {
+				console.log('success');
 					localStorage.setItem('id_token', user.getSessionToken());
 					dispatch(receiveLogin(user));
 
